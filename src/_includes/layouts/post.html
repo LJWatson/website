@@ -7,7 +7,12 @@
   <div class="[ post ] [ flow modal-open-inert ] [ flow-space-700 text-500 ]">
     <h1>{{ title }}</h1>
     <div class="[ post__meta ] [ measure-short flow-space-300 ]">
-      <time class="font-sans weight-bold" datetime="{{ date | w3DateFilter }}">{{ date | dateFilter }}</time>
+      <time class="font-sans weight-bold" datetime="{{ date | w3DateFilter }}">Posted on {{ date | dateFilter }}</time>
+      
+      {% if edited %}
+      <br>
+      <time class="font-sans weight-bold" datetime="{{ edited | w3DateFilter }}">Updated on {{ edited | dateFilter }}</time>
+      {% endif %}
       {% set categories = helpers.getCategories(categories, true) %}
       {% if categories | length %}
         <ul class="cluster" aria-label="Categories">
