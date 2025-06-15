@@ -7,7 +7,7 @@ categories: "Web life"
 
 Adrian Roselli tagged me in his [Tag, you're it](https://adrianroselli.com/2025/03/tag-youre-it.html) post in March, and it's taken me until now to do it.
 
-##Why did you start blogging in the first place?
+## Why did you start blogging in the first place?
 
 I have no idea why I began blogging! It probably had something to do with having owned my own domain name since the late 90s but not having done anything particularly useful with it - and a blog must have seemed like a good idea at the time.
 
