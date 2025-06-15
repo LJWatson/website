@@ -1,7 +1,7 @@
 ---
 title: "Thoughts on screen readers and image recognition"
 date: "2021-01-02"
-tags: ["Screen readers", "Artificial Intelligence"]
+tags: ["Screen readers", "AI"]
 categories: "Web life"
 ---
 

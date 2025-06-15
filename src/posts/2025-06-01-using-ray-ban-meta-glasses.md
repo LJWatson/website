@@ -1,7 +1,7 @@
 ---
 title: "Using Ray-Ban Meta Glasses"
 date: "2025-06-01"
-tags: [""]
+tags: ["AI"]
 categories: "Real life"
 ---
 

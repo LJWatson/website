@@ -1,7 +1,7 @@
 ---
 title: "Playing with Envision Glasses"
 date: "2020-11-05"
-tags: 
+tags: "AI"
 categories: "Real life"
 ---
 
