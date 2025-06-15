@@ -5,7 +5,7 @@ tags: [""]
 categories: "Web life"
 ---
 
-Adrian Roselli tagged me in his [Tag, you're it](https://adrianroselli.com/2025/03/tag-youre-it.html) post in March, and it's taken me until now to do it.
+Adrian Roselli tagged me in his [Tag, you're it](https://adrianroselli.com/2025/03/tag-youre-it.html) post in March, and it's taken me until now to get to it!
 
 ## Why did you start blogging in the first place?
 
@@ -52,6 +52,8 @@ I could choose so many different posts for so many different reasons, but if I h
 Nothing terribly exciting, no. I have the functionality in place to indicate when a post has been updated, but I have hinky feelings that it looks a bit wonky, so I really should get that sorted out before I merge the change.
 
 ## Tags
+
+People I've tagged to take-up the baton:
 
 * [Lola Odelola](https://lolaslab.co/), software developer and web standards specialist, founder of [blackgirl.tech](https://blackgirl.tech), and someone with an energy and curiosity that reminds me of when the web was new and everything was possible.
 
