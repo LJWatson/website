@@ -56,4 +56,5 @@ Nothing terribly exciting, no. I have the functionality in place to indicate whe
 People I've tagged to take-up the baton:
 
 * [Lola Odelola](https://lolaslab.co/), software developer and web standards specialist, founder of [blackgirl.tech](https://blackgirl.tech), and someone with an energy and curiosity that reminds me of when the web was new and everything was possible.
+* [Coralie Mercier](https://blog.koalie.net/), Head of Marketing and Communications at W3C, self-professed moon shuttle janitor, artist, and someone whose spirit and resilience I admire greatly.
 
