@@ -1,7 +1,6 @@
 ---
 title: "Sticky pork belly slices"
 date: "2025-06-10"
-edited: "2025-06-10"
 tags: ["Dinner"]
 categories: "Recipe book"
 ---
