@@ -16,3 +16,9 @@ Then:
 2. To build a production version of the site, run `npm run production`
 
 When you run a production build of the site, the contents of the `dist` should be deployed to the server. If you use Netlify to host, the correct production config has been preset in `netlify.toml` for you.
+
+Note to self: use this format when updating a post:
+
+```
+edited: "2025-06-10"
+```
