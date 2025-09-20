@@ -10,7 +10,6 @@
       <time class="font-sans weight-bold" datetime="{{ date | w3DateFilter }}">Posted on {{ date | dateFilter }}</time>
       
       {% if edited %}
-      <br>
       <time class="font-sans weight-bold" datetime="{{ edited | w3DateFilter }}">Updated on {{ edited | dateFilter }}</time>
       {% endif %}
       {% set categories = helpers.getCategories(categories, true) %}

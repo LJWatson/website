@@ -1,0 +1,16 @@
+.post {
+  &__meta {
+    flex-direction: column;
+
+    .cluster {
+      margin-top: 1rem;
+
+      li {
+        padding-block-start: 0;
+        padding-inline-start: 0;
+        padding-right: 1rem;
+      }
+    }
+  }
+}
+
