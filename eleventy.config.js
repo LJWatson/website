@@ -104,3 +104,6 @@ export default config => {
     passthroughFileCopy: true
   };
 };
+
+// Put robots.txt in root
+eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
