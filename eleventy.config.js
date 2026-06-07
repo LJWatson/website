@@ -12,7 +12,7 @@ const EXCLUDED_TAGS = ['blog', 'all'];
 
 export default config => {
 // Put robots.txt in root
-eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
+config.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
 
   // Add filters
   config.addFilter('dateFilter', dateFilter);
