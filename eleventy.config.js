@@ -11,6 +11,9 @@ import htmlMinTransform from './src/transforms/html-min-transform.js';
 const EXCLUDED_TAGS = ['blog', 'all'];
 
 export default config => {
+// Put robots.txt in root
+eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
+
   // Add filters
   config.addFilter('dateFilter', dateFilter);
   config.addFilter('w3DateFilter', w3DateFilter);
@@ -105,5 +108,3 @@ export default config => {
   };
 };
 
-// Put robots.txt in root
-eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
