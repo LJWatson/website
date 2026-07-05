@@ -189,8 +189,6 @@ A look at the common misconceptions about accessibility commonly felt by enginee
 
 Case study from CA Technologies and TPG. Exploring the use of Section 508 compliant video as a solution for product documentation, and meeting the challenges of audio description and captioned content.
 
-* [CA Technologies and Accessible Multimedia (PDF, 540Kb)](/wp-content/uploads/2011/05/case-study_CA-Technologies-and-accessible-media-with-links.pdf)
-
 ## The tribe and the challenge
 
 Perhaps the most evocative idea to come out of CSUN 2011 was “the tribe”. John Foliot seemed to capture the CSUN zeitgeist when he described the global accessibility community as a tribe, drawn together by a shared ambition to make the web a truly inclusive place.

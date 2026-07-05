@@ -43,7 +43,7 @@ The ultimate safeguard is for browsers to offer a way to ignore CSS Speech. Ther
 
 With these protections and safeguards in place, CSS Speech would let us elevate the experience of listening to content from a monotone into something altogether more interesting.
 
-There are some truly [extraordinary Text To Speech (TTS) engins](https://play.ht/) out there, but they're not the ones used by browsers or screen readers as a rule. For the most part this means that content spoken by web readers or screen readers is delivered in a flat, disinterested way that never changes - whether reading about a climate catastrophe or describing unfeasibly cute and fluffy things.
+There are some truly extraordinary Text To Speech (TTS) engins out there, but they're not the ones used by browsers or screen readers as a rule. For the most part this means that content spoken by web readers or screen readers is delivered in a flat, disinterested way that never changes - whether reading about a climate catastrophe or describing unfeasibly cute and fluffy things.
 
 Imagine this news item:
 

@@ -39,6 +39,7 @@
   "dependencies": {
     "@11ty/eleventy-plugin-rss": "^1.0.7",
     "js-yaml": "^4.1.0",
+    "linkinator": "^7.6.1",
     "luxon": "^3.6.1",
     "markdown-it": "^14.1.0"
   },

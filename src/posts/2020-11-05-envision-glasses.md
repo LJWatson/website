@@ -2,9 +2,13 @@
 title: "Playing with Envision Glasses"
 date: 2020-11-05
 postTags: ["AI"]
+updated: 2026-07-05
 postCategories: ["Real life"]
 postSummary: "Vision accounts for most of our brain's electrical activity, but AI apps like Microsoft's SeeingAI have only partially solved the problem for blind people — you still have to point your phone at what you want to see, which is inconvenient and socially awkward."
 ---
+
+Updated because the link to the FAQ about personal data storage in the cloud is no longer available on the Let's Envision website.
+
 
 We humans put a lot of effort into seeing. When our eyes are open, vision accounts for [two thirds of the electrical activity in our brain](https://www.imagethink.net/true-or-false-vision-rules-the-brain/); 40% of the nerve fibres that are connected into the brain relate to vision; and more of our neurons are dedicated to vision than the other senses combined. We consume huge quantities of visual data every day and most people think nothing of it.
 
@@ -285,7 +289,7 @@ You do get a lifetime subscription to the Envision AI service which is something
 
 ## Privacy and data protection
 
-Envision does not have a privacy policy on its website or in the app. There is a short [knowledge base article](https://www.letsenvision.com/faq/is-my-personal-information-stored-in-the-cloud) that states that no personal data is stored in the cloud, but that's it.
+Envision does not have a privacy policy on its website or in the app. There was a short knowledge base article that stated that no personal data is stored in the cloud, but it is no longer available.
 
 I've contacted Envision to suggest they provide a more detailed privacy policy and that they make it more easily accessible from the website and the app. I'll update this section if anything changes.
 

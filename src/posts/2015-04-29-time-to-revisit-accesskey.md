@@ -14,7 +14,7 @@ Each of these sites (and many others) provide keyboard shortcuts using JavaScrip
 
 ## Caught in the virtual buffer
 
-Windows screen readers use a [virtual model](understanding-screen-reader-interaction-modes/) to support interaction with content rendered in the browser. A virtual buffer of the content is created, based on information from the DOM and accessibility tree. It is this virtual version of the content that the screen reader presents to the user.
+Windows screen readers use a [virtual model](/understanding-screen-reader-interaction-modes) to support interaction with content rendered in the browser. A virtual buffer of the content is created, based on information from the DOM and accessibility tree. It is this virtual version of the content that the screen reader presents to the user.
 
 Interaction with the virtual buffer works like this: the screen reader listens for keyboard events. When it detects a key press that corresponds to a screen reader command, that action is executed in the virtual buffer. For example, if the h key is pressed when a Windows screen reader is running, focus will move to the next heading (h1 – h6) in the virtual buffer. Otherwise the key is passed back through to the browser, where it will be caught by the JavaScript that handles the shortcuts provided by the website.
 

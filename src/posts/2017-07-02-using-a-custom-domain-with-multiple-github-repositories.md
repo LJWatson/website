@@ -61,6 +61,6 @@ When you've added all the CNAME records, save your changes and make sure your cu
 
 Meanwhile, you need to configure each Github repository to recognise the sub-domain name you've just created for it. To do this, go to the Github page for each repository, and in **Settings** add the sub-domain to the **Custom domain** field (don't forget to save it).
 
-Once the CNAME records have propagated, you'll be able to use the sub-domain to reference the gh-pages branch of your Github repositories. For example, [design-patterns.tink.uk](https://design-patterns.tink.uk) instead of [ljwatson.github.io/design-patterns/](https://ljwatson.github.io/design-patterns).
+Once the CNAME records have propagated, you'll be able to use the sub-domain to reference the gh-pages branch of your Github repositories. For example, design-patterns.tink.uk instead of ljwatson.github.io/design-patterns/.
 
 Thanks to Dan Hopkins for his help.

@@ -1,10 +1,13 @@
 ---
 title: "Everybody be Coil. You... Be Coil"
 date: 2020-10-31
+updated: 2026-07-05
 postTags: ["HTML"]
 postCategories: ["Code things"]
 postSummary: "I've decided to monetize this website using Web Monetization and become a Coil member because I've had enough of intrusive online advertising, tracking, and having my personal information bought and sold across the web."
 ---
+
+Updated now that Web Monetization is no longer used on this website.
 
 Online advertising is, in my opinion, intrusive, invasive, and, in the case of accessibility, frequently destructive. Yet since it [first emerged in 1994](https://www.wired.com/2010/10/1027hotwired-banner-ads/), online advertising has been one of the few ways content creators have had to be compensated for their efforts. Until now.
 
