@@ -26,7 +26,7 @@ No, not some kind of tabular [existentialism](https://en.wikipedia.org/wiki/Exis
 
 ## Screen reader results
 
-Using a simple table test page and some help from [Everett Zufelt](https://twitter.com/ezufelt), I put several popular screen readers through their paces in Firefox 3.6. The four screen readers were:
+Using a simple table test page and some help from Everett Zufelt, I put several popular screen readers through their paces in Firefox 3.6. The four screen readers were:
 
 * Jaws 11.
 * NVDA 2010.1.

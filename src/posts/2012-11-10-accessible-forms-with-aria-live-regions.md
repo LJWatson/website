@@ -88,6 +88,6 @@ Adding the aria-atomic attribute to the basket summary:
 
 The `aria-atomic` attribute has two possible values: true and false (default). Using `aria-atomic="true"` means that all of the content within the ARIA live region will be announced, even though only a small part of it has changed. So screen readers will announce something like "Your basket contains 3 items", instead of just "3".
 
-The [All Star route deviation calculator](https://www.allstarcard.co.uk/calculators/route-deviation) is one of the best examples of this technique in the wild. Developed by [Matt Lawson](http:www.twitter.com/lawlesscreation) of [Nomensa](https://www.nomensa.com), the form is used to calculate cost savings based on reduced mileage.
+The [All Star route deviation calculator](https://www.allstarcard.co.uk/calculators/route-deviation) is one of the best examples of this technique in the wild. Developed by Matt Lawson of [Nomensa](https://www.nomensa.com), the form is used to calculate cost savings based on reduced mileage.
 
 As you manipulate information within the form, your potential cost saving is dynamically updated on the page. Because the updated information is an ARIA live region, using the form with a screen reader couldn't be easier.

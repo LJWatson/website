@@ -78,7 +78,7 @@ Tapping the side of the glasses felt a bit strange at first but I soon realised 
 
 When you turn Envision Glasses on it takes about a minute for them to boot up. There is no audio confirmation that the boot sequence has begun, though lights do turn on should you be able to see them. I cannot, so it took a few attempts before I was able to turn them on for the first time. Even now, having turned my Envision Glasses on/off several more times I still find it an uncertain process. 
 
-When Envision Glasses finish booting an audio welcome is played, forming part of the sound scheme designed by [Andre Louis](https://twitter.com/FreakyFwoof). The sound effects are informative without being intrusive, helping you make sense of what the glasses are doing - taking a picture or processing information for example.
+When Envision Glasses finish booting an audio welcome is played, forming part of the sound scheme designed by Andre Louis. The sound effects are informative without being intrusive, helping you make sense of what the glasses are doing - taking a picture or processing information for example.
 
 ## Features and functionality
 
@@ -138,7 +138,7 @@ Reads multi-page documents by scanning them in succession. To use Batch Scan:
 
 #### Notes
 
-It turns out I'm about 20 years out of practice finding a line of sight so at first I was incredibly frustrated because I could not read anything. After my [ever patient husband](https://twitter.com/perlbod) explained I was staring off into the middle distance instead of the thing I was trying to read, things improved dramatically and so far I've found the text recognition to be tolerably accurate using both Instant Text and Scan Text.
+It turns out I'm about 20 years out of practice finding a line of sight so at first I was incredibly frustrated because I could not read anything. After my ever patient husband explained I was staring off into the middle distance instead of the thing I was trying to read, things improved dramatically and so far I've found the text recognition to be tolerably accurate using both Instant Text and Scan Text.
 
 ### Identify
 
@@ -305,6 +305,6 @@ Then there is the other value - the value of feeling like I'm another step close
 
 Yes, the Envision Glasses are limited. Unlike SeeingAI, Envision AI does not recognise money, and although the Envision AI app has a Scan Barcode option it is not present on the Envision Glasses. I mentioned the Find Object limitations earlier, and the brevity of the Describe Scene descriptions, but these are all things that can (and will) improve with time and advances in technology.
 
-There is often a tendancy to criticise things that are less than perfect. When image recognition was first introduced, it was criticised for its lack of detail, but mostly by people who could see the images being described. For those of us that otherwise had to put up with garbage information or no information, it was a revelation. As [Gez Lemon](https://twitter.com/gezlemon) remarked to me at the time, if you need to get some place and your choice is between a rusty bike and not going anywhere, a rusty bike looks like a damned good option.
+There is often a tendancy to criticise things that are less than perfect. When image recognition was first introduced, it was criticised for its lack of detail, but mostly by people who could see the images being described. For those of us that otherwise had to put up with garbage information or no information, it was a revelation. As Gez Lemon remarked to me at the time, if you need to get some place and your choice is between a rusty bike and not going anywhere, a rusty bike looks like a damned good option.
 
 So in spite of their limitations, and because of all they do, and all they will be able to do, and because a little bit of me really did want to be [7 of 9](https://en.wikipedia.org/wiki/Seven_of_Nine), it's fair to say that I think my Envision Glasses are really quite marvellous.

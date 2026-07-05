@@ -11,7 +11,7 @@ Cognition covers an incredibly wide range of conditions and requirements. It's o
 
 ## Accessibility beyond code
 
-[Antonia Hyde](https://www.twitter.com/hiantonia) kicked off with a powerful message: People are not defined by their disability. She went on to say that people with learning disabilities do use websites, and they often treasure the ability to use the web in their own homes, where there is shelter from the bustle and distraction of the outside world.
+Antonia Hyde kicked off with a powerful message: People are not defined by their disability. She went on to say that people with learning disabilities do use websites, and they often treasure the ability to use the web in their own homes, where there is shelter from the bustle and distraction of the outside world.
 
 Antonia played two videos of a gentleman using the Ebay and Amazon websites. Some key ideas that were highlighted:
 
@@ -27,7 +27,7 @@ Antonia also explained that people don't often know how to use their browser set
 
 ## Autism, the Internet & antelopes
 
-[Jamie Knight](https://twitter.com/JamieKnight) from JK3 explained that Autism isn't being stupid or being difficult. It's a different way of processing information and it affects people in different ways. It's just that some people are at a more noticeable end of the spectrum than others. Jamie spoke about some of the ideas he has about information on the web:
+Jamie Knight from JK3 explained that Autism isn't being stupid or being difficult. It's a different way of processing information and it affects people in different ways. It's just that some people are at a more noticeable end of the spectrum than others. Jamie spoke about some of the ideas he has about information on the web:
 
 * It's easy to get distracted from reading information when sound is playing on the page.
 * It's difficult to follow video content when it is fast paced and the scenes change quickly.
@@ -41,7 +41,7 @@ Jamie also talked about the importance of literal meanings. With typical good hu
 
 ## Lessons learned doing usability testing
 
-[David Owens](https://www.twitter.com/fineartdavid) from Transmedia Gateway spoke about his experiences of testing with people with Autism. His message was simple. If people can't use it, you're building it the wrong way. David went on to talk about the lessons he'd learnt:
+David Owens from Transmedia Gateway spoke about his experiences of testing with people with Autism. His message was simple. If people can't use it, you're building it the wrong way. David went on to talk about the lessons he'd learnt:
 
 * Keep testing scripts simple and easy to understand, to avoid frustrating people taking part.
 * If the tab order of a page doesn't follow the visual flow, it can confuse sighted people with Autism who use screen readers.
@@ -54,7 +54,7 @@ David also talked about the importance of sharing insights from usability testin
 
 ## Content & cognition
 
-[Ian Pouncey](https://twitter.com/IanPouncey) from Yahoo! wrapped up the day by taking it back to basics. He talked about many of the standard concepts of web accessibility, but with a focus on cognition. Some of Ian's key points include:
+Ian Pouncey from Yahoo! wrapped up the day by taking it back to basics. He talked about many of the standard concepts of web accessibility, but with a focus on cognition. Some of Ian's key points include:
 
 * Keep page layout consistent, particularly in terms of navigation.
 * Don't use too many fonts in the design, they can become distracting.
@@ -74,4 +74,4 @@ Now I've come to understand that some people will aalways find it difficult to g
 
 Many of the ideas presented during the day were familiar, colour contrast, consistent design, good structure, literal meaning and so forth. What really struck me though was their importance in relation to cognition. We're accustomed to the blunt force benefits each of these concepts bring to people with other disabilities. For people with cognitive disabilities, the impact is more subtle, but no less dramatic.
 
-Thanks to [Henny Swan](https://www.twitter.com/iheni) and [Bruce Lawson](https://www.twitter.com/brucel) for organising the day, and to [Kath Moonan](https://www.twitter.com/ladymoonani) for finding a great pub to continue the discussions in!
+Thanks to Henny Swan and Bruce Lawson for organising the day, and to Kath Moonan for finding a great pub to continue the discussions in!

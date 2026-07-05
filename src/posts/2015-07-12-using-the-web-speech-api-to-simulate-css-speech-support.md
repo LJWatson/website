@@ -24,7 +24,7 @@ If CSS Speech was supported by browsers, it would be possible for a screen reade
 
 In the absence of consistent browser support for CSS Speech, it isn’t possible to determine the [computed aural style](https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle) of content. Even if it were, there is no way to relay that information to a screen reader and force it to respond accordingly. There are no APIs for interacting directly with screen readers.
 
-It is possible to use the Web Speech API to simulate the way a screen reader might respond to CSS Speech though. A [basic demo](https://playground.tink.uk/cssspeech/index.html) is available (with the warning that it’s held together with chicken wire and sticky tape). Thanks to [Aurelio De Rosa](https://www.twitter.com/AurelioDeRosa), from whom I borrowed the workaround for the [getVoices() bug in Chrome](https://code.google.com/p/chromium/issues/detail?id=340160).
+It is possible to use the Web Speech API to simulate the way a screen reader might respond to CSS Speech though. A [basic demo](https://playground.tink.uk/cssspeech/index.html) is available (with the warning that it’s held together with chicken wire and sticky tape). Thanks to Aurelio De Rosa, from whom I borrowed the workaround for the [getVoices() bug in Chrome](https://code.google.com/p/chromium/issues/detail?id=340160).
 
 ## CSS Speech properties
 

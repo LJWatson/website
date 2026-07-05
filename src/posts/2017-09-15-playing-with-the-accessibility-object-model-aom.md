@@ -145,4 +145,4 @@ In MacOS run:
 
 You can then open this [AOM disclosure demo](https://test-cases.tink.uk/aom-disclosure), and with a screen reader running it'll behave exactly like you'd expect. The screen reader recognises a button in a collapsed state. When the button is activated, the screen reader recognises the button is now in the expanded state and (Jaws only) recognises that the button is being used to control the disclosed content.
 
-With thanks to [Dan Hopkins](https://twitter.com/perlbod) and [Ian Pouncey](https://twitter.com/ianpouncey).
+With thanks to Dan Hopkins and Ian Pouncey.

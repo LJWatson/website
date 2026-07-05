@@ -10,7 +10,7 @@ HTML5 includes a handful of [sectioning elements](https://www.w3.org/TR/2011/WD-
 
 Now that HTML5 is being used on mainstream websites (such as that of the [UK Government](https://www.gov.uk)), it’s interesting to see how well screen readers support this handful of elements. Testing included [Jaws 14](https://www.freedomscientific.com), [NVDA 2012.3](https://www.nvda-project.org/) and [Window Eyes 8](https://www.gwmicro.com), with Firefox 18 and Internet Explorer 9, and [VoiceOver (Mac OSX 10.8.2)](https://www.apple.com/accessibility/voiceover/) with Safari 6.
 
-Thanks to [Alastair Campbell](https://www.twitter.com/alastc) and [Kiran Kaja](https://www.twitter.com/kirankaja12) for VoiceOver testing, and [Steve Faulkner](https://www.twitter.com/stevefaulkner) for the mighty useful [HTML5 Accessibility test page](https://www.html5accessibility.com/html5elements/).
+Thanks to Alastair Campbell and Kiran Kaja for VoiceOver testing, and Steve Faulkner for the mighty useful [HTML5 Accessibility test page](https://www.html5accessibility.com/html5elements/).
 
 ## Test results
 

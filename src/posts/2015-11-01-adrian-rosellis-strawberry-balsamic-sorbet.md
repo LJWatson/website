@@ -6,7 +6,7 @@ postCategories: ["Recipe book"]
 postSummary: "The 12th post bringing together food and technology, featuring a versatile strawberry and balsamic vinegar recipe from Adrian Roselli that works as both sauce and sorbet."
 ---
 
-The 12th in a series of posts that bring together the two sides of my blog: Food and technology. I’ve asked the great and the good from the web standards community to share their favourite recipes. This versatile dessert is from [Adrian Roselli](https://www.twitter.com/aardrian).
+The 12th in a series of posts that bring together the two sides of my blog: Food and technology. I’ve asked the great and the good from the web standards community to share their favourite recipes. This versatile dessert is from Adrian Roselli.
 
 ## Information
 

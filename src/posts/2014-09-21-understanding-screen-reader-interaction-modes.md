@@ -44,4 +44,4 @@ A set of tabs is a good example: When interacting with a set of tabs in a softwa
 
 To all intents and purposes, applications mode is the same as forms/focus mode – it causes the screen reader to pass keystrokes back through to the browser so they can fulfil their original purpose. For example, when the [tablist](https://www.w3.org/TR/wai-aria/roles#tablist) and [tab](https://www.w3.org/TR/wai-aria/roles#tab) roles are used as part of the [tab widget design pattern](https://www.w3.org/TR/wai-aria-practices/#tabpanel), using the tab key to move focus onto the first tab in the set causes a Windows screen reader to automatically switch into applications mode. From that point all the keyboard interaction is handled by the script. This does mean of course that the script driving the functionality of the widget has to be setup to handle keyboard interaction!
 
-With thanks to [Hans Hillen](https://www.twitter.com/hanshillen).
+With thanks to Hans Hillen.

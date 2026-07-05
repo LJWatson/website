@@ -6,7 +6,7 @@ postCategories: ["Recipe book"]
 postSummary: "I've asked folk from the web standards community to share their favourite recipes, and this eighth post in the series features Jeremy Keith's go-to pork chop meal for one—a recipe inspired by TV chef Valentine Warner that sounds weird but is absolutely delicious."
 ---
 
-The eighth in a series of posts that bring together the two sides of my blog: Food and technology. I’ve asked the great and the good from the [web standards community](/tag/web-standards-food/) to share their favourite recipes. This tasty recipe is from [Jeremy Keith](https://www.twitter.com/adactio).
+The eighth in a series of posts that bring together the two sides of my blog: Food and technology. I’ve asked the great and the good from the [web standards community](/tag/web-standards-food/) to share their favourite recipes. This tasty recipe is from Jeremy Keith.
 
 ## Information
 

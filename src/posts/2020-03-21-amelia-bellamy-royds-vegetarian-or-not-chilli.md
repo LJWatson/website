@@ -6,7 +6,7 @@ postCategories: ["Recipe book"]
 postSummary: "This is the 14th post bringing together food and technology, featuring favourite recipes from the web standards community. This versatile recipe comes from Amelia Bellamy-Royds."
 ---
 
-The 14th in a series of posts that bring together the two sides of my blog: food and technology. I’ve asked the great and the good from the web standards community to share their favourite recipes. This versatile recipe comes from [Amelia Bellamy-Royds](https://twitter.com/ameliasbrain).
+The 14th in a series of posts that bring together the two sides of my blog: food and technology. I’ve asked the great and the good from the web standards community to share their favourite recipes. This versatile recipe comes from Amelia Bellamy-Royds.
 
 ## Information
 

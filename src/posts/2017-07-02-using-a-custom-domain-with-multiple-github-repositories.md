@@ -63,4 +63,4 @@ Meanwhile, you need to configure each Github repository to recognise the sub-dom
 
 Once the CNAME records have propagated, you'll be able to use the sub-domain to reference the gh-pages branch of your Github repositories. For example, [design-patterns.tink.uk](https://design-patterns.tink.uk) instead of [ljwatson.github.io/design-patterns/](https://ljwatson.github.io/design-patterns).
 
-Thanks to [Dan Hopkins](https://twitter.com/perlbod) for his help.
+Thanks to Dan Hopkins for his help.

@@ -6,7 +6,7 @@ postCategories: ["Recipe book"]
 postSummary: "I'm bringing together the two sides of my blog with the 13th post in my Food and technology series, featuring a mouth-watering chicken dish from web standards community member Eric Meyer."
 ---
 
-The 13th in a series of posts that bring together the two sides of my blog: Food and technology. I’ve asked the great and the good from the web standards community to share their favourite recipes. This mouth-watering chicken dish is from [Eric Meyer](https://twitter.com/meyerweb).
+The 13th in a series of posts that bring together the two sides of my blog: Food and technology. I’ve asked the great and the good from the web standards community to share their favourite recipes. This mouth-watering chicken dish is from Eric Meyer.
 
 ## Information
 

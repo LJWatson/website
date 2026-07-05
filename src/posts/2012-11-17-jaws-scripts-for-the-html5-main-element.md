@@ -22,7 +22,7 @@ The disadvantage is that developers must consciously include ARIA roles in their
 
 ## HTML5 elements
 
-Until the `main` element extension was proposed by [Steve Faulkner](https://www.twitter.com/stevefaulkner), there was no direct mapping between `role="main"` and an HTML5 element. This means that a screen reader mechanism for moving focus to the primary content area, would be entirely dependent on `role="main"` being added to the HTML.
+Until the `main` element extension was proposed by Steve Faulkner, there was no direct mapping between `role="main"` and an HTML5 element. This means that a screen reader mechanism for moving focus to the primary content area, would be entirely dependent on `role="main"` being added to the HTML.
 
 One of the [reasons for introducing the main element](https://www.w3.org/html/wg/wiki/User:Sfaulkne/main-usecases#Introduction) is that it's easier for developers to code and style `<main></main>` , than it is to use `<div id="main" role="main"></div>`.
 

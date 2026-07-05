@@ -46,4 +46,4 @@ If you use the `<i>` element as a container for an emoji, you probably shouldn't
 
 Now the browser will expose the emoji as an image in the accessibility tree, and use the value of the aria-label attribute as its accessible name. When a screen reader queries the accessibility tree it will use this information to tell the user that there is an image of a snowman (☃) on the page.
 
-_Update 30th December 2016:_ [Adrian Roselli](https://www.twitter.com/aardrian) has posted a useful follow-up article to this one * [Accessible emoji, tweaked](https://adrianroselli.com/2016/12/accessible-emoji-tweaked.html).
+_Update 30th December 2016:_ Adrian Roselli has posted a useful follow-up article to this one * [Accessible emoji, tweaked](https://adrianroselli.com/2016/12/accessible-emoji-tweaked.html).

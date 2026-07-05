@@ -6,7 +6,7 @@ postCategories: ["Recipe book"]
 postSummary: "The tenth post in my Food and technology series, featuring a beautifully written Italian meatball and sauce recipe from Joseph Karr O'Connor in the web standards community."
 ---
 
-The tenth in a series of posts that bring together the two sides of my blog: Food and technology. I’ve asked the great and the good from the [web standards community](/tag/web-standards-food/) to share their favourite recipes. This beautifully written Italian recipe is from [Joseph Karr O'Connor](https://www.twitter.com/accessiblejoe).
+The tenth in a series of posts that bring together the two sides of my blog: Food and technology. I’ve asked the great and the good from the [web standards community](/tag/web-standards-food/) to share their favourite recipes. This beautifully written Italian recipe is from Joseph Karr O'Connor.
 
 ## Information
 

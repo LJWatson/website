@@ -101,7 +101,7 @@ On 17 March 2021, I sent AccessiBe a Direct Message (DM) on Twitter, asking them
 
 When AccessiBe did not respond, I completed the contact form on their website on 23 March. I was promptly called by one of their sales team, who could not tell me anything about AccessiBe's compliance with the General Data Protection Regulations (GDPR), but assured me someone would be in touch who could help.
 
-When they had not responded by 1 April, I sent [AccessiBe an open tweet](https://twitter.com/LeonieWatson/status/1377596545168719876) asking them for a copy of their DPIA.
+When they had not responded by 1 April, I sent AccessiBe an open tweet asking them for a copy of their DPIA.
 
 I'm still waiting.
 

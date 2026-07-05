@@ -1,10 +1,12 @@
 ---
 title: "Accessible Twitter applications"
 date: 2009-05-21
+updated: 2024-04-27
 postTags: ["Screen readers"]
 postCategories: ["Web life"]
 postSummary: "Twitter's one of the web's killer applications at the moment, and it's proving increasingly popular with blind and partially sighted people, with several accessible alternatives now available."
 ---
+Updated to remove broken links to custom Twitter applications that are no longer maintained following Elon Musk's acquisition of Twitter and withdrawl of the API that enaled custom applications to be created.
 
 There's simply no denying it. Twitter is one of the web's killer applications of the moment. It's not uncommon to hear of people buying a computer and getting online, just so they can start tweeting.
 
@@ -23,11 +25,6 @@ Accessible Twitter is an alternative Twitter website. It has all the functionali
 
 When typing in a tweet, Accessible Twitter automatically warns you when you only have a certain number of characters left. The audio warnings alert you to the fact that either 30, 15 or 5 characters remain from your 140 character limit.
 
-### Accessible Twitter Links
-
-* [Accessible Twitter website](https://www.accessibletwitter.com/)
-* [Follow @AccessibleTwitr on Twitter](https://twitter.com/AccessibleTwitr)
-
 ## TwInbox
 
 * Application type: Microsoft Outlook plugin.
@@ -41,11 +38,6 @@ TwInbox, previously known as OutTwit, plugs Twitter directly into Outlook. It ad
 
 A simple keyboard command calls up a message box from anywhere in Outlook. You can create any kind of tweet, including @messages and direct messages. TwInbox automatically checks that your tweet is under the 140 character limit and lets you publish your tweet at the touch of a button.
 
-### TwInbox Links
-
-* [TwInbox website](https://www.techhit.com/TwInbox/twitter_plugin_outlook.html)
-* [Follow @TechHit on Twitter](https://twitter.com/TechHit/)
-
 ## Jawter
 
 * Application type: Screen reader extension (beta).
@@ -58,10 +50,6 @@ Jawter is an extension to the Jaws screen reader. It brings all the standard fun
 ### Jawter Top Feature
 
 Jawter lets you change the way tweets are displayed. You can change the order that the sender's name, the tweet time and the tweet itself are displayed. You can also choose to hear tweet times expressed as "11.30am", or "15 minutes ago".
-
-### Jawter Links
-
-* [Jawter website](https://randylaptop.com/software/jawter-2/all/1/)
 
 ## McTwit
 
@@ -77,13 +65,6 @@ Brian Hartgen has also produced Jaws scripts for McTwit. Whilst they're not requ
 
 Simple keyboard commands for accessing your tweets. For example, Alt + n grabs the tweets from people you're following, Alt + R grabs all the @messages about you, Alt + r grabs all the direct messages sent to you, and Alt + p grabs all the tweets from the public timeline.
 
-### McTwit Links
-
-* [Download McTwit](https://www.empowermentzone.com/mtsetup.exe)
-* [Download Jaws scripts for McTwit](https://www.hartgen.org/mctwitscripts.exe)
-* [Follow Jamal Mazrui on Twitter](https://twitter.com/JamalMazrui)
-* [Follow Brian Hartgen on Twitter](https://twitter.com/brianhartgen)
-
 ## Qwitter
 
 * Application type: Screen reader extension.
@@ -96,11 +77,6 @@ Qwitter is an invisible Twitter application that can be accessed from anywhere w
 ### Qwitter Top Feature
 
 Qwitter uses very simple commands to call up lists of tweets, @messages, direct messages and sent tweets. The commands are all easy to remember, and include useful options such as the ability to call up a list of links within a tweet. This makes it easy to choose a link and open it in the browser.
-
-### Qwitter Links
-
-* [Qwitter website](https://www.qwitter-client.net/)
-* [Follow the Mongoose Enterprises team on Twitter](https://www.qwitter-client.net/contact.php)
 
 ## Tweets60
 
@@ -115,7 +91,3 @@ Tweets60 is a Twitter application for Series 60 mobile phones (3rd/5th editions)
 
 Tweets60 lets you post tweets, manage who you're following, and keep up to date with automatic polling, all from your mobile phone. Despite all this functionality, it uses smart synchronisation technology to keep data useage to a minimum.
 
-### Tweets60 Links
-
-* [Tweets60 website](https://www.tweets60.com/)
-* [Follow Tweets60 on Twitter](https://twitter.com/tweets60)

@@ -6,7 +6,7 @@ postCategories: ["Recipe book"]
 postSummary: "I'm bringing together the two sides of my blog with recipes from the web standards community, and this easy pasta dish is from Graham Armfield."
 ---
 
-The ninth in a series of posts that bring together the two sides of my blog: Food and technology. I’ve asked the great and the good from the [web standards community](/tag/web-standards-food/) to share their favourite recipes. This easy pasta dish is from [Graham Armfield](https://www.twitter.com/coolfields).
+The ninth in a series of posts that bring together the two sides of my blog: Food and technology. I’ve asked the great and the good from the [web standards community](/tag/web-standards-food/) to share their favourite recipes. This easy pasta dish is from Graham Armfield.
 
 ## Information
 

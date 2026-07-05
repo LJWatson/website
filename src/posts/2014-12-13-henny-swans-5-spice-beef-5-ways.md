@@ -6,7 +6,7 @@ postCategories: ["Recipe book"]
 postSummary: "The 11th post in my Food and Technology series features a brilliant Chinese five spice beef recipe from web standards community member Henny Swan, plus clever ways to use the leftover master sauce."
 ---
 
-The 11th in a series of posts that bring together the two sides of my blog: Food and technology. I’ve asked the great and the good from the [web standards community](/tag/web-standards-food/) to share their favourite recipes. This bundle of awesome Chinese dishes is from [Henny Swan](https://www.twitter.com/iheni).
+The 11th in a series of posts that bring together the two sides of my blog: Food and technology. I’ve asked the great and the good from the [web standards community](/tag/web-standards-food/) to share their favourite recipes. This bundle of awesome Chinese dishes is from Henny Swan.
 
 ## Information
 

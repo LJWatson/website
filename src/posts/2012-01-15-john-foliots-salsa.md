@@ -6,7 +6,7 @@ postCategories: ["Recipe book"]
 postSummary: "I'm bringing together the two sides of my blog—food and technology—by asking people from the web standards community to share their favourite recipes, starting with this gorgeous salsa from John Foliot."
 ---
 
-The first in a series of posts that bring together the two sides of my blog: Food and technology. I’ve asked the great and the good from the [web standards community](/tag/web-standards-food/) to share their favourite recipes. This gorgeous salsa recipe is from [John Foliot](https://www.twitter.com/johnfoliot).
+The first in a series of posts that bring together the two sides of my blog: Food and technology. I’ve asked the great and the good from the [web standards community](/tag/web-standards-food/) to share their favourite recipes. This gorgeous salsa recipe is from John Foliot.
 
 ## Information
 
