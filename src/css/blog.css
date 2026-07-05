@@ -1,0 +1,200 @@
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   tink.uk — Blog CSS
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+
+/* ━━━ POST LIST ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.item-post {
+border-block-end: var(--border-width) solid var(--color-border-subtle);
+margin-block-end: var(--space-7);
+padding-block-end: var(--space-7); }
+
+.item-post:last-of-type {
+border-block-end: none; }
+
+.item-post h2 {
+font-size: var(--text-lg);
+margin-block-end: var(--space-2); }
+
+.item-post h2 a {
+color: var(--color-text);
+text-decoration: none; }
+
+.item-post h2 a:hover {
+color: var(--color-accent); }
+
+.item-post h2 a:visited {
+color: var(--color-text-secondary); }
+
+.item-post time {
+margin-block-end: var(--space-3); }
+
+.item-post > p {
+color: var(--color-text-secondary); }
+
+
+/* ━━━ POST METADATA (tags and categories) ━━━ */
+
+.post-meta {
+display: flex;
+flex-wrap: wrap;
+gap: var(--space-2);
+list-style: none;
+margin: var(--space-3) 0 0;
+padding: 0; }
+
+.post-meta li {
+margin: 0; }
+
+.post-meta a {
+background-color: var(--color-surface-subtle);
+border-radius: var(--radius-sm);
+color: var(--color-text-secondary);
+display: inline-block;
+font-size: var(--text-sm);
+padding: var(--space-1) var(--space-3);
+text-decoration: none;
+transition: background-color var(--transition-fast), color var(--transition-fast); }
+
+.post-meta a:hover {
+background-color: var(--color-accent);
+color: var(--white); }
+
+.post-meta a:visited {
+color: var(--color-text-secondary); }
+
+
+/* ━━━ FEED SIDEBAR (categories and tags) ━━━━ */
+
+[data-content="posts"] ~ div h2 {
+font-size: var(--text-md);
+margin-block-end: var(--space-3); }
+
+[data-content="posts"] ~ div ul {
+list-style: none;
+padding: 0; }
+
+[data-content="posts"] ~ div li {
+border-block-end: var(--border-width) solid var(--color-border-subtle);
+margin: 0;
+padding-block: var(--space-2); }
+
+[data-content="posts"] ~ div li:last-child {
+border-block-end: none; }
+
+[data-content="posts"] ~ div a {
+color: var(--color-text-secondary);
+font-weight: var(--weight-medium);
+text-decoration: none;
+transition: color var(--transition-fast); }
+
+[data-content="posts"] ~ div a:hover,
+[data-content="posts"] ~ div a:active {
+color: var(--color-accent); }
+
+[data-content="posts"] ~ div a:visited {
+color: var(--color-text-secondary); }
+
+[data-content="posts"] ~ div a[aria-current="page"] {
+color: var(--color-text);
+text-decoration: underline;
+text-decoration-thickness: 2px;
+text-underline-offset: 0.25em; }
+
+
+/* ━━━ PAGINATION ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+[aria-label="Pagination"] {
+margin-block: var(--space-6); }
+
+[aria-label="Pagination"] ol {
+display: flex;
+flex-wrap: wrap;
+gap: var(--space-2);
+list-style: none;
+margin: 0;
+padding: 0; }
+
+[aria-label="Pagination"] li {
+margin: 0; }
+
+[aria-label="Pagination"] a,
+[aria-label="Pagination"] span {
+align-items: center;
+border-radius: var(--radius-sm);
+display: flex;
+font-size: var(--text-sm);
+font-weight: var(--weight-medium);
+justify-content: center;
+min-block-size: 2rem;
+min-inline-size: 2rem;
+padding: var(--space-1) var(--space-3);
+text-decoration: none; }
+
+[aria-label="Pagination"] a {
+border: var(--border-width) solid var(--color-border);
+color: var(--color-text-secondary);
+transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast); }
+
+[aria-label="Pagination"] a:hover {
+background-color: var(--color-accent);
+border-color: var(--color-accent);
+color: var(--white); }
+
+[aria-label="Pagination"] a:visited {
+color: var(--color-text-secondary); }
+
+[aria-label="Pagination"] span[aria-current="page"] {
+background-color: var(--color-accent);
+color: var(--white); }
+
+
+/* ━━━ INDIVIDUAL POST ━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.post-feature {
+margin-block: var(--space-5) var(--space-6);
+margin-inline: 0; }
+
+.post-feature img {
+aspect-ratio: 16 / 9;
+display: block;
+object-fit: cover;
+width: 100%; }
+
+
+
+.post-dates {
+margin-block-end: var(--space-6); }
+
+.post-dates time + time {
+margin-block-start: var(--space-2); }
+
+/* "More posts" related content */
+aside[aria-label="More posts"] {
+border-block-start: var(--border-width) solid var(--color-border-subtle);
+margin-block-start: var(--space-8);
+padding-block-start: var(--space-6); }
+
+aside[aria-label="More posts"] ul {
+list-style: none;
+padding: 0; }
+
+aside[aria-label="More posts"] li {
+border-block-end: var(--border-width) solid var(--color-border-subtle);
+margin: 0;
+padding-block: var(--space-3); }
+
+aside[aria-label="More posts"] li:last-child {
+border-block-end: none; }
+
+
+/* ━━━ DARK THEME COMPONENT OVERRIDES ━━━━━━━━ */
+
+@media (prefers-color-scheme: dark) {
+.post-meta a:hover {
+color: var(--violet-900); }
+
+[aria-label="Pagination"] a:hover,
+[aria-label="Pagination"] span[aria-current="page"] {
+color: var(--violet-900); } }

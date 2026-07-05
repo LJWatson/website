@@ -1,8 +1,9 @@
 ---
 title: "Nielsen needs to think again"
-date: "2024-03-07"
-tags: ["Screen readers", "AI"]
-categories: "Web life"
+date: 2024-03-07
+postTags: ["Screen readers", "AI"]
+postCategories: ["Web life"]
+postSummary: "Jakob Nielsen reckons accessibility has failed, but as I go about my day using various accessible online services, I'm not convinced he's right about that."
 ---
 
 Jakob Nielsen thinks that [accessibility has failed](https://jakobnielsenphd.substack.com/p/accessibility-generative-ui).

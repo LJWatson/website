@@ -1,8 +1,9 @@
 ---
 title: "Why we need CSS Speech"
-date: "2022-10-18"
-tags: ["Screen readers"]
-categories: "Code things"
+date: 2022-10-18
+postTags: ["Screen readers"]
+postCategories: ["Code things"]
+postSummary: "Whilst almost every device can talk to you now, there's currently no way for web authors to design the aural presentation of content the way they can the visual — but CSS Speech could change that."
 ---
 
 In these times when almost every device and platform is capable of talking to you, you may be surprised to learn that there is no way for authors to design the aural presentation of web content, in the way they can design the visual presentation.

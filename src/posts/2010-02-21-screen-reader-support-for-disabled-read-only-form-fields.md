@@ -1,8 +1,9 @@
 ---
-title: "Screen Reader Support For Disabled & Read Only Form Fields"
-date: "2010-02-21"
-tags: ["HTML", "Screen readers"]
-categories: "Code things"
+title: "Screen reader support for disabled & read only form fields"
+date: 2010-02-21
+postTags: ["HTML", "Screen readers"]
+postCategories: ["Code things"]
+postSummary: "I was asked how screen readers handle disabled and read only form fields, and despite forms being commonplace on most websites, there's remarkably little information available on the subject."
 ---
 
 Some while ago I was asked how screen readers handle disabled and read only form fields. Despite forms being commonplace on most websites, there's remarkably little information available on the subject. It turns out that there's also very little consistency in the way different screen readers behave either.
@@ -14,7 +15,7 @@ The [HTML 4.01 specification](https://www.w3.org/TR/html4/interact/forms.html) d
 
 Both attributes are boolean, meaning they can either be on or off.
 
-## Disabled Form Fields
+## Disabled form fields
 
 The `disabled` attribute can be applied to button, input, optgroup, option, select and submit form fields. For example:
 
@@ -28,7 +29,7 @@ When applied to a form field, the `disabled` attribute means that the field:
 * Should be skipped in the tab order.
 * Should not successfully submit data.
 
-## Read Only Form Fields
+## Read only form fields
 
 The `readonly` attribute can be applied to input and textarea form fields. For example:
 
@@ -42,7 +43,7 @@ When applied to a form field, the `readonly` attribute means that a field:
 * Should be included in the tab order.
 * Should successfully submit data.
 
-## Screen Reader Results
+## Screen reader results
 
 Using these [disabled form fields](https://test-cases.tink.uk/disabled-form-fields/index.html) and [readonly form fields](https://test-cases.tink.uk/readonly-form-fields/index.html) test cases, page, I looked at the way three popular screen readers dealt with disabled and read only form fields. It wasn’t meant to be an exhaustive investigation, but more a chance to get a flavour of screen reader support. The screen readers in question were:
 

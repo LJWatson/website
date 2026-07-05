@@ -1,8 +1,9 @@
 ---
 title: "Understanding screen reader interaction modes"
-date: "2014-09-21"
-tags: ["Screen readers", "ARIA"]
-categories: "Code things"
+date: 2014-09-21
+postTags: ["Screen readers", "ARIA"]
+postCategories: ["Code things"]
+postSummary: "Windows screen readers like JAWS and NVDA have multiple interaction modes that automatically switch depending on the task, and your code can influence that behaviour."
 ---
 
 [Traduction française](https://access42.net/Comprendre-les-modes-d-interaction.html?lang=fr)

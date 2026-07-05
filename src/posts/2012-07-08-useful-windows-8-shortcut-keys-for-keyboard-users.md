@@ -1,8 +1,9 @@
 ---
 title: "Useful Windows 8 shortcut keys for keyboard users"
-date: "2012-07-08"
-tags: ["Windows"]
-categories: "Desktop things"
+date: 2012-07-08
+postTags: ["Windows"]
+postCategories: ["Desktop things"]
+postSummary: "Windows 8 is a big change from Windows 7 with a completely reworked interface focused on touch, meaning a whole new set of keyboard shortcuts for keyboard users."
 ---
 
 Windows 8 is a big change from Windows 7. With features like the Metro start screen and charm bar, the interface has been completely reworked and the focus is on touch screen devices. That also means a whole new set of shortcut keys for keyboard devices too.

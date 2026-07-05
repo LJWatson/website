@@ -1,8 +1,9 @@
 ---
 title: "Accessible SVG tables"
-date: "2017-08-05"
-tags: ["SVG", "ARIA"]
-categories: "Code things"
+date: 2017-08-05
+postTags: ["SVG", "ARIA"]
+postCategories: ["Code things"]
+postSummary: "SVG has no native table semantics, but ARIA1.1 introduces roles that can polyfill the necessary information, making SVG tables more accessible for screen reader users."
 ---
 
 SVG has no native semantics for representing structures like tables, but [ARIA1.1](https://www.w3.org/TR/wai-aria-1.1/) introduces a number of roles that can be used to polyfill the necessary semantic information.

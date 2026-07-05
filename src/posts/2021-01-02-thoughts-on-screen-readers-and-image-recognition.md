@@ -1,8 +1,9 @@
 ---
 title: "Thoughts on screen readers and image recognition"
-date: "2021-01-02"
-tags: ["Screen readers", "AI"]
-categories: "Web life"
+date: 2021-01-02
+postTags: ["Screen readers", "AI"]
+postCategories: ["Web life"]
+postSummary: "Text alternatives for images have been an accessibility first principle since 1999, but over 30% of homepage images are still missing descriptions, leaving blind users unable to see or use that content."
 ---
 
 The provision of text alternatives has been a first principle of accessibility since before [WCAG 1.0](https://www.w3.org/TR/WCAG10/) made it official in 1999, but apparently not everyone has got the message. According to the [WebAIM Million from February 2020](https://webaim.org/projects/million/), more than 30% of homepage images were missing text descriptions and more than half of those images were part of links.

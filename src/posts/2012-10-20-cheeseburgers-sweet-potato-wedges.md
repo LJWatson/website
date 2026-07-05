@@ -1,8 +1,9 @@
 ---
 title: "Cheeseburgers & sweet potato wedges"
-date: "2012-10-20"
-tags: ["Dinner"]
-categories: "Recipe book"
+date: 2012-10-20
+postTags: ["Dinner"]
+postCategories: ["Recipe book"]
+postSummary: "With Guy Fawkes' night coming up, these easy cheeseburgers and sweet potato wedges are perfect to eat before heading out to enjoy the fireworks, and they're madly versatile too."
 ---
 
 With Guy Fawkes’ night coming up, these cheeseburgers and sweet potato wedges are great to eat before you head out to enjoy the fireworks. They’re incredibly easy to make, and madly versatile, so you can rustle them up anytime throughout the year.

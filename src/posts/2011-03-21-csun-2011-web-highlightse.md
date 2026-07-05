@@ -1,8 +1,9 @@
 ---
-title: "CSUN 2011 Web highlightse"
-date: "2011-03-21"
-tags: []
-categories: "Real life"
+title: "CSUN 2011 web highlightse"
+date: 2011-03-21
+postTags: []
+postCategories: ["Real life"]
+postSummary: "I attended the CSUN conference where people from around the world gathered to share knowledge and discuss ideas. Here are some highlights from the web stream on web accessibility and HTML5."
 ---
 
 The California State University Northridge 26th Annual International Technology and Persons with Disabilities Conference, referred to simply as [CSUN](https://www.csunconference.org), was an extraordinary few days. People from all over the world gathered to share knowledge and discuss ideas. Here are a few highlights from the web stream.
@@ -92,7 +93,7 @@ Best practice approaches taken by Yahoo! To increase the usability of accessible
 
 * [Next generation web accessibility: Improving usability for disabled users](https://www.slideshare.net/ArturOrtega/next-generation-web-accessibility-improvement-of-usability-for-disabled-users-7311170)
 
-## HTML5 Accessibility
+## HTML5 accessibility
 
 * [Steve Faulkner (TPG)](https://twitter.com/#!/stevefaulkner)
 * [John Foliot (Stanford University)](https://www.twitter.com/#!/johnfoliot)
@@ -116,7 +117,7 @@ A look at the work being done by AOL and TPG to address the accessibility shortc
 
 [
 
-## HTML5 and Flash: An accessibility comparison
+## HTML5 and Flash: an accessibility comparison
 
 ](https://access.aol.com/csun2011/)
 
@@ -135,7 +136,7 @@ Ways to achieve WCAG 2.0 conformance with the HTML5 media elements.
 
 Presentation source to be confirmed.
 
-## Introducing DISTCHA * Yet another attempt at killing CAPTCHA
+## Introducing DISTCHA * yet another attempt at killing CAPTCHA
 
 * Vincent François (Accessibilité Web)
 
@@ -143,7 +144,7 @@ Could there be a secure, accessible and inclusive alternative to CAPTCHA?
 
 * [Introducing DISTCHA: Yet another attempt at killing CAPTCHA](https://www.accessibiliteweb.com/presentations/2011/csun/distcha/)
 
-## Accessible Twitter: An update
+## Accessible Twitter: an update
 
 * [Dennis Lembrée (RIM)](https://www.twitter.com/dennisl)
 
@@ -181,7 +182,7 @@ A look at the common misconceptions about accessibility commonly felt by enginee
 
 * [Role of engineering best practices to create an inclusive web](https://www.slideshare.net/SrinivasuChakravarthula/role-ofengineeringbestpracticestocreateaninclusiveweb-final1)
 
-## How CA Technologies established a 508-compliant Video Standards Program
+## How CA Technologies established a 508-compliant video standards program
 
 * [Mike Paciello (TPG)](https://www.twitter.com/mpaciello)
 

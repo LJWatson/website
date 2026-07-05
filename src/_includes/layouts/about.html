@@ -1,0 +1,48 @@
+{% set assetHash = global.random() %}
+
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+
+{% include "partials/head.html" %}
+
+<body id="{{ site.siteID }}">
+
+{% include "partials/analytics-body.html" %}
+
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+{% include "partials/header.html" %}
+
+<main id="main-content">
+
+{% if featureImage %}
+<div class="layout" data-layout="rome">
+<div>
+<figure>
+<img src="{{ featureImage }}" alt="{{ featureImageAlt or featureImageCaption }}" />
+{% if featureImageCaption %}
+<figcaption>{{ featureImageCaption }}</figcaption>
+{% endif %}
+</figure>
+</div>
+<div>
+{% endif %}
+
+<h1>{{ title }}</h1>
+{% if lede %}{{ lede | markdown | safe }}{% endif %}
+{{ content | safe }}
+{% if aside %}{{ aside | markdown | safe }}{% endif %}
+
+{% if featureImage %}
+</div>
+</div>
+{% endif %}
+
+</main>
+
+{% include "partials/footer.html" %}
+<script src="{{ site.assetPath }}/js/scripts.js"></script>
+{% include "partials/pagefind.html" %}
+</body>
+
+</html>

@@ -1,8 +1,9 @@
 ---
 title: "Slow cooker French onion soup with cheese toasts"
-date: "2024-11-22"
-tags: ["Lunch", "Dinner"]
-categories: "Recipe book"
+date: 2024-11-22
+postTags: ["Lunch", "Dinner"]
+postCategories: ["Recipe book"]
+postSummary: "Making French onion soup can be a faff, but if you're not in a hurry, you can use a slow cooker to make it instead—it takes just 15 minutes prep and 8.5 hours in the cooker."
 ---
 
 Making French onion soup can be a [bit of a faff](https://dictionary.cambridge.org/dictionary/english/faff), especially when it comes to caramelising the onions, but if you're not in a hurry, you can use a slow cooker to make it instead.

@@ -1,0 +1,21 @@
+<header>
+
+<a href="/" aria-label="{{ site.name }}" class="wordmark-link">{% include "partials/wordmark.html" %}</a>
+
+{% if features.navigationMenus %}
+{% include "partials/navigation-menu.html" %}
+{% else %}
+<nav data-navigation-body="bar" aria-label="Website">
+<ul>
+{% for item in navigation.items %}
+<li><a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a></li>
+{% endfor %}
+</ul>
+</nav>
+{% endif %}
+
+<search aria-label="Site">
+<pagefind-searchbox shortcut="" hide-shortcut></pagefind-searchbox>
+</search>
+
+</header>

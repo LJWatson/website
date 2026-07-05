@@ -1,0 +1,18 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% for entry in collections.all %}
+{% if entry.url and entry.page and entry.page.outputPath and entry.page.outputPath.endsWith(".html") and entry.data.sitemap != false and not entry.url.startsWith("/admin/") %}
+{% set locUrl = entry.url %}
+{% if site.absoluteUrl %}
+{% set locUrl = site.absoluteUrl + entry.url %}
+{% endif %}
+  <url>
+    <loc>{{ locUrl }}</loc>
+  </url>
+{% endif %}
+{% endfor %}
+</urlset>

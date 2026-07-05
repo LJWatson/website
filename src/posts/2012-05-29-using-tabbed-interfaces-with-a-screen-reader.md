@@ -1,8 +1,9 @@
 ---
 title: "Using tabbed interfaces with a screen reader"
-date: "2012-05-29"
-tags: ["ARIA", "HTML", "Screen readers"]
-categories: "Code things"
+date: 2012-05-29
+postTags: ["ARIA", "HTML", "Screen readers"]
+postCategories: ["Code things"]
+postSummary: "Tabbed interfaces are visually intuitive and space-efficient, but screen reader users face two key challenges: visual clues aren't available, and the required interaction isn't obvious."
 ---
 
 Tabbed interfaces are increasingly common on web pages. They make good use of space, and they can be visually intuitive. Using tabs with a screen reader is a different experience though.

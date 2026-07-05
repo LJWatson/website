@@ -1,8 +1,9 @@
 ---
 title: "Jaws scripts for the HTML5 `main` element"
-date: "2012-11-17"
-tags: ["Screen readers", "ARIA", "HTML"]
-categories: "Code things"
+date: 2012-11-17
+postTags: ["Screen readers", "ARIA", "HTML"]
+postCategories: ["Code things"]
+postSummary: "Jaws scripts are no longer available, but a shortcut for moving directly to the `main` element is now standard, offering a more reliable way for screen readers to pinpoint primary content."
 ---
 
 **Updated:** 1 November 2018

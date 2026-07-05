@@ -1,8 +1,9 @@
 ---
 title: "Using the aria-current attribute"
-date: "2017-01-14"
-tags: ["ARIA", "Screen readers"]
-categories: "Code things"
+date: 2017-01-14
+postTags: ["ARIA", "Screen readers"]
+postCategories: ["Code things"]
+postSummary: "Highlighting the current item in a collection visually is common on the web, but providing an alternative for screen reader users has often involved hacks—that's where the `aria-current` attribute comes in to solve this problem."
 ---
 
 It is common on the web for the current thing in a collection to be highlighted visually, but providing an alternative for screen reader users has often involved something of a hack. The [aria-current](https://www.w3.org/TR/wai-aria-1.1/#aria-current) attribute is intended to solve this problem.

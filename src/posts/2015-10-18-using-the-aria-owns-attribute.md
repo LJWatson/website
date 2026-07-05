@@ -1,8 +1,9 @@
 ---
 title: "Using the aria-owns attribute"
-date: "2015-10-18"
-tags: ["ARIA", "HTML"]
-categories: "Code things"
+date: 2015-10-18
+postTags: ["ARIA", "HTML"]
+postCategories: ["Code things"]
+postSummary: "Sometimes parent/child relationships are evident on-screen but missing from the DOM; the `aria-owns` attribute can establish that relationship in the accessibility layer, though screen reader support remains inconsistent."
 ---
 
 When a parent/child relationship is evident on-screen, but it isn’t represented in the DOM, the [aria-owns](https://www.w3.org/TR/wai-aria/states_and_properties#aria-owns) attribute can be used to establish that relationship in the accessibility layer.

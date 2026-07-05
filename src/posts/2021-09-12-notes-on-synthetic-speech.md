@@ -1,8 +1,9 @@
 ---
 title: "Notes on synthetic speech"
-date: "2021-09-12"
-tags: ["Screen readers", "Voice"]
-categories: "Web life"
+date: 2021-09-12
+postTags: ["Screen readers", "Voice"]
+postCategories: ["Web life"]
+postSummary: "I've been thinking about conversational interfaces and the importance of voice quality in user experience, particularly as a screen reader user who's been listening to the same synthetic voice for about 20 years."
 ---
 
 I've been thinking about conversational interfaces for some time, and about the importance of voice quality as a part of user experience. 

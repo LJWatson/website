@@ -1,8 +1,9 @@
 ---
 title: "Marking up the current page with HTML5 links"
-date: "2011-07-31"
-tags: ["HTML"]
-categories: "Code things"
+date: 2011-07-31
+postTags: ["HTML"]
+postCategories: ["Code things"]
+postSummary: "HTML5 changes how you should mark up the current page in navigation. Instead of using the `strong` element like in HTML4.01, the HTML5 spec recommends using a plain `a` element without an `href` attribute."
 ---
 
 **Updated on 3rd July 2017:** this post is out of date, please read [Using the aria-current attribute](/using-the-aria-current-attribute/) instead.

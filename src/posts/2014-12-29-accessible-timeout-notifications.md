@@ -1,8 +1,9 @@
 ---
 title: "Accessible timeout notifications"
-date: "2014-12-29"
-tags: ["ARIA", "HTML", "JavaScript", "Screen readers"]
-categories: "Code things"
+date: 2014-12-29
+postTags: ["ARIA", "HTML", "JavaScript", "Screen readers"]
+postCategories: ["Code things"]
+postSummary: "I've written about making session timeout warnings accessible to all users, including those using assistive technologies like screen readers, by moving keyboard focus to the notification and using proper ARIA attributes."
 ---
 
 When a web application has a session timeout, it’s a good idea to warn users about the impending timeout and give them the opportunity to do something about it. It’s therefore important to make sure that all users know when the warning notification appears.

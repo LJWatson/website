@@ -1,0 +1,11 @@
+{
+  "featureFlag": "blog",
+  "mainNavigationItems": [
+    {
+      "text": "Blog",
+      "url": "/blog/"
+    }
+  ],
+  "footerNavigationItems": [],
+  "cms": true
+}

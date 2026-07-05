@@ -1,14 +1,15 @@
 ---
-title: "Standards.Next Cognition & Accessibility"
-date: "2009-09-20"
-categories: "Real life"
+title: "Standards.Next cognition & accessibility"
+date: 2009-09-20
+postCategories: ["Real life"]
+postSummary: "On Saturday 19th September, Standards.Next hosted an informal meetup focused on cognition and accessibility, one of the least documented and understood areas of web accessibility, with four presentations exploring key issues."
 ---
 
 [Standards.Next](https://otrops.com/notes/Standards.Next_-_Cognition_and_accessibility) is an informal meetup hosted by [Opera](https://www.opera.com), and attended by anyone with an interest in web standards and beyond. On Saturday 19th September focus turned to one of the most unchartered areas of user experience: Cognition and Accessibility.
 
 Cognition covers an incredibly wide range of conditions and requirements. It's one of the least well documented areas of web accessibility, and perhaps the least understood. The four presentations at Standards.Next provided a fantastic insight into some of the key issues.
 
-## Accessibility Beyond Code
+## Accessibility beyond code
 
 [Antonia Hyde](https://www.twitter.com/hiantonia) kicked off with a powerful message: People are not defined by their disability. She went on to say that people with learning disabilities do use websites, and they often treasure the ability to use the web in their own homes, where there is shelter from the bustle and distraction of the outside world.
 
@@ -24,7 +25,7 @@ Antonia also explained that people don't often know how to use their browser set
 
 * [Antonia's thoughts on Standards.Next](https://hiantonia.wordpress.com/)
 
-## Autism, the Internet & Antelopes
+## Autism, the Internet & antelopes
 
 [Jamie Knight](https://twitter.com/JamieKnight) from JK3 explained that Autism isn't being stupid or being difficult. It's a different way of processing information and it affects people in different ways. It's just that some people are at a more noticeable end of the spectrum than others. Jamie spoke about some of the ideas he has about information on the web:
 
@@ -38,7 +39,7 @@ Jamie also talked about the importance of literal meanings. With typical good hu
 
 * [Jamie's thoughts on Standards.Next](https://jkg3.com/Journal/150/standardsnext-cognitive-accessibility)
 
-## Lessons Learned Doing Usability Testing
+## Lessons learned doing usability testing
 
 [David Owens](https://www.twitter.com/fineartdavid) from Transmedia Gateway spoke about his experiences of testing with people with Autism. His message was simple. If people can't use it, you're building it the wrong way. David went on to talk about the lessons he'd learnt:
 
@@ -51,7 +52,7 @@ David also talked about the importance of sharing insights from usability testin
 
 * [David's thoughts on Standards.Next](https://fineartdavid.com/standardsnext.htm)
 
-## Content & Cognition
+## Content & cognition
 
 [Ian Pouncey](https://twitter.com/IanPouncey) from Yahoo! wrapped up the day by taking it back to basics. He talked about many of the standard concepts of web accessibility, but with a focus on cognition. Some of Ian's key points include:
 
@@ -66,7 +67,7 @@ Ian also explained that spelling mistakes can cause problems for people as they 
 
 * [Ian's thoughts on Standards.Next](https://ianpouncey.com/weblog/2009/09/standardsnext-cognition-and-accessibility/)
 
-## Closing Thoughts
+## Closing thoughts
 
 Some key points really stood out for me during the day. For the first time I came down off the fence about style switchers. I'd never quite decided whether it was better to give people the ability to use their browser settings, or provide a widget on the page.  
 Now I've come to understand that some people will aalways find it difficult to go through their browser to make those choices.

@@ -1,8 +1,9 @@
 ---
 title: "How screen readers navigate data tables"
-date: "2020-09-28"
-tags: ["Screen readers", "HTML"]
-categories: "Code things"
+date: 2020-09-28
+postTags: ["Screen readers", "HTML"]
+postCategories: ["Code things"]
+postSummary: "When a table is created with appropriate HTML elements or ARIA roles, screen readers can inform users about table characteristics and provide keyboard commands for navigating tabular content."
 ---
 
 When a table is created using the appropriate HTML elements (or ARIA roles) screen readers can inform users about the characteristics of the table, and users have access to keyboard commands specifically for navigating tabular content. 

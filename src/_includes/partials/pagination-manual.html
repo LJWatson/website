@@ -1,0 +1,30 @@
+{% if totalPages > 1 %}
+{% set current = pageNumber %}
+{% set total = totalPages %}
+<section aria-label="Pagination">
+<ol>
+{% for i in range(0, total) %}
+{% set show = (i == 0) or (i == total - 1) or (i >= current - 1 and i <= current + 1) %}
+{% if show %}
+{% set prevI = i - 1 %}
+{% set prevShow = (prevI == 0) or (prevI == total - 1) or (prevI >= current - 1 and prevI <= current + 1) %}
+{% if i > 0 and not prevShow %}
+<li><span>…</span></li>
+{% endif %}
+{% if i == 0 %}
+{% set pageUrl = baseUrl %}
+{% else %}
+{% set pageUrl = baseUrl + "page/" + i + "/" %}
+{% endif %}
+<li>
+{% if i == current %}
+<span aria-current="page">{{ i + 1 }}</span>
+{% else %}
+<a href="{{ pageUrl }}">{{ i + 1 }}</a>
+{% endif %}
+</li>
+{% endif %}
+{% endfor %}
+</ol>
+</section>
+{% endif %}

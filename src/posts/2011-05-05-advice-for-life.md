@@ -1,8 +1,9 @@
 ---
 title: "Advice for life"
-date: "2011-05-05"
-tags: ["Philosophy"]
-categories: "Real life"
+date: 2011-05-05
+postTags: ["Philosophy"]
+postCategories: ["Real life"]
+postSummary: "In 1997, Mary Schmich published life advice in the Chicago Tribune, which Baz Luhrmann turned into a chillout anthem in 1999—some of the best life advice I've ever heard."
 ---
 
 In 1997, Mary Schmich published a [guide to life](https://www.chicagotribune.com/news/columnists/chi-schmich-sunscreen-column,0,4054576.column) in the Chicago Tribune. In 1999, Baz Lurhmann turned it into a chillout anthem called [Everybody's Free (To Wear Sunscreen)](https://www.youtube.com/watch?v=sTJ7AzBIJoI). It was, and remains, some of the best advice for life I've ever heard...

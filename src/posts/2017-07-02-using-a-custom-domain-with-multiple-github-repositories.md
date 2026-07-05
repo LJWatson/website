@@ -1,7 +1,8 @@
 ---
-title: "Using a custom domain with multiple Github repositories"
-date: "2017-07-02"
-categories: "Web life"
+title: "Using a custom domain with multiple GitHub repositories"
+date: 2017-07-02
+postCategories: ["Web life"]
+postSummary: "I've figured out how to use a single custom domain with multiple Github repositories that use Github Pages, and it's simpler than the documentation makes it seem."
 ---
 
 It's possible to use a single custom domain with multiple [Github](https://github.com) repositories that use [Github Pages](https://pages.github.com/). The available documentation makes it seem more complicated than it is, so this is an effort to provide some more simple instructions.

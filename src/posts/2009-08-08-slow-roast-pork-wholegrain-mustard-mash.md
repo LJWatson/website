@@ -1,8 +1,9 @@
 ---
 title: "Slow roast pork & wholegrain mustard mash"
-date: "2009-08-08"
-tags: ["Dinner"]
-categories: "Recipe book"
+date: 2009-08-08
+postTags: ["Dinner"]
+postCategories: ["Recipe book"]
+postSummary: "I've spent years wondering how to get pork crackling just right, and I've finally cracked it: the secret is slow cooking, proving that all good things come to those who wait."
 ---
 
 Sunday lunch is a time to indulge yourself. Gather up your friends and family, catch up on all the news, and enjoy a sumptuous roast. For years I wondered how to roast pork so that the crackling came out just right. The secret is slow cooking, proving that all good things including the perfect crackling, come to those who wait.

@@ -1,0 +1,20 @@
+<head>
+
+{% include "partials/meta.html" %}
+{% include "partials/json-ld.html" %}
+{% include "partials/analytics-head.html" %}
+
+<meta name="color-scheme" content="light dark" />
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#6D28D9" />
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1A1025" />
+
+{% if features.blog %}
+<link rel="alternate" type="application/rss+xml" href="{{ site.assetPath }}/feed.xml" />
+{% endif %}
+<link rel="stylesheet" href="{{ site.assetPath }}/css/critical.css">
+<link rel="stylesheet" href="/pagefind/pagefind-component-ui.css">
+{% if features.blog %}
+<link rel="stylesheet" href="{{ site.assetPath }}/css/blog.css">
+{% endif %}
+
+</head>

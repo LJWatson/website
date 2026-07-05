@@ -1,8 +1,9 @@
 ---
-title: "Wendy Chisholm's Chocolate pudding"
-date: "2012-02-05"
-tags: ["Pudding", "Web standards food"]
-categories: "Recipe book"
+title: "Wendy Chisholm's chocolate pudding"
+date: 2012-02-05
+postTags: ["Pudding", "Web standards food"]
+postCategories: ["Recipe book"]
+postSummary: "I'm bringing together food and technology again in this series, and this beautiful chocolate pudding is from Wendy Chisholm of the web standards community."
 ---
 
 The third in a series of posts that bring together the two sides of my blog: Food and technology. I’ve asked the great and the good from the [web standards community](/tag/web-standards-food/) to share their favourite recipes. This beautiful chocolate pudding is from [Wendy Chisholm](https://www.twitter.com/wendyabc).

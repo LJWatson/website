@@ -1,8 +1,9 @@
 ---
 title: "Confit of duck"
-date: "2009-12-02"
-tags: ["Dinner"]
-categories: "Recipe book"
+date: 2009-12-02
+postTags: ["Dinner"]
+postCategories: ["Recipe book"]
+postSummary: "Confit of duck is a classic French dish that's absolutely scrumptious, with crispy skin and meat that falls off the bone—it takes a bit of preparation, but it's definitely worth it."
 ---
 
 Confit of duck is a classic French dish and it’s absolutely scrumptious! If you like duck with a crispy skin and meat that just falls off the bone, this is the food for you. It takes a little bit of preparation, but it’s worth it.

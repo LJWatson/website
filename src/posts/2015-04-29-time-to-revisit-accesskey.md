@@ -1,8 +1,9 @@
 ---
 title: "Time to revisit accesskey?"
-date: "2015-04-29"
-tags: ["HTML", "JavaScript", "Screen readers"]
-categories: "Code things"
+date: 2015-04-29
+postTags: ["HTML", "JavaScript", "Screen readers"]
+postCategories: ["Code things"]
+postSummary: "Many websites provide keyboard shortcuts for common tasks, but the way they're delivered using JavaScript is problematic for Windows screen reader users because the screen reader intercepts the keys."
 ---
 
 Many websites provide keyboard shortcuts for common tasks. Keyboard shortcuts are useful things to have, but the way in which they’re provided is often problematic for Windows screen reader users.

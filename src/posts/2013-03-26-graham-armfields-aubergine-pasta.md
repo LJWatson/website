@@ -1,8 +1,9 @@
 ---
-title: "Graham Armfield's Aubergine pasta"
-date: "2013-03-26"
-tags: ["Dinner", "Web standards food"]
-categories: "Recipe book"
+title: "Graham Armfield's aubergine pasta"
+date: 2013-03-26
+postTags: ["Dinner", "Web standards food"]
+postCategories: ["Recipe book"]
+postSummary: "I'm bringing together the two sides of my blog with recipes from the web standards community, and this easy pasta dish is from Graham Armfield."
 ---
 
 The ninth in a series of posts that bring together the two sides of my blog: Food and technology. I’ve asked the great and the good from the [web standards community](/tag/web-standards-food/) to share their favourite recipes. This easy pasta dish is from [Graham Armfield](https://www.twitter.com/coolfields).

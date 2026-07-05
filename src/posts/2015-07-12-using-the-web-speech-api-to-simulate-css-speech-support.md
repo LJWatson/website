@@ -1,8 +1,9 @@
 ---
 title: "Using the Web Speech API to simulate CSS Speech support"
-date: "2015-07-12"
-tags: ["CSS", "JavaScript", "Web Speech API", "Screen readers"]
-categories: "Code things"
+date: 2015-07-12
+postTags: ["CSS", "JavaScript", "Web Speech API", "Screen readers"]
+postCategories: ["Code things"]
+postSummary: "The CSS Speech module is largely unsupported in browsers, but I've created a demo using the Web Speech API to show how CSS Speech properties might give content aural style, similar to how other CSS properties provide visual style."
 ---
 
 Updated on 4th February 2018.
@@ -11,7 +12,7 @@ The CSS Speech properties are intended to give content aural style, in the same 
 
 The CSS Speech module and Web Speech API both use [Text To Speech (TTS)](https://en.wikipedia.org/wiki/Speech_synthesis). The CSS Speech module describes how a service that uses TTS (like a screen reader or voice assistant) speaks web content, and the Web Speech API produces synthetic speech using a TTS engine.
 
-## Text To Speech
+## Text to speech
 
 There are TTS engines bundled with most platforms. Voice assistants like Siri, Cortana or Google Talk tend to use platform TTS engines. Screen readers may also use the platform TTS, but often come bundled with alternative TTS engines that offer a wider choice of voices or language support.
 

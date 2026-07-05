@@ -1,0 +1,30 @@
+---js
+{
+  pagination: {
+    data: "collections.blogCategoryPages",
+    size: 1,
+    alias: "category",
+    addAllPagesToCollections: true
+  },
+  permalink: function(data) { return data.category.permalink; },
+  layout: "layouts/base.html",
+  eleventyComputed: {
+    title: function(data) { return data.category ? data.category.title : "Category"; }
+  }
+}
+---
+
+<div class="layout" data-layout="athens">
+
+<div data-content="posts">
+{% set postListItems = category.posts %}
+{% include "partials/post-list.html" %}
+{% set pageNumber = category.pageNumber %}
+{% set totalPages = category.totalPages %}
+{% set baseUrl = category.baseUrl %}
+{% include "partials/pagination-manual.html" %}
+</div>
+
+{% include "partials/blog-sidebar.html" %}
+
+</div>

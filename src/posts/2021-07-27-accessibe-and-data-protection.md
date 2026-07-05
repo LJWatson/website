@@ -1,8 +1,9 @@
 ---
 title: "AccessiBe and data protection?"
-date: "2021-07-27"
-tags: ["Screen readers", "Privacy", "JavaScript"]
-categories: "Web life"
+date: 2021-07-27
+postTags: ["Screen readers", "Privacy", "JavaScript"]
+postCategories: ["Web life"]
+postSummary: "The case against accessibility overlays is well established, but AccessiBe's privacy practices deserve closer scrutiny—particularly how it tracks your browsing activity and personal data across websites."
 ---
 
 The [case for not using accessibility overlays](https://overlayfactsheet.com/) has been made and endorsed by industry professionals, disability organisations, and people with disabilities. One concern is the [privacy of personal data](https://overlayfactsheet.com/#privacy), and in the case of the [AccessiBe overlay](https://accessibe.com), it deserves closer scrutiny.
@@ -23,7 +24,7 @@ When I turned off ETP and tried again, I found that the AccessiBe overlay automa
 
 I wrote about my [thoughts on screen reader detection](/thoughts-on-screen-reader-detection) in 2014. Now, I wanted to understand the full impact screen reader detection could have on my personal privacy.
 
-## Third party Javascript
+## Third party JavaScript
 
 When the AccessiBe overlay is opened, the JavaScript it uses sets up local storage, session storage, and cookies from accounts.accessibe.com, although no persistent data seems to be stored in them. In other words, AccessiBe does not appear to use cookies or web storage for tracking (no matter if you use an assistive technology or not).
 

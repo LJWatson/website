@@ -1,8 +1,9 @@
 ---
-title: "Gez Lemon's Broccoli pesto pasta"
-date: "2012-02-19"
-tags: ["Dinner", "Web standards food"]
-categories: "Recipe book"
+title: "Gez Lemon's broccoli pesto pasta"
+date: 2012-02-19
+postTags: ["Dinner", "Web standards food"]
+postCategories: ["Recipe book"]
+postSummary: "I'm sharing recipes from web standards community people, and this time Gez Lemon's contributed a tasty vegetarian broccoli pesto pasta that's healthy, lemony, and brilliantly quick to make."
 ---
 
 The fourth in a series of posts that bring together the two sides of my blog: Food and technology. I’ve asked the great and the good from the [web standards community](/tag/web-standards-food/) to share their favourite recipes. This tempting vegetarian recipe is from [Gez Lemon](https://www.twitter.com/gezlemon).

@@ -1,8 +1,9 @@
 ---
 title: "Inaccessible Cyber Streetwise website"
-date: "2014-02-21"
-tags: []
-categories: "Web life"
+date: 2014-02-21
+postTags: []
+postCategories: ["Web life"]
+postSummary: "The UK Home Office launched Cyber Streetwise in January to change attitudes towards online security, but it's a complete travesty when it comes to accessibility—it can't be used with keyboards or assistive technologies."
 ---
 
 The [Cyber Streetwise](https://www.cyberstreetwise.com/#!/street) website was launched by the UK [Home Office](https://www.gov.uk/government/organisations/home-office) in January. Developed by [Nudge Digital](https://www.nudgedigital.co.uk/), Cyber Streetwise is a high profile website intended to change attitudes towards online security. It is also a complete travesty when it comes to accessibility.

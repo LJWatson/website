@@ -1,8 +1,9 @@
 ---
 title: "Playing with the Accessibility Object Model (AOM)"
-date: "2017-09-15"
-tags: ["ARIA", "JavaScript", "Screen readers"]
-categories: "Code things"
+date: 2017-09-15
+postTags: ["ARIA", "JavaScript", "Screen readers"]
+postCategories: ["Code things"]
+postSummary: "The Accessibility Object Model (AOM) is an experimental JavaScript API that enables developers to modify the browser accessibility tree, with phase one support recently landing in Chrome Canary behind a flag."
 ---
 
 **Updated on 27th February 2019:** The Accessibility Object Model (AOM) specification has been updated and `accessibleNode` has been dropped. Read the [AOM explainer](https://github.com/WICG/aom/blob/gh-pages/explainer.md) for more information.
@@ -24,7 +25,7 @@ The AOM is being developed by Alice Boxhall and Dominic Mazzoni of Google, James
 3. Create virtual accessibility nodes (not associated with DOM nodes);
 4. Programmatically explore the accessibility tree, and access the computed properties of accessibility nodes.
 
-## AOM Phase 1
+## AOM phase 1
 
 The [AOM Phase 1 specification](https://wicg.github.io/aom/spec/) introduces the `AccessibleNode` and `AccessibleNodeList` interfaces. These enable developers to modify the semantics of nodes in the accessibility tree, and to pass references to accessible nodes to other properties.
 

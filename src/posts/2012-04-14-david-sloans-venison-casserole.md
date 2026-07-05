@@ -1,8 +1,9 @@
 ---
-title: "David Sloan's Venison casserole"
-date: "2012-04-14"
-tags: ["Dinner", "Web standards food"]
-categories: "Recipe book"
+title: "David Sloan's venison casserole"
+date: 2012-04-14
+postTags: ["Dinner", "Web standards food"]
+postCategories: ["Recipe book"]
+postSummary: "I'm bringing together the two sides of my blog with recipes from the web standards community, and this hearty venison casserole is from David Sloan."
 ---
 
 The seventh in a series of posts that bring together the two sides of my blog: Food and technology. I’ve asked the great and the good from the [web standards community](/tag/web-standards-food/) to share their favourite recipes. This hearty feast is from [David Sloan](https://www.twitter.com/sloandr).

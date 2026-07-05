@@ -1,8 +1,9 @@
 ---
 title: "Screen reader support for HTML5 sections"
-date: "2013-02-17"
-tags: ["Screen readers", "HTML"]
-categories: "Code things"
+date: 2013-02-17
+postTags: ["Screen readers", "HTML"]
+postCategories: ["Code things"]
+postSummary: "I tested how well screen readers support HTML5's sectioning elements like `header`, `footer`, `nav`, `article`, `section` and `aside`, and the results show support is patchy and inconsistent across different screen readers and browsers."
 ---
 
 HTML5 includes a handful of [sectioning elements](https://www.w3.org/TR/2011/WD-html5-20110525/sections.html) that give documents a robust semantic structure. The `header`, `footer`, `nav`, `article`, `section` and `aside` elements give different regions of a document meaning. Amongst other things, that meaning can be understood by screen readers, and the information used to help blind and partially sighted people orient themselves and navigate around the page.

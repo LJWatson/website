@@ -1,32 +1,31 @@
-{% extends "layouts/base.html" %} 
+{% extends "layouts/base.html" %}
 
-{% set pageHeaderTitle = title %}
-{% set pageHeaderSummary = content %}
 {% set postListItems = pagination.items %}
 
-{# If this is a taxonomy, grab those items instead as one large collection #}
-{% if taxonomy %}
-  {% set postListItems = helpers.filterCollectionsByTaxonomy(collections, taxonomy.text, taxonomyKey) %}
-  {% set pageHeaderTitle = 'Blog posts filed under “' + taxonomy.text + '”' %}
+{% if tag %}
+{% set postListItems = collections[tag] %}
+{% set pageHeaderTitle = 'Posts tagged "' + tag + '"' %}
+{% else %}
+{% set pageHeaderTitle = title %}
 {% endif %}
 
 {% block content %}
-  {# The homepage still uses feed so we set homepage specific stuff here #}
-  {% if page.url === '/' %}
-    <h1 class="visually-hidden">{{ site.homepageTitle }}</h1>
-  {% elseif taxonomy %}
-    <h1>{{ 'Posts filed under “' + taxonomy.text + '”' }}</h1>
-    <hr />
-  {% else %}
-    {# We take one off the total because page one is actually the homepage #}
-    <h1>Page {{ pagination.pageNumber }} of {{ pagination.pages.length - 1}} of the blog</h1>
-    <hr />
-  {% endif %}
-  
-  {% include "partials/post-list.html" %}
 
-  {% if not taxonomy %}
-    <hr />
-    {% include "partials/pagination.html" %}
-  {% endif %}
+<h1>{{ pageHeaderTitle }}</h1>
+
+{{ content | safe }}
+
+<div class="layout" data-layout="athens">
+
+<div data-content="posts">
+{% include "partials/post-list.html" %}
+{% if not tag %}
+{% include "partials/pagination.html" %}
+{% endif %}
+</div>
+
+{% include "partials/blog-sidebar.html" %}
+
+</div>
+
 {% endblock %}

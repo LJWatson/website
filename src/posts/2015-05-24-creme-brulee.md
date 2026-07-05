@@ -1,8 +1,9 @@
 ---
 title: "Crème brulée"
-date: "2015-05-24"
-tags: ["Pudding"]
-categories: "Recipe book"
+date: 2015-05-24
+postTags: ["Pudding"]
+postCategories: ["Recipe book"]
+postSummary: "A friend recently gave me some saffron, so I made crème brulée with a little extra magic in it—ridiculously easy to make, exudes classic style, and has an element of danger about it."
 ---
 
 When a friend generously gave me some saffron recently, it presented me with an opportunity to make crème brulée with a little extra magic in it. crème brulée is ridiculously easy to make, exudes classic style, and even has an element of danger about it... so even if (like me) you rarely eat dessert, what's not to like?

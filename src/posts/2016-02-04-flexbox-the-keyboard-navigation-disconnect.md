@@ -1,8 +1,9 @@
 ---
 title: "Flexbox & the keyboard navigation disconnect"
-date: "2016-02-04"
-tags: ["CSS", "ARIA", "HTML"]
-categories: "Code things"
+date: 2016-02-04
+postTags: ["CSS", "ARIA", "HTML"]
+postCategories: ["Code things"]
+postSummary: "CSS Flexbox can create a disconnect between DOM order and visual presentation, breaking keyboard navigation. I explore why asking authors not to use flexbox this way seems illogical."
 ---
 
 CSS Flexbox can create a disconnect between the DOM order and visual presentation of content, causing keyboard navigation to break. For this reason, the [CSS Flexible Box Layout module](https://www.w3.org/TR/css-flexbox-1/) warns against resequencing content logic, but asking authors not to use flexbox in this way seems illogical in itself.

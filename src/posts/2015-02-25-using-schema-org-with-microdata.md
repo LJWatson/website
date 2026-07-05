@@ -1,8 +1,9 @@
 ---
-title: "Using Schema.org with Microdata"
-date: "2015-02-25"
-tags: ["HTML", "Schema"]
-categories: "Code things"
+title: "Using Schema.org with microdata"
+date: 2015-02-25
+postTags: ["HTML", "Schema"]
+postCategories: ["Code things"]
+postSummary: "Search engines struggle to extract meaning from web content because information is presented so many different ways, but marking it up using schema.org vocabularies makes it easier and is very straightforward to do."
 ---
 
 Search engines have ways of extracting meaning from content, but they're prone to error because information on the webb can be presented in so many different ways. Marking up information so it's easier for search engines to index is a good thing to do, and thanks to the vocabularies available from [schema.org](https://schema.org/) it's also very easy.

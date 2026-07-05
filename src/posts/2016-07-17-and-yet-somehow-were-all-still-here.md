@@ -1,8 +1,9 @@
 ---
 title: "And yet somehow we’re all still here"
-date: "2016-07-17"
-tags: ["Philosophy"]
-categories: "Real life"
+date: 2016-07-17
+postTags: ["Philosophy"]
+postCategories: ["Real life"]
+postSummary: "My friend Tim shared his memories of living through the '70s and '80s — a period of crisis, from oil shortages and miners' strikes to the Falklands War and the Troubles in Northern Ireland."
 ---
 
 When my friend Tim Norris posted this to Facebook recently, it made me stop and think. One of those "thinks" was that his words were worth sharing, so here (with Tim's permission) they are...

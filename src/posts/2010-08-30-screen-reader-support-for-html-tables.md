@@ -1,8 +1,9 @@
 ---
 title: "Screen reader support for HTML tables"
-date: "2010-08-30"
-tags: ["HTML", "Screen readers"]
-categories: "Code things"
+date: 2010-08-30
+postTags: ["HTML", "Screen readers"]
+postCategories: ["Code things"]
+postSummary: "Screen reader support for tables is quite curious, with significant variations in how different screen readers handle them, partly because tables are often misused and poorly coded."
 ---
 
 Screen reader support for tables is something of a curiosity. Although tables are among the most common of HTML elements, they’re often misused and poorly coded. To some extent this has influenced screen reader support, but even so the variations in screen reader behaviour are quite remarkable.

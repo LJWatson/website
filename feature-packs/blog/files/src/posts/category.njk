@@ -1,0 +1,30 @@
+---
+pagination:
+  data: collections.blogCategoryPages
+  size: 1
+  alias: category
+  addAllPagesToCollections: true
+permalink: "{{ category.permalink }}"
+layout: "layouts/base.html"
+---
+
+<h1>{{ category.title }}</h1>
+
+<div class="layout" data-layout="athens">
+
+<div data-content="posts">
+{% set categoryPosts = collections.blog | filterBlogByCategory(category.category) %}
+{% set postListItems = categoryPosts %}
+{% include "partials/post-list.html" %}
+</div><!-- one -->
+
+<div>
+<h3>Categories</h3>
+<ul class="alt-">
+{% for cat in collections.postCategories %}
+<li><a href="/blog/category/{{ cat | slug }}/">{{ cat }}</a></li>
+{% endfor %}
+</ul>
+</div><!-- two -->
+
+</div><!-- layout -->

@@ -1,8 +1,9 @@
 ---
 title: "Using HTML5 headings"
-date: "2011-11-28"
-tags: ["HTML"]
-categories: "Code things"
+date: 2011-11-28
+postTags: ["HTML"]
+postCategories: ["Code things"]
+postSummary: "I originally recommended using flat `h1` heading structures, but four years later the HTML5 outline algorithm still isn't supported in browsers, making that approach meaningless—better to use explicitly ranked HTML headings instead."
 ---
 
 **Updated:** 26th November 2015.

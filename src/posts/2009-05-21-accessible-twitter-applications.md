@@ -1,8 +1,9 @@
 ---
-title: "Accessible Twitter Applications"
-date: "2009-05-21"
-tags: ["Screen readers"]
-categories: "Web life"
+title: "Accessible Twitter applications"
+date: 2009-05-21
+postTags: ["Screen readers"]
+postCategories: ["Web life"]
+postSummary: "Twitter's one of the web's killer applications at the moment, and it's proving increasingly popular with blind and partially sighted people, with several accessible alternatives now available."
 ---
 
 There's simply no denying it. Twitter is one of the web's killer applications of the moment. It's not uncommon to hear of people buying a computer and getting online, just so they can start tweeting.

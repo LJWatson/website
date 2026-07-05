@@ -1,8 +1,10 @@
 ---
 title: "Tag, you're it"
-date: "2025-06-15"
-tags: [""]
-categories: "Web life"
+date: 2025-06-15
+permalink: /tag-youre-it/index.html
+postTags: []
+postCategories: ["Web life"]
+postSummary: "Adrian Roselli tagged me in his post back in March, and it's taken me until now to get round to answering his blogging questions!"
 ---
 
 Adrian Roselli tagged me in his [Tag, you're it](https://adrianroselli.com/2025/03/tag-youre-it.html) post in March, and it's taken me until now to get to it!

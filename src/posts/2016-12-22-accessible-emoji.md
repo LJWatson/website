@@ -1,8 +1,9 @@
 ---
 title: "Accessible emoji"
-date: "2016-12-22"
-tags: ["ARIA", "HTML", "Screen readers"]
-categories: "Code things"
+date: 2016-12-22
+postTags: ["ARIA", "HTML", "Screen readers"]
+postCategories: ["Code things"]
+postSummary: "Emoji help us communicate complex ideas easily, but on the web we need to make sure everyone can understand them — screen readers don't always recognise emoji without the right markup."
 ---
 
 [Emoji](https://en.wikipedia.org/wiki/Emoji) help us communicate complex ideas very easily. When used in native apps and applications, emoji are reasonably accessible to screen readers, but on the web we need to do a little more to make sure everyone can understand emoji.

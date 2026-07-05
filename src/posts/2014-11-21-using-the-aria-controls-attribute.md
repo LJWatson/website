@@ -1,8 +1,9 @@
 ---
 title: "Using the aria-controls attribute"
-date: "2014-11-21"
-tags: ["ARIA"]
-categories: "Code things"
+date: 2014-11-21
+postTags: ["ARIA"]
+postCategories: ["Code things"]
+postSummary: "I've been looking at the `aria-controls` attribute in ARIA 1.0, which creates cause and effect relationships between elements when those connections aren't clear from the DOM structure alone."
 ---
 
 There are a handful of [ARIA1.0](https://www.w3.org/TR/wai-aria/) attributes that can be used to indicate relationships between elements, when those relationships can’t be ascertained easily from the DOM. One such attribute is [aria-controls](https://www.w3.org/TR/wai-aria/states_and_properties#aria-controls).

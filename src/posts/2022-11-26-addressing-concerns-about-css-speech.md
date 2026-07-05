@@ -1,8 +1,9 @@
 ---
 title: "Addressing concerns about CSS Speech"
-date: "2022-11-26"
-tags: ["Screen readers"]
-categories: "Code things"
+date: 2022-11-26
+postTags: ["Screen readers"]
+postCategories: ["Code things"]
+postSummary: "The case for CSS Speech isn't just about screen readers, but concerns about websites taking over your screen reader and making content less accessible are worth examining carefully."
 ---
 
 The [case for CSS Speech](/why-we-need-css-speech/) is not just about screen readers, but they do of course matter. Whenever the topic is mentioned, someone will contact me to say they worry about websites taking over their screen reader and making content less accessible instead of more enjoyable.

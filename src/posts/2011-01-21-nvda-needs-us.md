@@ -1,8 +1,9 @@
 ---
 title: "NVDA needs us"
-date: "2011-01-21"
-tags: ["Screen readers"]
-categories: "Desktop things"
+date: 2011-01-21
+postTags: ["Screen readers"]
+postCategories: ["Desktop things"]
+postSummary: "NVDA, a vital free screen reader for blind and partially sighted people, is facing financial crisis with only enough funding to sustain the project until July 2011."
 ---
 
 [NVDA](https://www.nvda-project.org/) is one of a new generation of access technologies for blind and partially sighted people. It's given thousands of blind people a chance to use a computer, and it's the darling of the open standards community, but on 19th January NVDA's developers sent out an urgent SOS.

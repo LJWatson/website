@@ -1,8 +1,9 @@
 ---
-title: "Patrick H. Lauke's Goulash"
-date: "2021-12-03"
-tags: ["Dinner", "Web standards food"]
-categories: "Recipe book"
+title: "Patrick H. Lauke's goulash"
+date: 2021-12-03
+postTags: ["Dinner", "Web standards food"]
+postCategories: ["Recipe book"]
+postSummary: "I'm bringing together food and technology again with this fifteenth post in the series, featuring a meltingly good goulash recipe from Patrick H. Lauke of the web standards community."
 ---
 
 The 15th in a series of posts that bring together the two sides of my blog: food and technology. I’ve asked the great and the good from the web standards community to share their favourite recipes. This meltingly good goulash recipe comes from [Patrick H. Lauke](https://twitter.com/patrick_h_lauke). 

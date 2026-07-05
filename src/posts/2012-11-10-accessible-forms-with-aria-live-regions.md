@@ -1,8 +1,9 @@
 ---
 title: "Accessible forms with ARIA live regions"
-date: "2012-11-10"
-tags: ["ARIA", "HTML", "Screen readers"]
-categories: "Code things"
+date: 2012-11-10
+postTags: ["ARIA", "HTML", "Screen readers"]
+postCategories: ["Code things"]
+postSummary: "ARIA live regions are a simple way to announce dynamic page updates to screen reader users, so they don't miss important changes like basket confirmations that happen outside their current focus."
 ---
 
 When a form is used to update information on the page, it can be troublesome for screen reader users. Unless the screen reader is focused on the relevant bit of the page, the update goes by un-noticed. ARIA live regions are a simple way to improve the experience for screen reader users.

@@ -1,8 +1,9 @@
 ---
 title: "Guide to WCAG"
-date: "2009-02-01"
-tags: ["Standards"]
-categories: "Web life"
+date: 2009-02-01
+postTags: ["Standards"]
+postCategories: ["Web life"]
+postSummary: "The Web Content Accessibility Guidelines are developed by the W3C and recognised as the international standard for building accessible websites across all types of disability."
 ---
 
 The Web Content Accessibility Guidelines are developed by the Web Accessibility Initiative (WAI). The WAI is a branch of the World Wide Web Consortium (W3C), the organisation that provides guidelines and specifications for many web technologies.
@@ -90,7 +91,7 @@ WCAG 2.0 measures conformance using the same three levels that define the succes
 * Double-A, achieved when all Single-A and Double-A success criteria are satisfied
 * Triple-A, achieved when all Single-A, Double-A and Triple-A success criteria are satisfied
 
-## Recommended Guidelines
+## Recommended guidelines
 
 The W3C recommend using WCAG 2.0 as the basis for all new and updated content on the web. It also recommends referencing WCAG 2.0 in web accessibility policies or statements.
 

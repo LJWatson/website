@@ -1,8 +1,9 @@
 ---
 title: "Playing with Envision Glasses"
-date: "2020-11-05"
-tags: "AI"
-categories: "Real life"
+date: 2020-11-05
+postTags: ["AI"]
+postCategories: ["Real life"]
+postSummary: "Vision accounts for most of our brain's electrical activity, but AI apps like Microsoft's SeeingAI have only partially solved the problem for blind people — you still have to point your phone at what you want to see, which is inconvenient and socially awkward."
 ---
 
 We humans put a lot of effort into seeing. When our eyes are open, vision accounts for [two thirds of the electrical activity in our brain](https://www.imagethink.net/true-or-false-vision-rules-the-brain/); 40% of the nerve fibres that are connected into the brain relate to vision; and more of our neurons are dedicated to vision than the other senses combined. We consume huge quantities of visual data every day and most people think nothing of it.

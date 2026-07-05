@@ -1,0 +1,25 @@
+.item-post {
+border-block-end: var(--border-width-l) solid var(--color-border);
+margin-block-end: var(--spacing-l);
+padding-block-end: var(--spacing-r);
+}
+
+.item-meta {
+font-family: var(--font-family-alt);
+font-size: var(--font-size-xs);
+text-transform: uppercase;
+}
+
+@media screen and (min-width: 64em) {
+[data-content="posts"] {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 3rem var(--grid-column-gap);
+}
+
+.item-post {
+border-block-end: unset;
+margin-block-end: unset;
+padding-block-end: unset;
+}
+}

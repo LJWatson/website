@@ -1,8 +1,9 @@
 ---
 title: "Papa Sangre game review"
-date: "2011-01-02"
-tags: ["Games", "Apps"]
-categories: "Mobile things"
+date: 2011-01-02
+postTags: ["Games", "Apps"]
+postCategories: ["Mobile things"]
+postSummary: "I've discovered Papa Sangre, an audio-only iOS game with no video — a first-person thriller entirely in sound that's remarkably stylish and screen reader friendly."
 ---
 
 You are lost, deep in the darkness of the land of the dead. Your eyes are useless to you here — but your ears are filled with sound. Thus the scene is set for [Papa Sangre](https://www.papasangre.com/), one of the most stylish (and screen reader friendly) games on the iOS platform.

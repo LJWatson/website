@@ -1,4 +1,4 @@
 {
   "layout": "layouts/post.html",
-  "permalink": "/{{ page.fileSlug }}/index.html"
+  "permalink": "/{{ title | slug }}/index.html"
 }

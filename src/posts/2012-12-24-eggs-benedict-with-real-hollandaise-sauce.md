@@ -1,8 +1,9 @@
 ---
 title: "Eggs benedict (with real Hollandaise sauce)"
-date: "2012-12-24"
-tags: ["Breakfast"]
-categories: "Recipe book"
+date: 2012-12-24
+postTags: ["Breakfast"]
+postCategories: ["Recipe book"]
+postSummary: "This fabulous brunch recipe is perfect for Christmas Eve or any indulgent weekend, though you can cheat with shop-bought Hollandaise sauce if you'd rather not make it from scratch."
 ---
 
 This recipe is fabulous for brunch on Christmas eve, or any lazy weekend when you’re feeling indulgent. Cheating is perfectly acceptable if you don’t want to make the Hollandaise sauce from scratch, but it tastes even better when you’ve done it all yourself!

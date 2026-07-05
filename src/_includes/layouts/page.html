@@ -1,11 +1,21 @@
 {% extends "layouts/base.html" %}
 
-{% block content %}
-  <div class="[ post ] [ flow ] [ flow-space-700 text-500 ]">
-    <h1>{{ title }}</h1>
-    <div class="[ post__body ] [ flow ] [ flow-space-700 ]">
-      {{ content | safe }}
-    </div>
-  </div>
-{% endblock %}
+{% set pageHeaderTitle = title %}
 
+{% block content %}
+
+<div class="layout" data-layout="tbilisi">
+<div>
+
+{% if displayTitle %}
+<h1>{{ title }}</h1>
+{% else %}
+<h1>{{ title }}</h1>
+{% endif %}
+
+{{ content | safe }}
+
+</div><!-- one -->
+</div><!-- layout -->
+
+{% endblock %}

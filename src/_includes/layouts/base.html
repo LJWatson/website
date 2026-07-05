@@ -1,87 +1,33 @@
 {% set assetHash = global.random() %}
 
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="monetization" content="$ilp.uphold.com/dPdrQinmELyw">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<html lang="{{ site.lang }}">
 
-    {% include "partials/meta-info.html" %}
-    <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml" />
-    {% if demoMode %}
-    <meta name="robots" content="noindex" />
-    {% else %}
-    <script>
-      {# A global function that the theme toggle can use to apply the current theme. #}
-      window.applyThemeSetting = function(override) {
-        const currentSetting = override || localStorage.getItem('user-color-scheme');
-        const currentAttribute = document.documentElement.getAttribute('data-user-color-scheme');
+{% include "partials/head.html" %}
 
-        if (currentSetting && currentSetting !== currentAttribute) {
-          document.documentElement.setAttribute('data-user-color-scheme', currentSetting);
-        }
-      };
-      window.applyThemeSetting();
-    </script>
+<body id="{{ site.siteID }}">
 
-    <script>
-      if ("serviceWorker" in navigator)
-        navigator.serviceWorker.register("/service-worker.js");
-    </script>
+{% include "partials/analytics-body.html" %}
 
-    {% endif %}
+<a class="skip-link" href="#main-content">Skip to content</a>
 
-    <style>{% include "css/critical.css" %}</style>
+{% include "partials/header.html" %}
 
-    {# Add facility for pages to delare an array of critical styles #}
-    {% if pageCriticalStyles %}
-      {% for item in pageCriticalStyles %}
-        <style>{% include item %}</style>
-      {% endfor %}
-    {% endif %}
+<main id="main-content">
 
-    {# Fonts loaded in lower-priority CSS #}
-    <link rel="stylesheet" media="print" href="/fonts/fonts.css?{{ assetHash }}" onload="this.media='all'" />
+{% block content %}
 
-    {# Icons #}
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
-    <link rel="manifest" href="/favicons/site.webmanifest">
-    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#252525">
-    <link rel="shortcut icon" href="/favicons/favicon.ico">
-    <meta name="msapplication-TileColor" content="#252525">
-    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-  </head>
-  <body>
-    {% include "partials/site-head.html" %}
-    <div class="expander">
-      <div class="wrapper">
-        {% if demoMode %}
-          <div class="[ post ] [ flow ] [ flow-space-700 text-500 ]">
-            <div class="[ post__body ] [ flow ] [ flow-space-700 pad-top-700 pad-bottom-700 ]">
-              <p>Demo code goes here</p>
-            </div>
-          </div>
-        {% else %}
-          <div class="sidebar">
-            <main tabindex="-1" id="main-content">
-              {% block content %}{% endblock %}
-            </main>
-            {% include "partials/sidebar.html" %}
-          </div>
-        {% endif %}
-      </div>
-    </div>
-    {% include "partials/site-foot.html" %}
-    {% block foot %}{% endblock %}
+<h1>{{ title }}</h1>
+{{ lede | safe }}
+{{ content | safe }}
 
-    {% if not demoMode %}
-      <script src="/js/components/disclosure-toggle.js?{{ global.random() }}" type="module" defer></script>
-      <script src="/js/components/theme-toggle.js?{{ global.random() }}" type="module" defer></script>
-    {% endif %}
-  </body>
+{% endblock %}
+
+</main>
+
+{% include "partials/footer.html" %}
+<script src="{{ site.assetPath }}/js/scripts.js"></script>
+{% include "partials/pagefind.html" %}
+</body>
+
 </html>

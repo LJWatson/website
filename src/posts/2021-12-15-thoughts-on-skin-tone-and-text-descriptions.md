@@ -1,8 +1,9 @@
 ---
 title: "Thoughts on skin tone and text descriptions"
-date: "2021-12-15"
-tags: ["Screen readers"]
-categories: "Web life"
+date: 2021-12-15
+postTags: ["Screen readers"]
+postCategories: ["Web life"]
+postSummary: "Jake Archibald asked whether skin tone should be mentioned in alt text, and as a blind person I've asked myself the same thing, so his post has prompted me to think out loud about how we normalise diversity for people who cannot see."
 ---
 
 In a blog post on [writing great alt text](https://jakearchibald.com/2021/great-alt-text/), Jake Archibald asked "Should skin tone be mentioned in alt text?". It's a good question, and one I've asked myself as a blind person, so Jake's post has prompted me to do some thinking out loud...
