@@ -24,8 +24,8 @@
 {% if postAuthor %}<p>{{ postAuthor }}</p>{% endif %}
 {% if postCategories or postTags %}
 <ul class="post-meta">
-{% for category in postCategories %}<li><a href="/blog/category/{{ category | slug }}/">{{ category }}</a></li>{% endfor %}
-{% for tag in postTags %}<li><a href="/blog/tag/{{ tag | slug }}/">{{ tag }}</a></li>{% endfor %}
+{% for category in postCategories %}<li><a href="/category/{{ category | slug }}/">{{ category }}</a></li>{% endfor %}
+{% for tag in postTags %}<li><a href="/tag/{{ tag | slug }}/">{{ tag }}</a></li>{% endfor %}
 </ul>
 {% endif %}
 

@@ -90,7 +90,7 @@ module.exports = function blogFeature(eleventyConfig) {
     const pages = [];
     Array.from(categoriesMap.entries()).sort((a, b) => a[0].localeCompare(b[0])).forEach(([category, posts]) => {
       const slug = slugify(category);
-      const baseUrl = `/blog/category/${slug}/`;
+      const baseUrl = `/category/${slug}/`;
       paginateItems(posts, baseUrl).forEach((page) => {
         pages.push({ title: category, category, slug, ...page });
       });
@@ -115,7 +115,7 @@ module.exports = function blogFeature(eleventyConfig) {
     const pages = [];
     Array.from(tagsMap.entries()).sort((a, b) => a[0].localeCompare(b[0])).forEach(([tag, posts]) => {
       const slug = slugify(tag);
-      const baseUrl = `/blog/tag/${slug}/`;
+      const baseUrl = `/tag/${slug}/`;
       paginateItems(posts, baseUrl).forEach((page) => {
         pages.push({ title: tag, tag, slug, ...page });
       });

@@ -3,7 +3,7 @@
 <h2>Categories</h2>
 <ul>
 {% for category in collections.postCategories %}
-<li><a href="/blog/category/{{ category | slug }}/"{% if page.url == '/blog/category/' + (category | slug) + '/' %} aria-current="page"{% endif %}>{{ category }}</a></li>
+<li><a href="/category/{{ category | slug }}/"{% if page.url == '/category/' + (category | slug) + '/' %} aria-current="page"{% endif %}>{{ category }}</a></li>
 {% endfor %}
 </ul>
 {% endif %}
@@ -13,7 +13,7 @@
 <ul>
 {% for item in collections.postTagsWithCounts %}
 {% if loop.index <= 6 %}
-<li><a href="/blog/tag/{{ item.tag | slug }}/"{% if page.url == '/blog/tag/' + (item.tag | slug) + '/' %} aria-current="page"{% endif %}>{{ item.tag }}</a></li>
+<li><a href="/tag/{{ item.tag | slug }}/"{% if page.url == '/tag/' + (item.tag | slug) + '/' %} aria-current="page"{% endif %}>{{ item.tag }}</a></li>
 {% endif %}
 {% endfor %}
 </ul>
@@ -21,7 +21,7 @@
 <summary>All tags</summary>
 <ul>
 {% for item in collections.postTagsWithCounts %}
-<li><a href="/blog/tag/{{ item.tag | slug }}/"{% if page.url == '/blog/tag/' + (item.tag | slug) + '/' %} aria-current="page"{% endif %}>{{ item.tag }}</a></li>
+<li><a href="/tag/{{ item.tag | slug }}/"{% if page.url == '/tag/' + (item.tag | slug) + '/' %} aria-current="page"{% endif %}>{{ item.tag }}</a></li>
 {% endfor %}
 </ul>
 </details>

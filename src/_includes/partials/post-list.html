@@ -7,8 +7,8 @@
 
 {% if item.data.postCategories or item.data.postTags %}
 <ul class="post-meta">
-{% for category in item.data.postCategories %}<li><a href="/blog/category/{{ category | slug }}/">{{ category }}</a></li>{% endfor %}
-{% for tag in item.data.postTags %}<li><a href="/blog/tag/{{ tag | slug }}/">{{ tag }}</a></li>{% endfor %}
+{% for category in item.data.postCategories %}<li><a href="/category/{{ category | slug }}/">{{ category }}</a></li>{% endfor %}
+{% for tag in item.data.postTags %}<li><a href="/tag/{{ tag | slug }}/">{{ tag }}</a></li>{% endfor %}
 </ul>
 {% endif %}
 
