@@ -25,6 +25,14 @@ module.exports = function(eleventyConfig) {
   // Filters
   eleventyConfig.addFilter("dateFilter", dateFilter);
   eleventyConfig.addFilter("json", (value) => JSON.stringify(value));
+  eleventyConfig.addFilter("slug", (str) => {
+    if (!str) return "";
+    return str
+      .replace(/['']/g, "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+  });
   eleventyConfig.addFilter("markdown", (content) => {
     if (!content) {
       return "";
