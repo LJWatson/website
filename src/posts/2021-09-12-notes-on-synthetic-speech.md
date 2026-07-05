@@ -50,7 +50,7 @@ My usual Windows screen reader is Jaws, which uses the Eloquence TTS by default.
 
 <details>
 <summary aria-label="Show media player for Eloquence TTS">Show media player</summary>
-<audio controls src="../media/2021/TTS_Eloquence-demo.mp3"></audio>
+<audio controls src="/media/2021/TTS_Eloquence-demo.mp3"></audio>
 
 ### Eloquence TTS transcript
 
@@ -73,7 +73,7 @@ In the following demo, the formant Eloquence TTS is used to speak a passage of t
 <details>
 <summary aria-label="Show media player for formant TTS demo">Show media player</summary>
 
-<audio controls src="../media/2021/TTS_formant-demo.mp3"></audio>
+<audio controls src="/media/2021/TTS_Formant-demo.mp3"></audio>
 
 ### Formant TTS transcript
 
@@ -97,7 +97,7 @@ In the following demo, the concatenative Vocalizer Expressive 2 TTS is used to s
 <details>
 <summary aria-label="Show media player for concatenative TTS demo">Show media player</summary>
 
-<audio controls src="../media/2021/TTS_Concatenative-demo.mp3"></audio>
+<audio controls src="/media/2021/TTS_Concatenative-demo.mp3"></audio>
 
 ### Concatenative TTS transcript
 
@@ -118,7 +118,7 @@ In the following demo, Google's parametric TTS is used to repeat the same text:
 <details>
 <summary aria-label="Show media player for parametric TTS demo">Show media player</summary>
 
-<audio controls src="../media/2021/TTS_parametric-demo.mp3"></audio>
+<audio controls src="/media/2021/TTS_Parametric-demo.mp3"></audio>
 
 ### Parametric TTS transcript
 
@@ -137,7 +137,7 @@ In the following demo, Google's WaveNet TTS is used to repeat the same text:
 <details>
 <summary aria-label="Show media player for neural TTS demo">Show media player</summary>
 
-<audio controls src="../media/2021/TTS_Neural-demo.mp3"></audio>
+<audio controls src="/media/2021/TTS_Neural-demo.mp3"></audio>
 
 ### Neural TTS transcript
 

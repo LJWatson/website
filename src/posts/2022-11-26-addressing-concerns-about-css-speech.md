@@ -55,7 +55,7 @@ Imagine this news item:
 
 <details>
 <summary aria-label="Show media player for news item without CSS Speech">Show media player</summary>
-<audio controls src="../media/2022/screen-reader-demo-without-css-speech.mp3"></audio>
+<audio controls src="/media/2022/screen-reader-demo-without-css-speech.mp3"></audio>
 
 ## Transcript
 
@@ -86,7 +86,7 @@ voice-pitch: low;
 
 <details>
 <summary aria-label="Show media player for news item with CSS Speech">Show media player</summary>
-<audio controls src="../media/2022/screen-reader-demo-with-css-speech.mp3"></audio>
+<audio controls src="/media/2022/screen-reader-demo-with-css-speech.mp3"></audio>
 
 ## Transcript
 
