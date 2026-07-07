@@ -352,7 +352,7 @@ padding-block: var(--space-6); }
 .wordmark-link {
 color: inherit;
 font-family: var(--font-ui);
-font-size: var(--text-xl);
+font-size: calc(var(--text-xl) * 1.3);
 font-weight: var(--weight-medium);
 letter-spacing: var(--tracking-tight);
 line-height: 1;
