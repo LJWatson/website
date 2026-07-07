@@ -54,7 +54,7 @@ color: var(--color-text-secondary);
 display: inline-block;
 font-size: var(--text-sm);
 padding: var(--space-1) var(--space-3);
-text-decoration: none;
+text-decoration: underline;
 transition: background-color var(--transition-fast), color var(--transition-fast); }
 
 .post-meta a:hover {
