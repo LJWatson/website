@@ -288,7 +288,6 @@ border-block-start: var(--border-width) solid var(--color-border-subtle);
 margin-block: var(--space-7); }
 
 /* Media */
-audio,
 img,
 video {
 block-size: auto;
@@ -297,6 +296,7 @@ max-inline-size: 100%; }
 audio {
 display: block;
 inline-size: 100%;
+max-inline-size: 100%;
 margin-block: var(--space-5); }
 
 video {
