@@ -1,3 +1,10 @@
+const labelSearchInput = (attempts = 0) => {
+const input = document.querySelector(".pf-searchbox-input");
+if (input) { input.setAttribute("aria-label", "Search"); return; }
+if (attempts < 20) setTimeout(() => labelSearchInput(attempts + 1), 100);
+};
+labelSearchInput();
+
 (() => {
 const menus = document.querySelectorAll("[data-navigation-menu]");
 
