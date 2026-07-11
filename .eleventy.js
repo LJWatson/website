@@ -52,6 +52,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/fonts": "fonts" });
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/media");
+  eleventyConfig.addPassthroughCopy("src/robots.txt");
 
   if (features.blog) {
     const blogPlugin = require("./feature-packs/blog/plugin.js");
