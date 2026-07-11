@@ -14,7 +14,7 @@ The first thing that appealed to me about the Meta Glasses is that they look and
 
 I chose the Skyler frames in shiny black, with lenses that transition from clear to amethyst (when out in sunlight).
 
-<img src="../images/2025/ray-ban-meta-glasses.jpg" alt="Close-up of the right temple area of the Ray-Ban Meta Glasses, cut-away to reveal the integration of technology including the capture camera. The frames are black and the Ray-Ban logo is visible on the frames and at the top of the lens." height="400" width="400">
+<img src="/images/2025/ray-ban-meta-glasses.jpg" alt="Close-up of the right temple area of the Ray-Ban Meta Glasses, cut-away to reveal the integration of technology including the capture camera. The frames are black and the Ray-Ban logo is visible on the frames and at the top of the lens." height="400" width="400">
 
 Ray-Bans have a very robust look and feel, which makes them a strong presence on your face. Of the three basic frame styles (Wayfarer, Skyler, and Headliner), the Skyler frames appeared to be the least heavy looking - though there really is not much in it.
 
