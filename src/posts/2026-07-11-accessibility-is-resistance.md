@@ -75,7 +75,7 @@ That'll be a slow-hand clap for Calvin Klein then. To be fair, I could have chos
 
 What makes this such an excruciating example, is that the text description is a duplicate of the page title.
 
-Oh, and, every; product; image; on; the; page; has; exactly; the; same; damned; text description!
+Oh, and, every. Product. Image. On. The. Page. Has. Exactly. The. Same. Damned. Text description!
 
 Ahem!
 
