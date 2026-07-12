@@ -45,7 +45,7 @@ Like many people, I shop online. I might even do it more regularly than most, be
 
 If I asked you to think of a clothing brand likely to have an accessible website, you might think of retailers with plenty of money - Amazon Essentials, Calvin Klein, or Marks and Spencer perhaps. Let's use Calvin Klein as the working example. Here's a product page from their UK website:
 
-<images src="/images/2026/CK-product-page.png" alt="Screenshot of a product page on the Calvin Klein website showing a large image and some associated product information">
+<img src="/images/2026/CK-product-page.png" alt="Screenshot of a product page on the Calvin Klein website showing a large image and some associated product information">
 
 Notice how much information about the product is held in image format? Here's the product information available as text on the page:
 
@@ -65,7 +65,7 @@ Is the jumper going to make me appear sophisticated and elegant, or look like a 
 
 Now, if you're even a little bit familiar with accessibility, you'll be thinking "Aha! But, what about [text descriptions](https://tetralogical.com/blog/2022/01/24/text-descriptions/)?". Here's an image from the product page:
 
-<img src/images/2026/CK-product-image.png" alt="Product image from the Calvin Klein website showing a model wearing a black jumper">
+<img src="/images/2026/CK-product-image.png" alt="Product image from the Calvin Klein website showing a model wearing a black jumper">
 
 And the text description? Here you go:
 
