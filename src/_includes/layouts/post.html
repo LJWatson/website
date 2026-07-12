@@ -29,6 +29,13 @@
 </ul>
 {% endif %}
 
+<p class="share-mastodon">
+<a href="https://share.joinmastodon.org/?text={{ (title + ' ' + site.absoluteUrl + page.url) | urlencode }}">
+{% include "partials/icons/icon-mastodon.svg" %}
+<span>Share this post on Mastodon</span>
+</a>
+</p>
+
 {% if recommendedPosts %}
 <aside aria-label="More posts">
 <h2>More posts</h2>

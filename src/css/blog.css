@@ -64,6 +64,23 @@ color: var(--white); }
 .post-meta a:visited {
 color: var(--color-text-secondary); }
 
+.share-mastodon {
+margin: var(--space-4) 0 0; }
+
+.share-mastodon a {
+align-items: center;
+color: var(--color-text-secondary);
+display: inline-flex;
+gap: var(--space-2);
+text-decoration: none;
+transition: color var(--transition-fast); }
+
+.share-mastodon a:hover {
+color: var(--color-accent); }
+
+.share-mastodon a:visited {
+color: var(--color-text-secondary); }
+
 
 /* ━━━ FEED SIDEBAR (categories and tags) ━━━━ */
 
