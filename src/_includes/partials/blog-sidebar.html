@@ -20,7 +20,7 @@
 <details>
 <summary>All tags</summary>
 <ul>
-{% for item in collections.postTagsWithCounts %}
+{% for item in collections.postTagsWithCounts | sort(false, false, 'tag') %}
 <li><a href="/tag/{{ item.tag | slug }}/"{% if page.url == '/tag/' + (item.tag | slug) + '/' %} aria-current="page"{% endif %}>{{ item.tag }}</a></li>
 {% endfor %}
 </ul>
