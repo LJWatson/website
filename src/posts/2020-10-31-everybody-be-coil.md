@@ -29,7 +29,7 @@ Note: that example uses my payment pointer. You're welcome to use it of course b
 
 ## Changing the web
 
-I've had this website since 1998 and I've been creating content here and [elsewhere](/on-other-websites/) for much of that time. I've never seriously considered making a living from writing; I've been having too much fun with my chosen career for one thing. With Coil and Web Monetization I might be able to make the odd penny or two, but that is not why I decided to monetize this website.
+I've had this website since 1998 and I've been creating content here and [elsewhere](/elsewhere/) for much of that time. I've never seriously considered making a living from writing; I've been having too much fun with my chosen career for one thing. With Coil and Web Monetization I might be able to make the odd penny or two, but that is not why I decided to monetize this website.
 
 I am under no illusion that writing will ever be a major source of income, in fact if I ever receive enough to cover my own monthly subscription to Coil I'll be a happy person. But I do think that Coil and Web Monetization are at the vanguard of a quiet revolution.
 

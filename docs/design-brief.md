@@ -72,7 +72,8 @@ Primary navigation (unchanged from current site):
 - About Léonie
 - Elsewhere
 
-Social links — on the contact page only:
+Social links — shown under a "Find me on" heading in the blog sidebar
+(visible on the homepage and every post page) and on the contact page:
 - Bluesky
 - Mastodon
 - GitHub

@@ -6,7 +6,7 @@ postCategories: ["Real life"]
 postSummary: "I wrote about wearable AI tech for blind people back in 2020 when I bought the Envision Glasses, but they never became part of my everyday routine. I've had Ray-Ban Meta Glasses for a few months now, and they've already become part of my daily life."
 ---
 
-I wrote about the advantages of wearable AI tech for blind people back in 2020, when I bought a pair of [Envision Glasses](/envision-glasses). At the time they felt revolutionary, and indeed they were, but they never became part of my everyday tech. I've had my pair of [Ray-Ban Meta Glasses](https://www.ray-ban.com/uk/ray-ban-meta-ai-glasses) for a few months now, and they've already become part of my daily routine, just like my phone and my watch.
+I wrote about the advantages of wearable AI tech for blind people back in 2020, when I bought a pair of [Envision Glasses](/playing-with-envision-glasses/). At the time they felt revolutionary, and indeed they were, but they never became part of my everyday tech. I've had my pair of [Ray-Ban Meta Glasses](https://www.ray-ban.com/uk/ray-ban-meta-ai-glasses) for a few months now, and they've already become part of my daily routine, just like my phone and my watch.
 
 ## Design and style
 
