@@ -1,6 +1,6 @@
 ---
 title: "Accessibility is resistance!"
-date: 2026-07-11
+date: 2026-07-13
 postTags: ["AI"]
 postCategories: ["Web life"]
 postSummary: "Hello, my name is Léonie, and I 💜 AI. Well, that isn't entirely true, but I do use AI, quite a bit actually, and I'd like to tell you why."
