@@ -1,8 +1,9 @@
 ---
 title: "Quick guide to the ARIA specifications"
-date: "2017-05-17"
-tags: ["ARIA", "Standards"]
-categories: "Code things"
+date: 2017-05-17
+postTags: ["ARIA", "Standards"]
+postCategories: ["Code things"]
+postSummary: "I'm briefly introducing each ARIA specification from the W3C and explaining where each one fits into the overall ARIA landscape."
 ---
 
 ARIA (Accessible Rich Internet Applications) is a suite of specifications from the W3C. Knowing which specification has the information you need isn't always obvious, so this post briefly introduces each specification and where it fits into the overall ARIA landscape.

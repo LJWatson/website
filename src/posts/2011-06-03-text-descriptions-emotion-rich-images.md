@@ -1,8 +1,9 @@
 ---
 title: "Text descriptions and emotion rich images"
-date: "2011-06-03"
-tags: ["HTML", "Screen readers"]
-categories: "Web life"
+date: 2011-06-03
+postTags: ["HTML", "Screen readers"]
+postCategories: ["Web life"]
+postSummary: "I'm reposting an article from 2007 about whether emotion-rich images deserve descriptive alt texts, because I still believe they're important to blind people, particularly those who once had sight."
 ---
 
 This article was first posted in 2007 on the eAccess blog, now available courtesy of the [Internet Archive](https://web.archive.org/web/20170716115604/http://www.headstar.com/eablive/?p=106). Three years later and I still believe that emotion rich images are important to blind people, particularly those who once had sight (and that's most of us). Results from the third [WebAIM screen reader survey](https://webaim.org/projects/screenreadersurvey/#images) suggest I'm not alone, so I'm reposting the article here to encourage the debate to continue.

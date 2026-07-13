@@ -1,7 +1,8 @@
 ---
-title: "Using a custom domain with multiple Github repositories"
-date: "2017-07-02"
-categories: "Web life"
+title: "Using a custom domain with multiple GitHub repositories"
+date: 2017-07-02
+postCategories: ["Web life"]
+postSummary: "I've figured out how to use a single custom domain with multiple Github repositories that use Github Pages, and it's simpler than the documentation makes it seem."
 ---
 
 It's possible to use a single custom domain with multiple [Github](https://github.com) repositories that use [Github Pages](https://pages.github.com/). The available documentation makes it seem more complicated than it is, so this is an effort to provide some more simple instructions.
@@ -60,6 +61,6 @@ When you've added all the CNAME records, save your changes and make sure your cu
 
 Meanwhile, you need to configure each Github repository to recognise the sub-domain name you've just created for it. To do this, go to the Github page for each repository, and in **Settings** add the sub-domain to the **Custom domain** field (don't forget to save it).
 
-Once the CNAME records have propagated, you'll be able to use the sub-domain to reference the gh-pages branch of your Github repositories. For example, [design-patterns.tink.uk](https://design-patterns.tink.uk) instead of [ljwatson.github.io/design-patterns/](https://ljwatson.github.io/design-patterns).
+Once the CNAME records have propagated, you'll be able to use the sub-domain to reference the gh-pages branch of your Github repositories. For example, design-patterns.tink.uk instead of ljwatson.github.io/design-patterns/.
 
-Thanks to [Dan Hopkins](https://twitter.com/perlbod) for his help.
+Thanks to Dan Hopkins for his help.

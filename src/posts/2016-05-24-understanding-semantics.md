@@ -1,8 +1,9 @@
 ---
 title: "Understanding semantics"
-date: "2016-05-24"
-tags: ["HTML"]
-categories: "Code things"
+date: 2016-05-24
+postTags: ["HTML"]
+postCategories: ["Code things"]
+postSummary: "The word \"semantic\" is regularly used in web development, but what do we really mean by it, and why does it matter for structure and meaning?"
 ---
 
 [Эта статья на русском](https://css-live.ru/articles/ponimanie-semantiki.html)

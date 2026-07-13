@@ -1,0 +1,51 @@
+{% extends "layouts/base.html" %}
+
+{% set postListItems = pagination.items %}
+
+{% if tag %}
+{% set postListItems = collections[tag] %}
+{% set pageHeaderTitle = 'Blog posts filed under “' + tag + '”' %}
+{% else %}
+{% set pageHeaderTitle = title %}
+{% endif %}
+
+{% block content %}
+
+<h1>{{ pageHeaderTitle }}</h1>
+
+{% if lede %}
+{{ lede | markdown | safe }}
+{% endif %}
+{{ content | safe }}
+
+<div class="layout" data-layout="athens">
+
+<div data-content="posts">
+{% include "partials/post-list.html" %}
+</div><!-- one -->
+
+<div>
+<h3>Categories</h3>
+<ul class="alt-">
+{% for category in collections.postCategories %}
+<li><a href="/blog/category/{{ category | slug }}/">{{ category }}</a></li>
+{% endfor %}
+</ul>
+
+<hr>
+
+<h3>Tags</h3>
+<ul class="alt-">
+{% for tag in collections.postTags %}
+<li><a href="/blog/tag/{{ tag | slug }}/">{{ tag }}</a></li>
+{% endfor %}
+</ul>
+</div><!-- two -->
+
+</div><!-- layout -->
+
+{% if not tag %}
+{% include "partials/pagination.html" %}
+{% endif %}
+
+{% endblock %}

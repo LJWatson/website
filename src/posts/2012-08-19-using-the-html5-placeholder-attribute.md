@@ -1,8 +1,9 @@
 ---
 title: "Using the HTML5 `placeholder attribute"
-date: "2012-08-19"
-tags: ["HTML"]
-categories: "Code things"
+date: 2012-08-19
+postTags: ["HTML"]
+postCategories: ["Code things"]
+postSummary: "HTML5 has introduced new features that make inclusive design more achievable, and one simple way to start is by using the `placeholder` attribute to make forms easier to complete."
 ---
 
 HTML5 has changed the way we build websites and online applications. It introduces lots of new features, many of which make inclusive design much more achievable.
@@ -15,7 +16,7 @@ The [HTML5 placeholder attribute](https://www.w3.org/TR/2010/WD-html5-20100624/c
 
 The placeholder hint or description is displayed inside the empty form field, and is removed as soon as the field is given focus. In other words, the HTML5 `placeholder attribute replaces one of the most common uses of JavaScript on the web.
 
-## How is the HTML5 placeholder attribute Applied?
+## How is the HTML5 placeholder attribute applied?
 
 You can apply the `placeholder` attribute to `input` fields like `text`, `email`, `tel`, `search` or `URL`. It can also be applied to a `textarea`.
 

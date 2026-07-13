@@ -1,19 +1,31 @@
-{# Only renders this section if there are links to render #} 
-{% if pagination.href.next or pagination.href.previous %}
-  <footer class="font-sans weight-bold text-500">
-    <nav class="pagination" aria-label="Pagination links">
-      {% if pagination.href.previous %}
-        <a href="{{ pagination.href.previous }}{{ paginationAnchor }}" data-direction="backwards">
-          <span>{{ paginationPrevText if paginationPrevText else 'Previous' }}</span>
-          {% include "icons/arrow.svg" %}
-        </a>
-      {% endif %} 
-      {% if pagination.href.next %}
-      <a href="{{ pagination.href.next }}{{ paginationAnchor }}" data-direction="forwards">
-        <span>{{ paginationNextText if paginationNextText else 'Next' }}</span>
-        {% include "icons/arrow.svg" %}
-      </a>
-      {% endif %}
-    </nav>
-  </footer>
+{% if pagination.pageLinks.length > 1 %}
+{% set total = pagination.pageLinks.length %}
+{% set current = pagination.pageNumber %}
+<section aria-label="Pagination">
+<ol>
+{% for link in pagination.pageLinks %}
+{% set i = loop.index0 %}
+{% set show = (i == 0) or (i == total - 1) or (i >= current - 1 and i <= current + 1) %}
+{% if show %}
+{% set prevI = i - 1 %}
+{% set prevShow = (prevI == 0) or (prevI == total - 1) or (prevI >= current - 1 and prevI <= current + 1) %}
+{% if i > 0 and not prevShow %}
+<li><span>…</span></li>
+{% endif %}
+{% if i == 0 %}
+{% set pageUrl = "/" %}
+{% else %}
+{% set pageUrl = "/page/" + i + "/" %}
+{% endif %}
+<li>
+{% if i == current %}
+<span aria-current="page">{{ loop.index }}</span>
+{% else %}
+<a href="{{ pageUrl }}">{{ loop.index }}</a>
+{% endif %}
+</li>
+{% endif %}
+{% endfor %}
+</ol>
+</section>
 {% endif %}

@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   /**
    * Returns back some attributes based on wether the
    * link is active or a parent of an active item
@@ -20,46 +20,56 @@ export default {
 
     return response;
   },
+  /**
+   * Filters out the passed item from the passed collection
+   * and randomises and limits them based on flags
+   *
+   * @param {Array} collection The 11ty collection we want to take from
+   * @param {Object} item The item we want to exclude (often current page)
+   * @param {Number} limit=3 How many items we want back
+   * @param {Boolean} random=true Wether or not this should be randomised
+   * @returns {Array} The resulting collection
+   */
+  getSiblingContent(collection, item, limit = 3, random = true) {
+    let filteredItems = collection.filter(x => x.url !== item.url);
 
-  filterCollectionsByTaxonomy(collection, taxonomyKey, taxonomy = 'tags') {
-    if (taxonomy === 'tags') {
-      return collection[taxonomyKey];
+    if (random) {
+      let counter = filteredItems.length;
+
+      while (counter > 0) {
+        // Pick a random index
+        let index = Math.floor(Math.random() * counter);
+
+        counter--;
+
+        let temp = filteredItems[counter];
+
+        // Swap the last element with the random one
+        filteredItems[counter] = filteredItems[index];
+        filteredItems[index] = temp;
+      }
     }
-    const items = [];
 
-    collection.all.forEach(item => {
-      if (!item.data.hasOwnProperty(taxonomy)) {
-        return;
-      }
+    // Lastly, trim to length
+    if (limit > 0) {
+      filteredItems = filteredItems.slice(0, limit);
+    }
 
-      let taxonomyValue = item.data[taxonomy];
-
-      if (typeof taxonomyValue === 'string') {
-        taxonomyValue = [taxonomyValue];
-      }
-
-      if (taxonomyValue.includes(taxonomyKey)) {
-        items.push(item);
-      }
-    });
-
-    return items;
+    return filteredItems;
   },
 
-  // Takes the item returns back a guaranteed array of categories (or empty array)
-  getCategories(item, itemIsCategories = false) {
-    const taxonomyValue = itemIsCategories ? item : item.data['categories'];
-    let response = [];
-
-    switch (typeof taxonomyValue) {
-      case 'string':
-        response = [taxonomyValue];
-        break;
-      case 'object':
-        response = taxonomyValue;
-        break;
-    }
-
-    return response;
+  /**
+   * Take an array of keys and return back items that match.
+   * Note: items in the collection must have a key attribute in
+   * Front Matter
+   *
+   * @param {Array} collection 11ty collection
+   * @param {Array} keys collection of keys
+   * @returns {Array} result collection or empty
+   */
+  filterCollectionByKeys(collection, keys) {
+    return collection.filter(x => keys.includes(x.data.key));
   }
 };
+
+

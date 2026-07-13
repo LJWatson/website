@@ -1,8 +1,9 @@
 ---
 title: "The difference between keyboard and screen reader navigation"
-date: "2019-05-25"
-tags: ["Screen readers"]
-categories: "Web life"
+date: 2019-05-25
+postTags: ["Screen readers"]
+postCategories: ["Web life"]
+postSummary: "Screen reader users are often grouped with keyboard-only users, but this obscures how differently they actually navigate content. I'm going to explain the key distinction between keyboard and screen reader navigation."
 ---
 
 [18/5000 한국어 번역](https://web-for-all.tistory.com/4)

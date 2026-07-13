@@ -1,8 +1,9 @@
 ---
 title: "Accessible SVG line graphs"
-date: "2017-09-09"
-tags: ["SVG", "ARIA"]
-categories: "Code things"
+date: 2017-09-09
+postTags: ["SVG", "ARIA"]
+postCategories: ["Code things"]
+postSummary: "SVG is often used for data visualisation, but it lacks the semantics to express structures like bar charts and line graphs, making content difficult for screen reader users to interpret. The solution is to use accessible SVG table techniques as your starting point."
 ---
 
 SVG is often used for data visualisation, but because SVG lacks the semantics to express structures like bar charts, line graphs, and scatter plots, the content is difficult for screen reader users to interpret. The solution is to use the technique for creating [accessible SVG tables](/accessible-svg-tables/) as your starting point.

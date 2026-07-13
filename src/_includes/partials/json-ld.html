@@ -1,0 +1,37 @@
+{% set schemaUrl = canonicalUrl or page.url %}
+{% if site.absoluteUrl and schemaUrl and schemaUrl.startsWith("/") %}
+{% set schemaUrl = site.absoluteUrl + schemaUrl %}
+{% endif %}
+
+{% set schemaImage = ogImage or socialImage or featureImage or site.socialImage %}
+{% if schemaImage and site.absoluteUrl and schemaImage.startsWith("/") %}
+{% set schemaImage = site.absoluteUrl + schemaImage %}
+{% endif %}
+
+{% set schemaDescription = ogDescription or metaDesc or summary %}
+{% if not schemaDescription and lede %}
+{% set schemaDescription = lede | striptags %}
+{% endif %}
+{% if not schemaDescription %}
+{% set schemaDescription = site.metaDesc %}
+{% endif %}
+{% set schemaName = ogTitle or metaTitle or title or site.name %}
+{% set schemaType = "WebPage" %}
+{% if page.url == "/" %}
+{% set schemaType = "WebSite" %}
+{% endif %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "{{ schemaType }}",
+  "name": {{ schemaName | json | safe }},
+  "url": {{ schemaUrl | json | safe }}{% if schemaDescription %},
+  "description": {{ schemaDescription | json | safe }}{% endif %}{% if schemaImage %},
+  "image": {{ schemaImage | json | safe }}{% endif %}{% if page.url == "/" %},
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ (site.copyrightOwner or site.name) | json | safe }},
+    "url": {{ (site.absoluteUrl or "/") | json | safe }}
+  }{% endif %}
+}
+</script>

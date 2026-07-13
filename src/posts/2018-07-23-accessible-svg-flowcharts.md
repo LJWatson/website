@@ -1,8 +1,9 @@
 ---
 title: "Accessible SVG flowcharts"
-date: "2018-07-23"
-tags: ["SVG", "ARIA"]
-categories: "Code things"
+date: 2018-07-23
+postTags: ["SVG", "ARIA"]
+postCategories: ["Code things"]
+postSummary: "I've used ARIA table semantics to make SVG line graphs accessible to screen readers, and I'm now using the same approach to make an SVG flowchart accessible too."
 ---
 
 The [accessible SVG line graphs](/accessible-svg-line-graphs/) post explains how to use ARIA table semantics to make that form of data visualisation accessible to screen readers. This article uses the same ARIA based approach to make a screen reader accessible SVG flowchart.

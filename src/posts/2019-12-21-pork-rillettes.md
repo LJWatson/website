@@ -1,8 +1,9 @@
 ---
 title: "Pork rillettes"
-date: "2019-12-21"
-tags: ["Lunch"]
-categories: "Recipe book"
+date: 2019-12-21
+postTags: ["Lunch"]
+postCategories: ["Recipe book"]
+postSummary: "I've loved pork rillettes since childhood holidays in France, spreading them onto baguette with salt and cornichons around a cottage kitchen table."
 ---
 
 I've loved pork rillettes since my family used to holiday in France during the summers of my childhood. I have many happy memories of sitting around the kitchen table in the cottage owned by friends in Parcay-Meslay, spreading rillettes onto slices of baguette with a good sprinkling of salt, accompanied with crunchy cornichons and (when I was older) a glass of wine from an unlabelled bottle courtesy of one of the local vineyards.

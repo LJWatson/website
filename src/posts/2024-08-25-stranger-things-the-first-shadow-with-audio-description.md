@@ -1,8 +1,11 @@
 ---
-title: "Stranger Things: The First Shadow with Audio Description (AD)"
-date: "2024-08-25"
-tags: []
-categories: "Real life"
+title: "Stranger Things The First Shadow with audio description (AD)"
+date: 2024-08-25
+postTags: []
+postCategories: ["Real life"]
+postSummary: "Last Sunday I went to see Stranger Things: The First Shadow at the Phoenix theatre in London and what really made my day was that it was a performance with live Audio Description (AD) and a touch tour beforehand.
+
+"
 ---
 
 Last Sunday I went to see [Stranger Things: The First Shadow](https://uk.strangerthingsonstage.com/), at the Phoenix theatre in London. If you like the [Stranger Things Netflix series](https://en.wikipedia.org/wiki/Stranger_Things), you'll love the play - and I absolutely did! What really made my day was that it was a performance with live Audio Description (AD) and a touch tour beforehand.
@@ -46,7 +49,7 @@ The AD headset was like a stethoscope, with a large bud that fitted into each ea
 
 The notes consisted of a brief description of the set, presumably because not everyone chooses to take the touch tour, then gave a detailed visual description of each of the characters. Generally this included a description of their costume, or at least the first outfit they appeared in, a visual description of the character including their hair, [skin tone](/thoughts-on-skin-tone-and-text-descriptions), and general style, plus notes on their physical characteristics - one is described as typically carrying books or a clipboard for example.
 
-## Audio Description
+## Audio description
 
 Unlike the AD for movies and TV series, where each line is carefully curated to fit neatly into the gaps between the original dialogue and sound effects, live AD has to cope with the uncertainty of a live theatre performance. Even with this exceptionally polished and slick performance of Stranger Things: The First Shadow, the exact pace cannot be guaranteed and so the gaps between one actor speaking their lines and the next can vary from one performance to another. The upshot is that occasionally the AD overlapped with the dialogue, but it really didn't bother me in the slightest - perhaps like other blind people I've become adept at processing multiple audio streams at once, or perhaps I was just engrossed in the story!
 

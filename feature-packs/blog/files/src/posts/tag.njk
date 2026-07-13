@@ -1,0 +1,30 @@
+---
+pagination:
+  data: collections.blogTagPages
+  size: 1
+  alias: tag
+  addAllPagesToCollections: true
+permalink: "{{ tag.permalink }}"
+layout: "layouts/base.html"
+---
+
+<h1>{{ tag.title }}</h1>
+
+<div class="layout" data-layout="athens">
+
+<div data-content="posts">
+{% set tagPosts = collections.blog | filterBlogByTag(tag.tag) %}
+{% set postListItems = tagPosts %}
+{% include "partials/post-list.html" %}
+</div><!-- one -->
+
+<div>
+<h3>Tags</h3>
+<ul class="alt-">
+{% for tag in collections.postTags %}
+<li><a href="/blog/tag/{{ tag | slug }}/">{{ tag }}</a></li>
+{% endfor %}
+</ul>
+</div><!-- two -->
+
+</div><!-- layout -->

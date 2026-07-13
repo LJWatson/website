@@ -1,0 +1,37 @@
+{
+  "name": "tink",
+  "url": "https://tink.uk",
+  "siteID": "tink",
+  "lang": "en-GB",
+  "locale": "en_GB",
+  "metaDesc": "Léonie Watson's personal website. Writing about the web, accessibility, and other things.",
+  "socialImage": "",
+  "socialImageAlt": "",
+  "copyrightOwner": "Léonie Watson",
+  "address1": "",
+  "address2": "",
+  "townCity": "",
+  "countyState": "",
+  "postalZipCode": "",
+  "country": "",
+  "email": "",
+  "telephone": "",
+  "bluesky": "https://bsky.app/profile/tink.uk",
+  "github": "https://github.com/LJWatson",
+  "linkedin": "https://www.linkedin.com/in/leoniewatson",
+  "mastodon": "https://front-end.social/@tink",
+  "analytics": {
+    "googleAnalyticsId": "",
+    "googleTagManagerId": "",
+    "plausibleDomain": "",
+    "plausibleScriptSrc": "https://plausible.io/js/script.js",
+    "umamiScriptSrc": "https://cloud.umami.is/script.js",
+    "umamiWebsiteId": ""
+  },
+  "fonts": {
+    "mode": "none",
+    "googleFontsUrl": "",
+    "preconnectGoogleFonts": false,
+    "stylesheet": ""
+  }
+}

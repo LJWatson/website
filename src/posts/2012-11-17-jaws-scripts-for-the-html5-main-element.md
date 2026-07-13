@@ -1,8 +1,9 @@
 ---
 title: "Jaws scripts for the HTML5 `main` element"
-date: "2012-11-17"
-tags: ["Screen readers", "ARIA", "HTML"]
-categories: "Code things"
+date: 2012-11-17
+postTags: ["Screen readers", "ARIA", "HTML"]
+postCategories: ["Code things"]
+postSummary: "Jaws scripts are no longer available, but a shortcut for moving directly to the `main` element is now standard, offering a more reliable way for screen readers to pinpoint primary content."
 ---
 
 **Updated:** 1 November 2018
@@ -21,7 +22,7 @@ The disadvantage is that developers must consciously include ARIA roles in their
 
 ## HTML5 elements
 
-Until the `main` element extension was proposed by [Steve Faulkner](https://www.twitter.com/stevefaulkner), there was no direct mapping between `role="main"` and an HTML5 element. This means that a screen reader mechanism for moving focus to the primary content area, would be entirely dependent on `role="main"` being added to the HTML.
+Until the `main` element extension was proposed by Steve Faulkner, there was no direct mapping between `role="main"` and an HTML5 element. This means that a screen reader mechanism for moving focus to the primary content area, would be entirely dependent on `role="main"` being added to the HTML.
 
 One of the [reasons for introducing the main element](https://www.w3.org/html/wg/wiki/User:Sfaulkne/main-usecases#Introduction) is that it's easier for developers to code and style `<main></main>` , than it is to use `<div id="main" role="main"></div>`.
 

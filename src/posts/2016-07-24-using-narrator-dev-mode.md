@@ -1,8 +1,9 @@
 ---
 title: "Using Narrator dev mode"
-date: "2016-07-24"
-tags: ["Screen readers", "Windows"]
-categories: "Desktop things"
+date: 2016-07-24
+postTags: ["Screen readers", "Windows"]
+postCategories: ["Desktop things"]
+postSummary: "The August 2nd Windows 10 Anniversary update introduces Narrator dev mode, a new feature designed to help developers understand how screen readers consume content and identify which on-screen objects are accessible."
 ---
 
 Narrator is the integrated screen reader for Windows 10. The August 2nd [Windows 10 Anniversary update](https://blogs.msdn.microsoft.com/accessibility/2016/07/01/making-progress-on-accessibility-with-the-windows-10-anniversary-update/) introduces several new Narrator features, including a Narrator mode designed specifically for developers.

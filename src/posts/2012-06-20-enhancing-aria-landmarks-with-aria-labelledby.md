@@ -1,8 +1,9 @@
 ---
 title: "Enhancing ARIA landmarks with aria-labelledby"
-date: "2012-06-20"
-tags: ["ARIA", "Screen readers"]
-categories: "Code things"
+date: 2012-06-20
+postTags: ["ARIA", "Screen readers"]
+postCategories: ["Code things"]
+postSummary: "ARIA landmark roles help screen reader users navigate web pages, but adding aria-labelledby makes them even more useful by distinguishing between multiple similar landmarks."
 ---
 
 ARIA landmark roles provide a useful way for screen reader users to navigate through web pages, and to understand the purpose of different sections of content on the page. With just a little bit more ARIA you can make landmarks even more helpful to blind and partially sighted people.

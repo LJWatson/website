@@ -1,8 +1,9 @@
 ---
 title: "Chargrilled basil chicken"
-date: "2011-10-02"
-tags: ["Lunch"]
-categories: "Recipe book"
+date: 2011-10-02
+postTags: ["Lunch"]
+postCategories: ["Recipe book"]
+postSummary: "The weather's glorious at the moment, perfect for eating al fresco, and this recipe is brilliant for lunch or dinner paired with a crisp white wine."
 ---
 
 The weather is glorious at the moment! It’s perfect for eating [al fresco](https://en.wikipedia.org/wiki/Al_fresco_dining), and this recipe is great for lunch or dinner. Team it up with a crisp white wine, then sit back and enjoy the sunshine.

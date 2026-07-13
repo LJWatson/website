@@ -1,8 +1,9 @@
 ---
-title: "KNFB Reader Review"
-date: "2009-10-18"
-tags: ["Apps"]
-categories: "Mobile things"
+title: "KNFB Reader review"
+date: 2009-10-18
+postTags: ["Apps"]
+postCategories: ["Mobile things"]
+postSummary: "I've discovered KNFB Reader, a portable OCR package that works with your mobile phone to convert text into speech, making it easy for blind people to read post, letters and packaging at home."
 ---
 
 Imagine getting home from work, collecting the post from the mat and sitting at the kitchen table to go through it, while you wait for the kettle to boil. For most people that's domestic normality. For many blind people, it's a process that involves a computer, scanner and OCR package. Hardly the setup for a quick look at anything.

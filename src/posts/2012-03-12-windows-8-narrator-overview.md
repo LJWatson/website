@@ -1,8 +1,9 @@
 ---
 title: "Windows 8 Narrator overview"
-date: "2012-03-12"
-tags: ["Screen readers", "Windows"]
-categories: "Desktop things"
+date: 2012-03-12
+postTags: ["Screen readers", "Windows"]
+postCategories: ["Desktop things"]
+postSummary: "Windows 8 has several accessibility improvements, with Narrator—Windows' built-in speech capability—much more configurable than before, offering many options you'd expect from a desktop screen reader."
 ---
 
 _This post was updated on 8th July 2012, to reflect changes in the [Windows 8 release edition](https://windows.microsoft.com/en-US/windows-8/release-preview)._

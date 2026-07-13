@@ -1,8 +1,9 @@
 ---
-title: "Using Ray-Ban Meta Glasses"
-date: "2025-06-01"
-tags: ["AI"]
-categories: "Real life"
+title: "Using Ray-Ban Meta glasses"
+date: 2025-06-01
+postTags: ["AI"]
+postCategories: ["Real life"]
+postSummary: "I wrote about wearable AI tech for blind people back in 2020 when I bought the Envision Glasses, but they never became part of my everyday routine. I've had Ray-Ban Meta Glasses for a few months now, and they've already become part of my daily life."
 ---
 
 I wrote about the advantages of wearable AI tech for blind people back in 2020, when I bought a pair of [Envision Glasses](/envision-glasses). At the time they felt revolutionary, and indeed they were, but they never became part of my everyday tech. I've had my pair of [Ray-Ban Meta Glasses](https://www.ray-ban.com/uk/ray-ban-meta-ai-glasses) for a few months now, and they've already become part of my daily routine, just like my phone and my watch.
@@ -13,7 +14,7 @@ The first thing that appealed to me about the Meta Glasses is that they look and
 
 I chose the Skyler frames in shiny black, with lenses that transition from clear to amethyst (when out in sunlight).
 
-<img src="../images/2025/ray-ban-meta-glasses.jpg" alt="Close-up of the right temple area of the Ray-Ban Meta Glasses, cut-away to reveal the integration of technology including the capture camera. The frames are black and the Ray-Ban logo is visible on the frames and at the top of the lens." height="400" width="400">
+<img src="/images/2025/ray-ban-meta-glasses.jpg" alt="Close-up of the right temple area of the Ray-Ban Meta Glasses, cut-away to reveal the integration of technology including the capture camera. The frames are black and the Ray-Ban logo is visible on the frames and at the top of the lens." height="400" width="400">
 
 Ray-Bans have a very robust look and feel, which makes them a strong presence on your face. Of the three basic frame styles (Wayfarer, Skyler, and Headliner), the Skyler frames appeared to be the least heavy looking - though there really is not much in it.
 

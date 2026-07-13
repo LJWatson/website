@@ -1,8 +1,9 @@
 ---
-title: "Guide to Emoticons"
-date: "2009-03-10"
-tags: ["Screen readers"]
-categories: "Web life"
+title: "Guide to emoticons"
+date: 2009-03-10
+postTags: ["Screen readers"]
+postCategories: ["Web life"]
+postSummary: "Emoticons use punctuation marks to convey facial expressions in text, helping bridge the gap between written and verbal communication where tone and expression might otherwise be lost."
 ---
 
 Emoticons are short strings of punctuation intended to express emotions in type written text. Text can be a very antiseptic way of communicating and without the ability to see the facial expressions of the person you are talking to, it can sometimes be difficult to correctly interpret the meaning of what they are saying.
@@ -24,7 +25,7 @@ History recalls that the first emoticon was posted to a Carnegie Mellon Universi
 
 For Fahlman's own view of how it all began, take a look at his page on [Smiley Lore](https://www-2.cs.cmu.edu/%7Esef/sefSmiley.htm "Smiley Lore").
 
-## Types of Emoticon
+## Types of emoticon
 
 In the nearly three decades since the first emoticon was suggested, their scale and complexity have grown to become something close to an art form. Applications such as microsoft's Windows Messenger have the capability to turn the strings of punctuation into minature graphics, but this does sort of miss the point of emoticons in the first place.
 
@@ -94,7 +95,7 @@ Table of Character Emoticons
 | :-\[ | Colon, Hyphen, Left Bracket | Vampire |
 | <:+D | Less, Colon, Plus, Capital D | Clown |
 
-## Using Emoticons
+## Using emoticons
 
 When you first start using emoticons it's tempting to add one to every sentence, but as you become more accustomed to highlighting your messages with them you'll settle into a regular pattern.  
 A good rule of thumb is to use only one emoticon in any paragraph and no more than three or four in a message, depending on its length.

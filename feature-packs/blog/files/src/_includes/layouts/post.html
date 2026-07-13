@@ -1,0 +1,52 @@
+{% extends "layouts/base.html" %}
+
+{% set recommendedPosts = helpers.getSiblingContent(collections.blog, page, 6, false) %}
+
+{% block content %}
+
+<div class="layout" data-layout="tbilisi">
+
+<div>
+
+<small class="item-meta">{{ (date or page.date) | dateFilter }}</small>
+<h1>{{ title }}</h1>
+<p>{{ postSummary }}</p>
+
+{% if image %}
+<img src="{{ image }}" alt="{{ title }}">
+{% endif %}
+
+{{ content | safe }}
+
+<small>{{ postAuthor }}
+{% if postTags %}
+ •
+{% for tag in postTags %}
+<span class="tag">{{ tag }}</span>{% if not loop.last %} • {% endif %}
+{% endfor %}
+{% endif %}
+</small>
+
+</div><!-- one -->
+</div><!-- layout -->
+
+{% if recommendedPosts %}
+<div class="layout" data-layout="tbilisi">
+
+<div>
+<hr>
+
+<h2>More posts</h2>
+
+{% for item in recommendedPosts %}
+<article class="item-post-list">
+<h2><a href="{{ item.url }}">{{ item.data.title }}</a></h2>
+<p>{{ item.data.postSummary }}</p>
+</article>
+{% endfor %}
+</div><!-- one -->
+
+<div>
+{% endif %}
+
+{% endblock %}

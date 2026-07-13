@@ -1,8 +1,9 @@
 ---
 title: "Proposed ARIA password role"
-date: "2016-05-09"
-tags: ["ARIA", "Screen readers"]
-categories: "Code things"
+date: 2016-05-09
+postTags: ["ARIA", "Screen readers"]
+postCategories: ["Code things"]
+postSummary: "I'd never enter my password into a field I wasn't confident was protected from view, but a proposed ARIA password role could put screen reader users in exactly that position."
 ---
 
 Let me ask you a question: Would you enter your password into a password field, if you couldn’t be confident it was protected from being viewed by other people? The answer is probably not, but a proposed ARIA role could put screen reader users in exactly this position.

@@ -1,8 +1,9 @@
 ---
 title: "Using the Web Speech API to simulate CSS Speech support"
-date: "2015-07-12"
-tags: ["CSS", "JavaScript", "Web Speech API", "Screen readers"]
-categories: "Code things"
+date: 2015-07-12
+postTags: ["CSS", "JavaScript", "Web Speech API", "Screen readers"]
+postCategories: ["Code things"]
+postSummary: "The CSS Speech module is largely unsupported in browsers, but I've created a demo using the Web Speech API to show how CSS Speech properties might give content aural style, similar to how other CSS properties provide visual style."
 ---
 
 Updated on 4th February 2018.
@@ -11,7 +12,7 @@ The CSS Speech properties are intended to give content aural style, in the same 
 
 The CSS Speech module and Web Speech API both use [Text To Speech (TTS)](https://en.wikipedia.org/wiki/Speech_synthesis). The CSS Speech module describes how a service that uses TTS (like a screen reader or voice assistant) speaks web content, and the Web Speech API produces synthetic speech using a TTS engine.
 
-## Text To Speech
+## Text to speech
 
 There are TTS engines bundled with most platforms. Voice assistants like Siri, Cortana or Google Talk tend to use platform TTS engines. Screen readers may also use the platform TTS, but often come bundled with alternative TTS engines that offer a wider choice of voices or language support.
 
@@ -23,7 +24,7 @@ If CSS Speech was supported by browsers, it would be possible for a screen reade
 
 In the absence of consistent browser support for CSS Speech, it isn’t possible to determine the [computed aural style](https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle) of content. Even if it were, there is no way to relay that information to a screen reader and force it to respond accordingly. There are no APIs for interacting directly with screen readers.
 
-It is possible to use the Web Speech API to simulate the way a screen reader might respond to CSS Speech though. A [basic demo](https://playground.tink.uk/cssspeech/index.html) is available (with the warning that it’s held together with chicken wire and sticky tape). Thanks to [Aurelio De Rosa](https://www.twitter.com/AurelioDeRosa), from whom I borrowed the workaround for the [getVoices() bug in Chrome](https://code.google.com/p/chromium/issues/detail?id=340160).
+It is possible to use the Web Speech API to simulate the way a screen reader might respond to CSS Speech though. A [basic demo](https://playground.tink.uk/cssspeech/index.html) is available (with the warning that it’s held together with chicken wire and sticky tape). Thanks to Aurelio De Rosa, from whom I borrowed the workaround for the [getVoices() bug in Chrome](https://code.google.com/p/chromium/issues/detail?id=340160).
 
 ## CSS Speech properties
 

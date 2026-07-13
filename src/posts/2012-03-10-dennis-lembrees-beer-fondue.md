@@ -1,11 +1,12 @@
 ---
-title: "Dennis Lembree's Beer fondue"
-date: "2012-03-10"
-tags: ["Dinner", "Web standards food"]
-categories: "Recipe book"
+title: "Dennis Lembree's beer fondue"
+date: 2012-03-10
+postTags: ["Dinner", "Web standards food"]
+postCategories: ["Recipe book"]
+postSummary: "The fifth post bringing together food and technology on my blog, this time featuring a tasty cheese fondue recipe from Dennis Lembree, a web standards community favourite."
 ---
 
-The fifth in a series of posts that bring together the two sides of my blog: Food and technology. I’ve asked the great and the good from the [web standards community](/tag/web-standards-food/) to share their favourite recipes. This tasty fondue recipe is from [Dennis Lembree](https://www.twitter.com/dennisl).
+The fifth in a series of posts that bring together the two sides of my blog: Food and technology. I’ve asked the great and the good from the [web standards community](/tag/web-standards-food/) to share their favourite recipes. This tasty fondue recipe is from Dennis Lembree.
 
 ## Information
 

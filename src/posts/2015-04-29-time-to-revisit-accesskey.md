@@ -1,19 +1,20 @@
 ---
 title: "Time to revisit accesskey?"
-date: "2015-04-29"
-tags: ["HTML", "JavaScript", "Screen readers"]
-categories: "Code things"
+date: 2015-04-29
+postTags: ["HTML", "JavaScript", "Screen readers"]
+postCategories: ["Code things"]
+postSummary: "Many websites provide keyboard shortcuts for common tasks, but the way they're delivered using JavaScript is problematic for Windows screen reader users because the screen reader intercepts the keys."
 ---
 
 Many websites provide keyboard shortcuts for common tasks. Keyboard shortcuts are useful things to have, but the way in which they’re provided is often problematic for Windows screen reader users.
 
-Websites like [Facebook](https://www.facebook.com/), [Twitter](https://www.twitter.com/) and [Google](https://www.google.com/) provide keyboard shortcuts for repetitive tasks, like posting a status update, replying to a tweet, or deleting an email. The shortcuts are intended to make things easier for keyboard-only users, but also for mouse users (because it’s often quicker to hit a keyboard shortcut than it is to locate the relevant control and click on it with a mouse).
+Websites like [Facebook](https://www.facebook.com/), Twitter and [Google](https://www.google.com/) provide keyboard shortcuts for repetitive tasks, like posting a status update, replying to a tweet, or deleting an email. The shortcuts are intended to make things easier for keyboard-only users, but also for mouse users (because it’s often quicker to hit a keyboard shortcut than it is to locate the relevant control and click on it with a mouse).
 
 Each of these sites (and many others) provide keyboard shortcuts using JavaScript. On the face of it this seems like a reasonable way to do things, but layering keyboard functionality on top of the application means that none of the shortcuts are available to Windows screen reader users.
 
 ## Caught in the virtual buffer
 
-Windows screen readers use a [virtual model](understanding-screen-reader-interaction-modes/) to support interaction with content rendered in the browser. A virtual buffer of the content is created, based on information from the DOM and accessibility tree. It is this virtual version of the content that the screen reader presents to the user.
+Windows screen readers use a [virtual model](/understanding-screen-reader-interaction-modes) to support interaction with content rendered in the browser. A virtual buffer of the content is created, based on information from the DOM and accessibility tree. It is this virtual version of the content that the screen reader presents to the user.
 
 Interaction with the virtual buffer works like this: the screen reader listens for keyboard events. When it detects a key press that corresponds to a screen reader command, that action is executed in the virtual buffer. For example, if the h key is pressed when a Windows screen reader is running, focus will move to the next heading (h1 – h6) in the virtual buffer. Otherwise the key is passed back through to the browser, where it will be caught by the JavaScript that handles the shortcuts provided by the website.
 

@@ -1,8 +1,9 @@
 ---
 title: "Leek & potato soup"
-date: "2010-12-05"
-tags: ["Lunch"]
-categories: "Recipe book"
+date: 2010-12-05
+postTags: ["Lunch"]
+postCategories: ["Recipe book"]
+postSummary: "When cold winter weather sets in, there's nothing like homemade leek and potato soup and fresh bread to warm you up — I love spending a Sunday morning making a batch."
 ---
 
 When the cold winter weather sets in, there’s nothing like a bowl of home made soup and some Ffresh bread to warm you up. Leek and potato soup is one of my favourites and I love spending an hour or so on a Sunday morning putting a batch together.

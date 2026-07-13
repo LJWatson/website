@@ -1,8 +1,9 @@
 ---
 title: "Adventures with BeMyAI"
-date: "2023-08-17"
-tags: ["Screen readers", "AI"]
-categories: "Web life"
+date: 2023-08-17
+postTags: ["Screen readers", "AI"]
+postCategories: ["Web life"]
+postSummary: "I was given early access to BeMyAI, a new feature being added to the BeMyEyes iOS app using ChatGPT4, which lets you ask questions about photos instead of relying on sighted volunteers."
 ---
 
 Today I was given early access to the [BeMyAI](https://www.bemyeyes.com/blog/introducing-be-my-eyes-virtual-volunteer) beta, a feature that's being added to the [BeMyEyes](https://www.bemyeyes.com/) iOS app using ChatGPT4.

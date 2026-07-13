@@ -1,8 +1,9 @@
 ---
 title: "Regaining sight?"
-date: "2017-10-12"
-tags: ["Philosophy"]
-categories: "Real life"
+date: 2017-10-12
+postTags: ["Philosophy"]
+postCategories: ["Real life"]
+postSummary: "People often presume I'd jump at the chance to see again, but honestly I'm not sure I would—there's more to it than you might think."
 ---
 
 People often presume I would jump at the chance to be able to see again. The fact of the matter is that I really don't know whether I would or not, because there is more to it than you might think.

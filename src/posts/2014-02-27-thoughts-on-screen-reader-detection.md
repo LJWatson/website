@@ -1,8 +1,9 @@
 ---
 title: "Thoughts on screen reader detection"
-date: "2014-02-27"
-tags: ["Screen readers", "Philosophy"]
-categories: "Web life"
+date: 2014-02-27
+postTags: ["Screen readers", "Philosophy"]
+postCategories: ["Web life"]
+postSummary: "Screen reader detection has been under discussion lately, and I'm not comfortable with it. I'd like to share the reasons why—it's really about disability detection, and that's a very different thing altogether."
 ---
 
 The subject of [screen reader detection](https://dvcs.w3.org/hg/IndieUI/raw-file/default/src/indie-ui-context.html#userScreenReaderSettings) has been under discussion lately. It isn’t something I’m comfortable with, so I’d like to share the reasons why.

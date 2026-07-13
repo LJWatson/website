@@ -1,8 +1,9 @@
 ---
 title: "Scrambled eggs on toast"
-date: "2014-11-11"
-tags: ["Breakfast"]
-categories: "Recipe book"
+date: 2014-11-11
+postTags: ["Breakfast"]
+postCategories: ["Recipe book"]
+postSummary: "Breakfast at the weekend can be delightfully indulgent, and sometimes the simple things are the most tempting—throw in interesting company and conversation, and that's my idea of heaven on a Sunday."
 ---
 
 Breakfast at the weekend can be delightfully indulgent, and sometimes the simple things are the most tempting of all. Throw in some interesting company, a little conversation and this uncomplicated breakfast, and that's my idea of heaven on a Sunday.

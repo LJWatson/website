@@ -1,0 +1,26 @@
+{% if pagination.pageLinks.length > 1 %}
+<p>Showing {{ (pagination.pageNumber * pagination.size) + 1 }} to
+{% if pagination.nextPageLink %}
+{{ (pagination.pageNumber * pagination.size) + pagination.size }}
+{% else %}
+{{ collections.blog.length }}
+{% endif %}
+of {{ collections.blog.length }} results</p>
+{% endif %}
+
+
+{% if pagination.href.next or pagination.href.previous %}
+<footer>
+
+{% if pagination.href.previous %}
+<a href="{{ pagination.href.previous }}{{ paginationAnchor }}" data-direction="backwards">
+<span>{{ paginationPrevText if paginationPrevText else 'Previous' }}</span></a>
+{% endif %}
+
+{% if pagination.href.next %}
+<a href="{{ pagination.href.next }}{{ paginationAnchor }}" data-direction="forwards">
+<span>{{ paginationNextText if paginationNextText else 'Next' }}</span></a>
+{% endif %}
+
+</footer>
+{% endif %}

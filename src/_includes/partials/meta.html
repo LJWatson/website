@@ -1,0 +1,68 @@
+{% set siteName = site.name or "Site name" %}
+{% set pageName = title or name or siteName %}
+{% set defaultPageTitle = pageName %}
+{% if siteName and pageName != siteName %}
+{% set defaultPageTitle = pageName + " - " + siteName %}
+{% endif %}
+{% set pageTitle = metaTitle or defaultPageTitle %}
+
+{% set currentUrl = canonicalUrl or page.url %}
+{% if site.absoluteUrl and currentUrl and currentUrl.startsWith("/") %}
+{% set currentUrl = site.absoluteUrl + currentUrl %}
+{% endif %}
+
+{% set pageMetaDescription = metaDesc or summary %}
+{% if not pageMetaDescription and lede %}
+{% set pageMetaDescription = lede | striptags %}
+{% endif %}
+{% if not pageMetaDescription %}
+{% set pageMetaDescription = site.metaDesc %}
+{% endif %}
+{% set ogTitleValue = ogTitle or pageTitle %}
+{% set ogDescriptionValue = ogDescription or pageMetaDescription %}
+{% set ogTypeValue = ogType or "website" %}
+{% set ogImageUrl = ogImage or socialImage or featureImage or site.socialImage %}
+{% if ogImageUrl and site.absoluteUrl and ogImageUrl.startsWith("/") %}
+{% set ogImageUrl = site.absoluteUrl + ogImageUrl %}
+{% endif %}
+{% set ogImageAltText = ogImageAlt or socialImageAlt or featureImageCaption or site.socialImageAlt %}
+{% if ogImageUrl and not ogImageAltText %}
+{% set ogImageAltText = "Preview image for " + pageName %}
+{% endif %}
+{% set robotsValue = metaRobots or site.metaRobots or "index, follow, noodp" %}
+{% set twitterCard = twitterCard or (ogImageUrl and "summary_large_image" or "summary") %}
+
+<title>{{ pageTitle }}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+{% if currentUrl %}<link rel="canonical" href="{{ currentUrl }}" />{% endif %}
+<meta name="author" content="{{ site.copyrightOwner or siteName }}" />
+<meta name="robots" content="{{ robotsValue }}" />
+
+{% if pageMetaDescription %}
+<meta name="description" content="{{ pageMetaDescription }}" />
+{% endif %}
+
+{% if site.locale %}
+<meta property="og:locale" content="{{ site.locale }}" />
+{% endif %}
+<meta property="og:site_name" content="{{ siteName }}" />
+<meta property="og:title" content="{{ ogTitleValue }}" />
+<meta property="og:type" content="{{ ogTypeValue }}" />
+{% if currentUrl %}<meta property="og:url" content="{{ currentUrl }}" />{% endif %}
+{% if ogDescriptionValue %}
+<meta property="og:description" content="{{ ogDescriptionValue }}" />
+{% endif %}
+{% if ogImageUrl %}
+<meta property="og:image" content="{{ ogImageUrl }}" />
+{% if ogImageAltText %}<meta property="og:image:alt" content="{{ ogImageAltText }}" />{% endif %}
+{% endif %}
+
+<meta name="twitter:card" content="{{ twitterCard }}" />
+<meta name="twitter:title" content="{{ ogTitleValue }}" />
+{% if ogDescriptionValue %}
+<meta name="twitter:description" content="{{ ogDescriptionValue }}" />
+{% endif %}
+{% if ogImageUrl %}
+<meta name="twitter:image" content="{{ ogImageUrl }}" />
+{% if ogImageAltText %}<meta name="twitter:image:alt" content="{{ ogImageAltText }}" />{% endif %}
+{% endif %}

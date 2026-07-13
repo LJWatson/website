@@ -1,8 +1,9 @@
 ---
 title: "Chorizo, Taleggio & polenta bake"
-date: "2009-06-15"
-tags: ["Dinner"]
-categories: "Recipe book"
+date: 2009-06-15
+postTags: ["Dinner"]
+postCategories: ["Recipe book"]
+postSummary: "This recipe has evolved over the years and combines two of my favourite foods — chorizo and cheese — creating something that comes perilously close to heaven!"
 ---
 
 Like most good recipes, this one has evolved over the years. It's one of those dishes that you can play fast and loose with, without worrying about it at all. Two of my favourite foods are chorizo and cheese, so this recipe comes perilously close to heaven as far as I'm concerned!

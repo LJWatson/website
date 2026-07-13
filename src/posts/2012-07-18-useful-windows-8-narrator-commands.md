@@ -1,8 +1,9 @@
 ---
 title: "Useful Windows 8 Narrator commands"
-date: "2012-07-18"
-tags: ["Windows", "Screen readers"]
-categories: "Desktop things"
+date: 2012-07-18
+postTags: ["Windows", "Screen readers"]
+postCategories: ["Desktop things"]
+postSummary: "Windows 8's Narrator has several improvements and many characteristics you'd expect in a screen reader, though learning its unique keyboard commands presents a challenge for new users."
 ---
 
 Windows 8 introduces several improvements to Narrator, its built in speech capability. Like VoiceOver in the early days, there is much that Narrator doesn’t do, but it already has many of the characteristics you’d expect to find in a screen reader.

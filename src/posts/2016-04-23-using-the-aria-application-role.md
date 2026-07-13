@@ -1,8 +1,9 @@
 ---
 title: "Using the ARIA application role"
-date: "2016-04-23"
-tags: ["ARIA", "JavaScript", "Screen readers"]
-categories: "Code things"
+date: 2016-04-23
+postTags: ["ARIA", "JavaScript", "Screen readers"]
+postCategories: ["Code things"]
+postSummary: "The ARIA `application` role stops screen readers from intercepting keystrokes, which can be useful for JavaScript keyboard shortcuts, but it also disables all standard screen reader navigation—so it must be used carefully and only when necessary."
 ---
 
 The ARIA [application role](https://www.w3.org/TR/wai-aria-1.1/#application) changes the way screen readers interact with web content. Several good articles explain (rightly) why the `application` role should be [used with caution](https://www.marcozehe.de/2012/02/06/if-you-use-the-wai-aria-role-application-please-do-so-wisely/), but this post looks at a use case where the `application` role is used to good effect.

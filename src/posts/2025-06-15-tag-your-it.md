@@ -1,8 +1,10 @@
 ---
 title: "Tag, you're it"
-date: "2025-06-15"
-tags: [""]
-categories: "Web life"
+date: 2025-06-15
+permalink: /tag-youre-it/index.html
+postTags: []
+postCategories: ["Web life"]
+postSummary: "Adrian Roselli tagged me in his post back in March, and it's taken me until now to get round to answering his blogging questions!"
 ---
 
 Adrian Roselli tagged me in his [Tag, you're it](https://adrianroselli.com/2025/03/tag-youre-it.html) post in March, and it's taken me until now to get to it!
@@ -15,7 +17,7 @@ I have no idea why I began blogging! It probably had something to do with having
 
 I use [Eleventy](https://www.11ty.dev/) hosted on [GitHub](https://github.com/ljwatson/website) and published via [Netlify](https://netlify.com). I wish I could take credit for the decision to use Eleventy (because I absolutely love it), but the credit goes to [Andy Bell](https://bell.bz/).
 
-As a blind person, the design and translation of designs into code, are no longer things I'm able to do for myself. Fortunately, I've known some remarkable designers and developers who've helped me make this website real over the years. The first version was designed by [Tom Waterhouse](https://2dforever.com/) and built by [Matt Lawson](https://lawlesscreation.com/), two of my then colleagues at [Nomensa](https://nomensa.com); and the current version was designed and built by Andy - who also migrated it onto Eleventy for me.
+As a blind person, the design and translation of designs into code, are no longer things I'm able to do for myself. Fortunately, I've known some remarkable designers and developers who've helped me make this website real over the years. The first version was designed by [Tom Waterhouse](https://2dforever.com/) and built by [Matt Lawson](https://lawlesscreation.com/), two of my then colleagues at Nomensa; and the current version was designed and built by Andy - who also migrated it onto Eleventy for me.
 
 ## Have you blogged on other platforms before?
 

@@ -1,8 +1,9 @@
 ---
 title: "Addressing concerns about CSS Speech"
-date: "2022-11-26"
-tags: ["Screen readers"]
-categories: "Code things"
+date: 2022-11-26
+postTags: ["Screen readers"]
+postCategories: ["Code things"]
+postSummary: "The case for CSS Speech isn't just about screen readers, but concerns about websites taking over your screen reader and making content less accessible are worth examining carefully."
 ---
 
 The [case for CSS Speech](/why-we-need-css-speech/) is not just about screen readers, but they do of course matter. Whenever the topic is mentioned, someone will contact me to say they worry about websites taking over their screen reader and making content less accessible instead of more enjoyable.
@@ -42,7 +43,7 @@ The ultimate safeguard is for browsers to offer a way to ignore CSS Speech. Ther
 
 With these protections and safeguards in place, CSS Speech would let us elevate the experience of listening to content from a monotone into something altogether more interesting.
 
-There are some truly [extraordinary Text To Speech (TTS) engins](https://play.ht/) out there, but they're not the ones used by browsers or screen readers as a rule. For the most part this means that content spoken by web readers or screen readers is delivered in a flat, disinterested way that never changes - whether reading about a climate catastrophe or describing unfeasibly cute and fluffy things.
+There are some truly extraordinary Text To Speech (TTS) engins out there, but they're not the ones used by browsers or screen readers as a rule. For the most part this means that content spoken by web readers or screen readers is delivered in a flat, disinterested way that never changes - whether reading about a climate catastrophe or describing unfeasibly cute and fluffy things.
 
 Imagine this news item:
 
@@ -54,7 +55,7 @@ Imagine this news item:
 
 <details>
 <summary aria-label="Show media player for news item without CSS Speech">Show media player</summary>
-<audio controls src="../media/2022/screen-reader-demo-without-css-speech.mp3"></audio>
+<audio controls src="/media/2022/screen-reader-demo-without-css-speech.mp3"></audio>
 
 ## Transcript
 
@@ -85,7 +86,7 @@ voice-pitch: low;
 
 <details>
 <summary aria-label="Show media player for news item with CSS Speech">Show media player</summary>
-<audio controls src="../media/2022/screen-reader-demo-with-css-speech.mp3"></audio>
+<audio controls src="/media/2022/screen-reader-demo-with-css-speech.mp3"></audio>
 
 ## Transcript
 

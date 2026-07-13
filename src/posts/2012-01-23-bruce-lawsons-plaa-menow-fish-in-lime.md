@@ -1,11 +1,12 @@
 ---
-title: "Bruce Lawson's Plaa menow (Fish in lime)"
-date: "2012-01-23"
-tags: ["Dinner", "Web standards food"]
-categories: "Recipe book"
+title: "Bruce Lawson's Plaa menow (fish in lime)"
+date: 2012-01-23
+postTags: ["Dinner", "Web standards food"]
+postCategories: ["Recipe book"]
+postSummary: "I'm bringing together the two sides of my blog—food and technology—by asking folk from the web standards community to share their favourite recipes. Here's a sumptuous Thai recipe from Bruce Lawson."
 ---
 
-The second in a series of posts that bring together the two sides of my blog: Food and technology. I’ve asked the great and the good from the [web standards community](/tag/web-standards-food/) to share their favourite recipes. This sumptuous Thai recipe is from [Bruce Lawson](https://www.twitter.com/brucel).
+The second in a series of posts that bring together the two sides of my blog: Food and technology. I’ve asked the great and the good from the [web standards community](/tag/web-standards-food/) to share their favourite recipes. This sumptuous Thai recipe is from Bruce Lawson.
 
 ## Information
 

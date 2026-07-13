@@ -1,8 +1,9 @@
 ---
 title: "Screen readers, ARIA & HTML5 (too much information)"
-date: "2013-04-12"
-tags: ["ARIA", "HTML", "Screen readers"]
-categories: "Code things"
+date: 2013-04-12
+postTags: ["ARIA", "HTML", "Screen readers"]
+postCategories: ["Code things"]
+postSummary: "Most screen readers now support ARIA and HTML5, making it easy to inadvertently overload users with too much information by applying roles incorrectly."
 ---
 
 Most current screen readers support [ARIA](https://www.w3.org/TR/wai-aria/) to one extent or another, and many now support some features of [HTML5](https://www.w3.org/TR/2011/WD-html5-20110525/) as well. With ARIA and HTML5 making increasing amounts of semantic data available to screen reader users, it’s really easy to inadvertently overload people with too much information.

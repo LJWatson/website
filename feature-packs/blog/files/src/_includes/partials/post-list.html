@@ -1,0 +1,16 @@
+{% for item in postListItems %}
+<article class="item-post">
+
+{% if item.data.thumbnail %}<figure>
+<a href="{{ item.url }}"><img src="{{ item.data.thumbnail }}" alt="{{ item.data.title }}"></a>
+<figcaption>{{ item.data.postAuthor }} • {{ (item.data.date or item.date) | dateFilter }}</figcaption>
+</figure>{% endif %}
+
+<h2><a href="{{ item.url }}">{{ item.data.title }}</a></h2>
+
+<p>{{ item.data.postSummary }}</p>
+
+<!-- {% if item.data.postTags %}<small>Tagged with: {% for tag in item.data.postTags %}
+{{ tag }}{% if not loop.last %} • {% endif %}{% endfor %}</small>{% endif %} -->
+</article>
+{% endfor %}

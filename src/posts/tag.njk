@@ -1,0 +1,30 @@
+---js
+{
+  pagination: {
+    data: "collections.blogTagPages",
+    size: 1,
+    alias: "tag",
+    addAllPagesToCollections: true
+  },
+  permalink: function(data) { return data.tag.permalink; },
+  layout: "layouts/base.html",
+  eleventyComputed: {
+    title: function(data) { return data.tag ? data.tag.title : "Tag"; }
+  }
+}
+---
+
+<div class="layout" data-layout="athens">
+
+<div data-content="posts">
+{% set postListItems = tag.posts %}
+{% include "partials/post-list.html" %}
+{% set pageNumber = tag.pageNumber %}
+{% set totalPages = tag.totalPages %}
+{% set baseUrl = tag.baseUrl %}
+{% include "partials/pagination-manual.html" %}
+</div>
+
+{% include "partials/blog-sidebar.html" %}
+
+</div>

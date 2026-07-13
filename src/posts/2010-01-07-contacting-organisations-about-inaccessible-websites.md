@@ -1,7 +1,8 @@
 ---
-title: "Contacting Organisations About Inaccessible Websites"
-date: "2010-01-07"
-categories: "Web life"
+title: "Contacting organisations about inaccessible websites"
+date: 2010-01-07
+postCategories: ["Web life"]
+postSummary: "Contacting organisations about inaccessible websites can seem daunting, but the Web Accessibility Initiative's new resource provides practical guidance on how to give feedback effectively."
 ---
 
 Contacting an organisation to explain why you find their website difficult to use, can seem a bit daunting. Who should you talk to? What should you say? How should you approach it?

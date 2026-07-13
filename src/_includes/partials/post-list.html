@@ -1,25 +1,16 @@
-<div class="[ post ] [ flow ] [ flow-space-900 text-500 ]">
-  {% for item in postListItems %}
-    <article class="flow">
-      <h2 class="text-700 md:text-800">
-        <a href="{{ item.url }}" rel="bookmark">{{ item.data.title }}</a>
-      </h2>
-      <div class="[ post__meta ] [ measure-short flow-space-300 ]">
-        <time class="font-sans weight-bold" datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateFilter }}</time>
-        {% set categories = helpers.getCategories(item) %}
-        {% if categories | length %}
-          <ul class="cluster">
-          {% for category in categories %}
-            <li>  
-              <a href="/category/{{ category | slug }}" class="[ pill ] [ bg-primary ]">{{ category }}</a>
-            </li>
-          {% endfor %}
-          </ul>
-        {% endif %}
-      </div>
-      {% if item.data.summary %}
-        <p class="measure-short flow-space-400">{{ item.data.summary }}</p>
-      {% endif %}
-    </article>
-  {% endfor %}
-</div>
+{% for item in postListItems %}
+<article class="item-post">
+
+<h2><a href="{{ item.url }}">{{ item.data.title }}</a></h2>
+<time datetime="{{ (item.data.date or item.date) | dateFilter('yyyy-MM-dd') }}">{{ (item.data.date or item.date) | dateFilter }}</time>
+<p>{{ item.data.postSummary }}</p>
+
+{% if item.data.postCategories or item.data.postTags %}
+<ul class="post-meta">
+{% for category in item.data.postCategories %}<li><a href="/category/{{ category | slug }}/">{{ category }}</a></li>{% endfor %}
+{% for tag in item.data.postTags %}<li><a href="/tag/{{ tag | slug }}/">{{ tag }}</a></li>{% endfor %}
+</ul>
+{% endif %}
+
+</article>
+{% endfor %}

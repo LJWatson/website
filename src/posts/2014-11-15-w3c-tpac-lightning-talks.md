@@ -1,8 +1,9 @@
 ---
-title: "W3C TPAC: Lightning talks"
-date: "2014-11-15"
-tags: ["Standards"]
-categories: "Real life"
+title: "W3C TPAC lightning talks"
+date: 2014-11-15
+postTags: ["Standards"]
+postCategories: ["Real life"]
+postSummary: "I attended TPAC 2014 at the Santa Clara Marriott in late October, a week when HTML5 became a W3C Recommendation and we celebrated 25 years of the web and 20 years of the W3C itself."
 ---
 
 [TPAC](https://www.w3.org/2014/11/TPAC/) is the annual gathering of the [W3C](https://www.w3.org/). It was held at the [Santa Clara Marriott](https://www.marriott.com/hotels/hotel-information/travel/sjcga-santa-clara-marriott/) between 27th and 31st October 2014.

@@ -1,8 +1,9 @@
 ---
-title: "Jaws, IE & the Forms region bug"
-date: "2013-07-31"
-tags: ["Screen readers", "ARIA", "HTML", "Screen readers"]
-categories: "Code things"
+title: "Jaws, IE & the forms region bug"
+date: 2013-07-31
+postTags: ["Screen readers", "ARIA", "HTML", "Screen readers"]
+postCategories: ["Code things"]
+postSummary: "I've discovered an unusual problem where Jaws announces \"region\" before every form field in Internet Explorer when a form is inside a `role=\"main\"` container, but there's a simple workaround: add `role=\"form\"` to the form element itself."
 ---
 
 There is an unusual problem with Jaws and Internet Explorer that causes the word "region" to be announced before every field in a form. Fortunately there is a workaround until the problem itself is resolved.

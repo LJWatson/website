@@ -1,8 +1,9 @@
 ---
 title: "Sticky pork belly slices"
-date: "2025-06-10"
-tags: ["Dinner"]
-categories: "Recipe book"
+date: 2025-06-10
+postTags: ["Dinner"]
+postCategories: ["Recipe book"]
+postSummary: "I've got a recipe for sticky pork belly slices that you can make as sweet and sticky as you like, or turn up the heat with chilli if that's your preference."
 ---
 
 This recipe for sticky pork belly slices is one where you can turn up the heat if you like your food with a chilli kick to it. Otherwise, it's just sweet and sticky and just a little bit crunchy all the way.

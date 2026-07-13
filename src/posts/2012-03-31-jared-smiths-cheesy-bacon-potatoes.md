@@ -1,11 +1,12 @@
 ---
-title: "Jared Smith's Cheesy bacon potatoes"
-date: "2012-03-31"
-tags: ["Dinner", "Web standards food"]
-categories: "Recipe book"
+title: "Jared Smith's cheesy bacon potatoes"
+date: 2012-03-31
+postTags: ["Dinner", "Web standards food"]
+postCategories: ["Recipe book"]
+postSummary: "I'm sharing favourite recipes from the web standards community, and this fabulous outdoors dish from Jared Smith combines meat and potatoes—two of his favourite things."
 ---
 
-The sixth in a series of posts that bring together the two sides of my blog: Food and technology. I’ve asked the great and the good from the [web standards community](/tag/web-standards-food/) to share their favourite recipes. This fabulous outdoors recipe is from [Jared Smith](https://www.twitter.com/jared_w_smith).
+The sixth in a series of posts that bring together the two sides of my blog: Food and technology. I’ve asked the great and the good from the [web standards community](/tag/web-standards-food/) to share their favourite recipes. This fabulous outdoors recipe is from Jared Smith.
 
 ## Information
 

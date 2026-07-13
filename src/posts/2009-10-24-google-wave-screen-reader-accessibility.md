@@ -1,8 +1,9 @@
 ---
-title: "Google Wave Screen Reader Accessibility"
-date: "2009-10-24"
-tags: ["Screen readers", "HTML"]
-categories: "Web life"
+title: "Google Wave screen reader accessibility"
+date: 2009-10-24
+postTags: ["Screen readers", "HTML"]
+postCategories: ["Web life"]
+postSummary: "Google Wave is the latest innovation in online communication and causing considerable interest, but it's a catastrophic accessibility failure for screen reader users with no navigation access or page structure available."
 ---
 
 Google Wave is the latest innovation in online communication. It's caused a great deal of interest across the industry, and may well herald a new era in online social interaction. It's new, it's cutting edge and it's exciting. It's also a catastrophic accessibility failure for screen reader users.

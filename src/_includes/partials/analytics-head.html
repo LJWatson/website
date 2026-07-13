@@ -1,0 +1,27 @@
+{% if site.analytics.googleAnalyticsId %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.googleAnalyticsId }}"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "{{ site.analytics.googleAnalyticsId }}");
+</script>
+{% endif %}
+
+{% if site.analytics.googleTagManagerId %}
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":
+new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
+"https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,"script","dataLayer","{{ site.analytics.googleTagManagerId }}");
+</script>
+{% endif %}
+
+{% if site.analytics.plausibleDomain %}
+<script defer data-domain="{{ site.analytics.plausibleDomain }}" src="{{ site.analytics.plausibleScriptSrc }}"></script>
+{% endif %}
+
+{% if site.analytics.umamiWebsiteId %}
+<script defer data-website-id="{{ site.analytics.umamiWebsiteId }}" src="{{ site.analytics.umamiScriptSrc }}"></script>
+{% endif %}

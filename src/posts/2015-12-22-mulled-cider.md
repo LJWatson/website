@@ -1,8 +1,9 @@
 ---
 title: "Mulled cider"
-date: "2015-12-22"
-tags: ["Drinks"]
-categories: "Recipe book"
+date: 2015-12-22
+postTags: ["Drinks"]
+postCategories: ["Recipe book"]
+postSummary: "One of my favourite winter things is mulled cider — the smell of apples and spices makes me all warm and fuzzy, and you might put that down to the cider itself."
 ---
 
 This is one of my favourite winter things. You can make it at any time of year of course, but there is something about the smell of apples and spices that makes me all warm and fuzzy. You might put that down to the cider, I couldn't possibly comment...

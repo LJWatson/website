@@ -1,8 +1,9 @@
 ---
 title: "The difference between aria-label and aria-labelledby"
-date: "2020-08-24"
-tags: ["Screen readers", "ARIA"]
-categories: "Code things"
+date: 2020-08-24
+postTags: ["Screen readers", "ARIA"]
+postCategories: ["Code things"]
+postSummary: "aria-label and aria-labelledby do the same job but in different ways, and it's easy to confuse them with unintended results. This post explains the differences and how to choose the right one."
 ---
 
 The [aria-label](https://www.w3.org/TR/wai-aria-1.1/#aria-label) and [aria-labelledby](https://www.w3.org/TR/wai-aria-1.1/#aria-labelledby) attributes do the same thing but in different ways. Sometimes the two attributes are confused and this has unintended results. This post describes the differences between `aria-label` and `aria-labelledby` and how to choose the right one.

@@ -1,8 +1,9 @@
 ---
 title: "Accessibility support for CSS generated content"
-date: "2015-03-29"
-tags: ["CSS", "HTML", "Screen readers"]
-categories: "Code things"
+date: 2015-03-29
+postTags: ["CSS", "HTML", "Screen readers"]
+postCategories: ["Code things"]
+postSummary: "I've been looking into how browsers and screen readers handle content generated with CSS before/after pseudo-selectors, and whether it's actually accessible to everyone."
 ---
 
 The CSS [before/after pseudo-selectors](https://www.w3.org/TR/css3-selectors/#gen-content) can be used to insert content into a page. In some situations this technique is a useful thing to do, but how do browsers and screen readers handle the generated content?

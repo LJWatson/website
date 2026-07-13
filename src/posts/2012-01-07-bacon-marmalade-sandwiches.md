@@ -1,8 +1,9 @@
 ---
 title: "Bacon & marmalade sandwiches"
-date: "2012-01-07"
-tags: ["Breakfast"]
-categories: "Recipe book"
+date: 2012-01-07
+postTags: ["Breakfast"]
+postCategories: ["Recipe book"]
+postSummary: "I inherited my love of bacon and marmalade sandwiches from my mum, along with much else—they're one of the many ways I'll always remember her."
 ---
 
 I inherited my love of bacon and marmalade sandwiches from my mum, along with much else. They’re one of the many ways I’ll always remember her.

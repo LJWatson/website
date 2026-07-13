@@ -1,15 +1,16 @@
 ---
 title: "Screen reader support for HTML5 sections"
-date: "2013-02-17"
-tags: ["Screen readers", "HTML"]
-categories: "Code things"
+date: 2013-02-17
+postTags: ["Screen readers", "HTML"]
+postCategories: ["Code things"]
+postSummary: "I tested how well screen readers support HTML5's sectioning elements like `header`, `footer`, `nav`, `article`, `section` and `aside`, and the results show support is patchy and inconsistent across different screen readers and browsers."
 ---
 
 HTML5 includes a handful of [sectioning elements](https://www.w3.org/TR/2011/WD-html5-20110525/sections.html) that give documents a robust semantic structure. The `header`, `footer`, `nav`, `article`, `section` and `aside` elements give different regions of a document meaning. Amongst other things, that meaning can be understood by screen readers, and the information used to help blind and partially sighted people orient themselves and navigate around the page.
 
 Now that HTML5 is being used on mainstream websites (such as that of the [UK Government](https://www.gov.uk)), it’s interesting to see how well screen readers support this handful of elements. Testing included [Jaws 14](https://www.freedomscientific.com), [NVDA 2012.3](https://www.nvda-project.org/) and [Window Eyes 8](https://www.gwmicro.com), with Firefox 18 and Internet Explorer 9, and [VoiceOver (Mac OSX 10.8.2)](https://www.apple.com/accessibility/voiceover/) with Safari 6.
 
-Thanks to [Alastair Campbell](https://www.twitter.com/alastc) and [Kiran Kaja](https://www.twitter.com/kirankaja12) for VoiceOver testing, and [Steve Faulkner](https://www.twitter.com/stevefaulkner) for the mighty useful [HTML5 Accessibility test page](https://www.html5accessibility.com/html5elements/).
+Thanks to Alastair Campbell and Kiran Kaja for VoiceOver testing, and Steve Faulkner for the mighty useful [HTML5 Accessibility test page](https://www.html5accessibility.com/html5elements/).
 
 ## Test results
 

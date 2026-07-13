@@ -1,8 +1,9 @@
 ---
 title: "Fixing the Jaws cursor in Firefox"
-date: "2015-09-19"
-tags: ["Screen readers"]
-categories: "Desktop things"
+date: 2015-09-19
+postTags: ["Screen readers"]
+postCategories: ["Desktop things"]
+postSummary: "When keyboard access doesn't work, Jaws screen reader can use simulated mouse movements instead, but this function is broken in Firefox due to graphics rendering changes. Here's a workaround involving three configuration tweaks."
 ---
 
 When keyboard access doesn't work, the Jaws screen reader makes it possible to explore content using simulated mouse movements instead. This function is broken in Firefox, due to changes made (some time ago) in its graphics rendering engine. This post describes a workaround that has proved successful for some.

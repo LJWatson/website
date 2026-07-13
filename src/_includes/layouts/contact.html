@@ -1,0 +1,61 @@
+{% set assetHash = global.random() %}
+
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+
+{% include "partials/head.html" %}
+
+<body id="{{ site.siteID }}">
+
+{% include "partials/analytics-body.html" %}
+
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+{% include "partials/header.html" %}
+
+<main id="main-content">
+
+<h1>{{ title }}</h1>
+
+<form action="/thanks/" class="contact-form" data-netlify="true" method="POST" name="contact-form" netlify-honeypot="bot-field">
+<input type="hidden" name="form-name" value="contact-form">
+<p hidden>
+<label>Don&#8217;t fill this out: <input name="bot-field"></label>
+</p>
+
+<div>
+<label for="contact-name">Name</label>
+<input type="text" name="contact-name" id="contact-name" autocomplete="name" required>
+</div>
+
+<div>
+<label for="contact-email">Email</label>
+<input type="email" name="contact-email" id="contact-email" autocomplete="email" required>
+</div>
+
+<div>
+<label for="contact-message">Message</label>
+<textarea name="contact-message" id="contact-message"></textarea>
+</div>
+
+<div>
+<button type="submit" class="btn">Send message</button>
+</div>
+
+</form>
+
+{% if site.email %}
+<p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+{% endif %}
+
+{% include "partials/socials.html" %}
+
+</main>
+
+{% include "partials/footer.html" %}
+
+<script src="{{ site.assetPath }}/js/scripts.js"></script>
+{% include "partials/pagefind.html" %}
+</body>
+
+</html>

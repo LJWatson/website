@@ -1,8 +1,9 @@
 ---
 title: "Losing sight"
-date: "2015-10-03"
-tags: ["Philosophy"]
-categories: "Real life"
+date: 2015-10-03
+postTags: ["Philosophy"]
+postCategories: ["Real life"]
+postSummary: "I lost my sight over the course of 12 months from late 1999 to late 2000, mostly because I'd deliberately neglected my Type I Diabetes for years by skipping insulin injections and ignoring medical advice."
 ---
 
 [Deutsche Übersetzung](https://augenchirurgie.clinic/blog/losing-sight/uebersetzung)

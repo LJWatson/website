@@ -1,8 +1,9 @@
 ---
 title: "Warm bacon and potato salad"
-date: "2010-03-28"
-tags: ["Lunch"]
-categories: "Recipe book"
+date: 2010-03-28
+postTags: ["Lunch"]
+postCategories: ["Recipe book"]
+postSummary: "With a bit of sunshine recently, I've been thinking about salads again, so here's a warm potato and bacon salad that's perfect for these chilly evenings."
 ---
 
 With a little bit of sunshine and blue sky recently, I’ve been thinking about salads again. Although the evenings are set to get lighter now, there’s still a chill in the air, so this warm potato and bacon salad does the job beautifully.

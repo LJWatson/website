@@ -1,8 +1,9 @@
 ---
 title: "Design like you give a damn!"
-date: "2011-09-17"
-tags: ["Philosophy"]
-categories: "Web life"
+date: 2011-09-17
+postTags: ["Philosophy"]
+postCategories: ["Web life"]
+postSummary: "Inclusive design is aspirational but not inspirational—it's a phrase for meetings and papers. What truly inspires is my old school friend's philosophy: design like you give a damn!"
 ---
 
 Inclusive design is an aspirational concept. It isn't particularly inspirational though. Inclusive design is a phrase for client meetings and government papers. No harm in that, but it isn’t a phrase that rocks the world and inspires us to challenge the accepted status quo.

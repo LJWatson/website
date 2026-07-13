@@ -1,0 +1,11 @@
+{% set hasSocials = site.bluesky or site.github or site.linkedin or site.mastodon %}
+
+{% if hasSocials %}
+<ul class="alt-social">
+{% if site.bluesky %}<li><a href="{{ site.bluesky }}" rel="me">{% include "partials/icons/icon-bluesky.svg" %}<span >Bluesky</span></a></li>{% endif %}
+{% if site.mastodon %}<li><a href="{{ site.mastodon }}" rel="me">{% include "partials/icons/icon-mastodon.svg" %}<span >Mastodon</span></a></li>{% endif %}
+{% if site.github %}<li><a href="{{ site.github }}" rel="me">{% include "partials/icons/icon-github.svg" %}<span >GitHub</span></a></li>{% endif %}
+{% if site.linkedin %}<li><a href="{{ site.linkedin }}" rel="me">{% include "partials/icons/icon-linkedin.svg" %}<span >LinkedIn</span></a></li>{% endif %}
+<li><a href="/feed.xml" type="application/rss+xml">{% include "partials/icons/icon-rss.svg" %}<span >RSS</span></a></li>
+</ul>
+{% endif %}

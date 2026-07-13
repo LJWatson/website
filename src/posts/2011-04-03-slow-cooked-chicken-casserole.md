@@ -1,8 +1,9 @@
 ---
 title: "Slow cooked chicken casserole"
-date: "2011-04-03"
-tags: ["Dinner"]
-categories: "Recipe book"
+date: 2011-04-03
+postTags: ["Dinner"]
+postCategories: ["Recipe book"]
+postSummary: "With spring here, I've thrown together this slow cooked chicken casserole—perfect for busy outdoor days, easy to prepare beforehand, and utterly welcoming when you come back in."
 ---
 
 With the first signs of spring upon us, it’s time to get out into the garden at weekends. It’s often still chilly in the evenings though, so this slow cooked chicken casserole is fabulous for those busy outdoor days! It’s easy to throw together before you head outside, and the smell of rosemary and tomatoes (with freshly baked bread) is gloriously welcoming when you come back in.

@@ -1,0 +1,26 @@
+pagesFiles:
+  - label: "Blog index"
+    name: "blog"
+    file: "src/blog.md"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/feed.html" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Meta description", name: "metaDesc", widget: "text", required: false }
+      - { label: "Intro", name: "lede", widget: "markdown", required: false }
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "src/posts"
+    create: true
+    slug: "{{slug}}"
+    preview_path: "blog/{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "postAuthor", widget: "string" }
+      - { label: "Image", name: "image", widget: "image", required: false, media_folder: "src/images/blog", public_folder: "/images/blog" }
+      - { label: "Thumbnail image", name: "thumbnail", widget: "image", required: false, media_folder: "src/images/blog", public_folder: "/images/blog" }
+      - { label: "Summary", name: "postSummary", widget: "text" }
+      - { label: "Categories", name: "postCategories", widget: "list", allow_add: true }
+      - { label: "Tags", name: "postTags", widget: "list", allow_add: true }
+      - { label: "Body", name: "body", widget: "markdown" }

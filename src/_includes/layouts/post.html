@@ -1,62 +1,55 @@
 {% extends "layouts/base.html" %}
 
-{% block foot %}
-  <script src="/js/components/code-block.js?{{ global.random() }}" type="module"></script>
-{% endblock %}
+{% set recommendedPosts = helpers.getSiblingContent(collections.blog, page, 6, false) %}
+
 {% block content %}
-  <div class="[ post ] [ flow modal-open-inert ] [ flow-space-700 text-500 ]">
-    <h1>{{ title }}</h1>
-    <div class="[ post__meta ] [ measure-short flow-space-300 ]">
-      <time class="font-sans weight-bold" datetime="{{ date | w3DateFilter }}">Posted on {{ date | dateFilter }}</time>
-      
-      {% if edited %}
-      <time class="font-sans weight-bold" datetime="{{ edited | w3DateFilter }}">Updated on {{ edited | dateFilter }}</time>
-      {% endif %}
-      {% set categories = helpers.getCategories(categories, true) %}
-      {% if categories | length %}
-        <ul class="cluster" aria-label="Categories">
-        {% for category in categories %}
-          <li>
-            <a href="/category/{{ category | slug }}" class="[ pill ] [ bg-primary ]">{{ category }}</a>
-          </li>
-        {% endfor %}
-        </ul>
-      {% endif %}
-    </div>
-    <hr />
-    <div class="[ post__body ] [ flow ] [ flow-space-700 ]">
-      {{ content | safe }}
-    </div>
-    {% if tags %}
-      <hr />
-      <div>
-        <h2>Tagged with</h2>
-        <ul class="cluster">
-          {% for tag in tags %}
-            <li>
-              <a class="[ pill ] [ bg-primary ]" href="/tag/{{ tag | slug }}/">{{ tag | replace(' ', '') | title }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-    {% endif %}
-    <hr />
-  </div>
-  <div class="blog-comments">
-    <h2 class="modal-open-inert">Comments</h2>
 
-    <noscript>JavaScript is required to view or add comments</noscript>
+<div class="layout" data-layout="athens">
 
-    <div id="commento"></div>
-    <script defer src="/scripts/wicg-inert.min.js"></script>
-    <script>
-      window.parent = {
-        location: {
-          host: 'tink.uk',
-          pathname: '{{ page.url }}'
-        }
-      };
-    </script>
-    <script defer src="/scripts/commento.js" data-hide-deleted="true" data-no-fonts="false"></script>
-  </div> 
+<div data-content="posts">
+<h1>{{ title }}</h1>
+<p>Posted on <time datetime="{{ (date or page.date) | dateFilter('yyyy-MM-dd') }}">{{ (date or page.date) | dateFilter('d MMMM yyyy') }}</time></p>
+{% if updated %}
+<p>Updated on <time datetime="{{ updated | dateFilter('yyyy-MM-dd') }}">{{ updated | dateFilter('d MMMM yyyy') }}</time></p>
+{% endif %}
+
+{% if image %}
+<figure class="post-feature">
+<img src="{{ image }}" alt="{{ imageAlt or '' }}">
+</figure>
+{% endif %}
+
+{{ content | safe }}
+
+{% if postAuthor %}<p>{{ postAuthor }}</p>{% endif %}
+{% if postCategories or postTags %}
+<ul class="post-meta">
+{% for category in postCategories %}<li><a href="/category/{{ category | slug }}/">{{ category }}</a></li>{% endfor %}
+{% for tag in postTags %}<li><a href="/tag/{{ tag | slug }}/">{{ tag }}</a></li>{% endfor %}
+</ul>
+{% endif %}
+
+<p class="share-mastodon">
+<a href="https://share.joinmastodon.org/?text={{ (title + ' ' + site.absoluteUrl + page.url) | urlencode }}">
+{% include "partials/icons/icon-mastodon.svg" %}
+<span>Share this post on Mastodon</span>
+</a>
+</p>
+
+{% if recommendedPosts %}
+<aside aria-label="More posts">
+<h2>More posts</h2>
+<ul>
+{% for item in recommendedPosts %}
+<li><a href="{{ item.url }}">{{ item.data.title }}</a></li>
+{% endfor %}
+</ul>
+</aside>
+{% endif %}
+</div>
+
+{% include "partials/blog-sidebar.html" %}
+
+</div>
+
 {% endblock %}

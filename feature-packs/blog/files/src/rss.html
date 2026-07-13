@@ -1,0 +1,31 @@
+---
+title: 'Blog feed'
+summary: 'The latest posts from this Eleventy boilerplate.'
+permalink: '/feed.xml'
+---
+{% set feedBaseUrl = site.absoluteUrl or site.url %}
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.name }} {{ title }}</title>
+	<subtitle>{{ summary }}</subtitle>
+	<link href="{{ feedBaseUrl }}{{ permalink }}" rel="self"/>
+	<link href="{{ feedBaseUrl }}/"/>
+	<updated>{{ collections.blog | rssLastUpdatedDate }}</updated>
+	<id>{{ feedBaseUrl or permalink }}</id>
+	<author>
+    <name>{{ site.authorName }}</name>
+    <email>{{ site.authorEmail }}</email>
+	</author>
+	{% for post in collections.blog %}
+    {% set absolutePostUrl %}{{ feedBaseUrl }}{{ post.url | url }}{% endset %}
+    <entry>
+      <title>{{ post.data.title }}</title>
+      <link href="{{ absolutePostUrl }}"/>
+      <updated>{{ (post.data.date or post.date) | rssDate }}</updated>
+      <id>{{ absolutePostUrl }}</id>
+      <content type="html"><![CDATA[
+        {{ post.templateContent | safe }}
+      ]]></content>
+    </entry>
+	{% endfor %}
+</feed>
