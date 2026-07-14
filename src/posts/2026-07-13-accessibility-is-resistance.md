@@ -31,7 +31,7 @@ If I want to get a sense of what the EAA is, requires, or otherwise contains, I'
 The [average reading speed](https://testmyreading.com/guides/average-reading-speed) of someone who is fluent in English with a typical level of literacy, is 238 Words Per Minute (WPM) for non-fiction.
 That's 9 hours of reading to get through the EAA. Even at the [elevated reading speeds](/notes-on-synthetic-speech/) of around 500 WPM I get with my screan reader, it's still 4 hours of my life I'd never get back.
 
-Our I could ask an AI "where do I find the requirements for websites in the EAA?".
+Or I could ask an AI "where do I find the requirements for websites in the EAA?".
 
 And get a response like this:
 
