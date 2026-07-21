@@ -11,7 +11,7 @@ eleventyExcludeFromCollections: true
 <language>{{ site.lang }}</language>
 <atom:link href="{{ site.absoluteUrl }}/feed.xml" rel="self" type="application/rss+xml"/>
 <lastBuildDate>{{ collections.blog | getNewestCollectionItemDate | dateToRfc822 }}</lastBuildDate>
-{% for post in collections.blog | reverse %}{% if loop.index <= 20 %}
+{% for post in collections.blog %}{% if loop.index <= 20 %}
 <item>
 <title>{{ post.data.title | escape }}</title>
 <link>{{ post.url | absoluteUrl(site.absoluteUrl) }}</link>
