@@ -9,6 +9,11 @@
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#6D28D9" />
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1A1025" />
 
+<link rel="manifest" href="/manifest.webmanifest" />
+<link rel="icon" href="{{ site.assetPath }}/images/favicon-32x32.png" sizes="32x32" type="image/png" />
+<link rel="icon" href="{{ site.assetPath }}/images/favicon-16x16.png" sizes="16x16" type="image/png" />
+<link rel="apple-touch-icon" href="{{ site.assetPath }}/images/apple-touch-icon.png" />
+
 {% if features.blog %}
 <link rel="alternate" type="application/rss+xml" href="{{ site.assetPath }}/feed.xml" />
 {% endif %}
