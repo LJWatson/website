@@ -30,7 +30,7 @@ When I posted on the socials that I was experimenting with BeMyAI, people were c
 
 So I took a photo of a bit of my office that I know very well. I've owned most of the things in the picture since before I [lost my sight](/losing-sight), and I'm very familiar with the rest because it's my house after all.
 
-<img src="../images/2023/my-office-shelf.jpg" alt="Photo of a shelf in my office"  width="500" height="400">
+{% image "2023/my-office-shelf.jpg", "Photo of a shelf in my office" %}
 
 Here's the initial description:
 

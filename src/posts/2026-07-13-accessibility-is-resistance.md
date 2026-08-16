@@ -45,7 +45,7 @@ Like many people, I shop online. I might even do it more regularly than most, be
 
 If I asked you to think of a clothing brand likely to have an accessible website, you might think of retailers with plenty of money - Amazon Essentials, Calvin Klein, or Marks and Spencer perhaps. Let's use Calvin Klein as the working example. Here's a product page from their UK website:
 
-<img src="/images/2026/CK-product-page.png" alt="Screenshot of a product page on the Calvin Klein website showing a large image and some associated product information">
+{% image "2026/CK-product-page.png", "Screenshot of a product page on the Calvin Klein website showing a large image and some associated product information" %}
 
 Notice how much information about the product is held in image format? Here's the product information available as text on the page:
 
@@ -65,7 +65,7 @@ Is the jumper going to make me appear sophisticated and elegant, or look like a 
 
 Now, if you're even a little bit familiar with accessibility, you'll be thinking "Aha! But, what about [text descriptions](https://tetralogical.com/blog/2022/01/24/text-descriptions/)?". Here's an image from the product page:
 
-<img src="/images/2026/CK-product-image.png" alt="Product image from the Calvin Klein website showing a model wearing a black jumper">
+{% image "2026/CK-product-image.png", "Product image from the Calvin Klein website showing a model wearing a black jumper" %}
 
 And the text description? Here you go:
 
@@ -99,7 +99,7 @@ I have a pair of [Meta Ray-Bans](/using-ray-ban-meta-glasses) and whereas there 
 
 Had you been standing next to me at this tea plantation, not far from Hangzhou China, earlier this year, this would have been your view:
 
-<img src="/images/2026/Hangzhou-tea-plantation.jpg" alt="A view looking out over a tea plantation in China">
+{% image "2026/Hangzhou-tea-plantation.jpg", "A view looking out over a tea plantation in China" %}
 
 But since you weren't there, an the aforementioned person I share my life with had gone off to order some lunch, it was just me and the view.
 

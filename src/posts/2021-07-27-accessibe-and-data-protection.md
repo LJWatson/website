@@ -97,7 +97,7 @@ AccessiBe's privacy policy makes me think there is a high risk to individuals, a
 
 On 17 March 2021, I sent AccessiBe a Direct Message (DM) on Twitter, asking them for a copy of their DPIA:
 
-<img src="../images/2021/dm-to-accessibe_2021-03-17.png" alt="Screenshot of a DM sent to AccessiBe, asking for a copy of its DPIA" height="473" width="640">
+{% image "2021/dm-to-accessibe_2021-03-17.png", "Screenshot of a DM sent to AccessiBe, asking for a copy of its DPIA" %}
 
 When AccessiBe did not respond, I completed the contact form on their website on 23 March. I was promptly called by one of their sales team, who could not tell me anything about AccessiBe's compliance with the General Data Protection Regulations (GDPR), but assured me someone would be in touch who could help.
 

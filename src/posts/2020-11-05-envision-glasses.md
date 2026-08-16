@@ -35,7 +35,7 @@ Envision Glasses are available in two styles: the standard Titanium frames with 
 
 The frames consist of the arm that goes over your left ear and the bits that frame your eyes. The rest, known as the body, attaches to the frames just over your right eye to form the arm that hooks over your right ear.
 
-<img src="../images/2020/google-glass-with-titanium-frames.png" alt="Photo of Envision Glasses with the standard titanium frames; the frames are very lightweight metal just a few millimetres wide" width="400" height="400">
+{% image "2020/google-glass-with-titanium-frames.png", "Photo of Envision Glasses with the standard titanium frames; the frames are very lightweight metal just a few millimetres wide" %}
 
 The body is made of black plastic and it's a lot more substantial than the frames because it's where all the hardware (including the camera and speaker) is found. When attached to the frames the body curves smoothly around the top of the frame over your right eye by about a centimetre. This is where the camera is found so it points forward in the direction you're facing. Continuing about two thirds of the way along the frame over your right eye is a clear perspex block that creates a Heads Up Display (HUD).
 
@@ -45,7 +45,7 @@ If you have usable sight, the HUD is in the top right corner of your field of vi
 
 I chose the standard titanium frames because the little jewelry I wear is platinum or silver and very plain, so they felt more my style than the darker and heavier Smith Optics frames (think NHS specs from the 1970s or classic Ray Ban frames).
 
-<img src="../images/2020/google-glass-with-smith-optics-frames.jpg" alt="Photo of Envision Glasses with the Smith Optics frames; the frames are black plastic, 2 or 3 times thicker than the titanium frames" width="400" height="400"> 
+{% image "2020/google-glass-with-smith-optics-frames.jpg", "Photo of Envision Glasses with the Smith Optics frames; the frames are black plastic, 2 or 3 times thicker than the titanium frames" %} 
 
 The asthetic imbalance between the light metal frames and the heavier black plastic body, particularly where it curves around the top of one eye,  makes me feel a bit like I've been assimilated by the [Borg](https://en.wikipedia.org/wiki/Borg), but I'm actually OK with that. The hardware has to go somewhere and I think the glasses manage it in a reasonably stylish way.
 

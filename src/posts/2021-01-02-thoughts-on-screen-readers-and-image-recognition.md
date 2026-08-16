@@ -30,7 +30,7 @@ image recognition has been around since the 1960s but it is only relatively rece
 
 To help mitigate this, the Picture Smart feature in Jaws uses certainty qualifiers to describe the image recognition results. For example here are the results for this image of the Mona Lisa by Leonardo Da Vinci:
 
-<img src="../images/2021/mona-lisa.jpg" alt="The Mona Lisa by Leonardo Da Vinci" width="400" height="400">
+{% image "2021/mona-lisa.jpg", "The Mona Lisa by Leonardo Da Vinci" %}
 
 * Caption is Mona Lisa posing for a picture
 * These tags describe the photo: Drawing, human face, painting, person, sketch, woman
@@ -44,7 +44,7 @@ If you're thinking to yourself that providing text descriptions is no longer som
 
 Here are the Picture Smart image recognition results for this image of The Metamorphosis of Narcissus by Salvador Dali:
 
-<img src="../images/2021/metamorphosis-of-narcissus.jpg" alt="The Metamorphosis of Narcissus by Salvador Dali" width="400" height="400">
+{% image "2021/metamorphosis-of-narcissus.jpg", "The Metamorphosis of Narcissus by Salvador Dali" %}
 
 * Caption is a painting of a person
 * These tags describe the photo: Art, cartoon, drawing, text

@@ -15,7 +15,7 @@
 
 {% if image %}
 <figure class="post-feature">
-<img src="{{ image }}" alt="{{ imageAlt or '' }}">
+{% image image, imageAlt, { eager: true } %}
 </figure>
 {% endif %}
 

@@ -19,7 +19,7 @@
 <div class="layout" data-layout="rome">
 <div>
 <figure>
-<img src="{{ featureImage }}" alt="{{ featureImageAlt or featureImageCaption }}" />
+{% image featureImage, featureImageAlt or featureImageCaption, { eager: true, sizes: "(min-width: 75rem) 400px, (min-width: 48rem) 33vw, 100vw", widths: [400, 800] } %}
 {% if featureImageCaption %}
 <figcaption>{{ featureImageCaption }}</figcaption>
 {% endif %}
