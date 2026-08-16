@@ -1,3 +1,4 @@
+const path = require("path");
 const markdownIt = require("markdown-it");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const features = require("./features.json");
@@ -19,8 +20,43 @@ function minifyHtmlOutput(content, outputPath) {
     .trim();
 }
 
-module.exports = function(eleventyConfig) {
+module.exports = async function(eleventyConfig) {
+  const Image = (await import("@11ty/eleventy-img")).default;
+
   eleventyConfig.addPlugin(pluginRss);
+
+  eleventyConfig.addNunjucksAsyncShortcode("image", async function(src, alt, opts = {}) {
+    const {
+      decorative = false,
+      eager = false,
+      sizes = "(min-width: 75rem) 800px, (min-width: 48rem) 66vw, 100vw",
+      widths = [400, 800, 1200]
+    } = opts;
+
+    if (!decorative && (!alt || !String(alt).trim())) {
+      throw new Error(`[image shortcode] Missing alt text for image: ${src}. Pass { decorative: true } if this image is purely decorative.`);
+    }
+
+    const altText = decorative ? "" : alt;
+
+    const relativeSrc = src.replace(/^\/?images\//, "");
+    const inputPath = path.join("src/images", relativeSrc);
+
+    const metadata = await Image(inputPath, {
+      widths,
+      formats: ["webp", "auto"],
+      outputDir: "./dist/images/optimized/",
+      urlPath: "/images/optimized/"
+    });
+
+    return Image.generateHTML(metadata, {
+      alt: altText,
+      sizes,
+      loading: eager ? "eager" : "lazy",
+      decoding: "async",
+      ...(eager ? { fetchpriority: "high" } : {})
+    });
+  });
 
   // Filters
   eleventyConfig.addFilter("dateFilter", dateFilter);

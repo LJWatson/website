@@ -31,7 +31,7 @@ The 15th in a series of posts that bring together the two sides of my blog: food
 ## Method
 
 
-<img src="../images/2021/goulash-in-big-red-dutch-oven-and-gnocchi-cooking-in-a-pot-next-to-it.jpg" alt="Goulash in a big red dutch oven with some gnocchi cooking in a pot next to it">
+{% image "2021/goulash-in-big-red-dutch-oven-and-gnocchi-cooking-in-a-pot-next-to-it.jpg", "Goulash in a big red dutch oven with some gnocchi cooking in a pot next to it" %}
 
 1. Peel and slice the onions (no need to get too fancy with how fine you cut them, as they'll mostly dissolve), peel and crush garlic, slice peppers into relatively thin strips.
 2. Put the butter and/or oil in a big pot - I use a dutch oven/Le Creuset job for this. Set the heat to high. Onions in the pot with a pinch of salt, and fry them up for a few minutes.
@@ -46,7 +46,7 @@ At the end, the consistency should be fairly thick (somewhere between a soup and
 If the sauce is too runny for your liking, you can add some corn starch slurry (one teaspoon of corn starch, mixed with a little bit of boiling water in a bowl first before pouring into the pot, to avoid lumps) and briefly bring it to the boil again until it thickens.
 
 
-<img src="../images/2021/finished-plate-of-goulash-with-gnocchi.jpg" alt="A plate with the finished goulash and some gnocchi">
+{% image "2021/finished-plate-of-goulash-with-gnocchi.jpg", "A plate with the finished goulash and some gnocchi" %}
 
 Serve with whatever starchy accompaniment you want: spaetzle (as most common in Austria), large potato dumplings (the more common German version), gnocchi, rigatoni, potatoes, rice, or just with bread.
 

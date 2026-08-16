@@ -12,6 +12,7 @@ Personal reference notes covering how the site is built, the decisions made duri
 | Date formatting | Luxon v3 |
 | RSS feed | `@11ty/eleventy-plugin-rss` v1.0.7 |
 | Search | Pagefind v1.3 (post-build index) |
+| Image optimization | `@11ty/eleventy-img` v7 (build-time, generates responsive `<picture>` markup) |
 | CSS minification | LightningCSS v1.32 (post-build) |
 | Contact form | Netlify Forms (no backend needed) |
 | Hosting | Netlify, deployed from GitHub |
@@ -144,6 +145,23 @@ The `<link rel="alternate">` tag pointing to the feed is added in `head.html` wh
 
 Pagefind runs after the build and indexes the HTML in `dist/`. The search box (`<pagefind-searchbox>`) is a web component loaded from `/pagefind/pagefind-component-ui.css` and initialised via `partials/pagefind.html`. The `<search>` landmark in the header wraps it.
 
+### Images
+
+Images are optimized at build time via `@11ty/eleventy-img`, through a Nunjucks async shortcode registered in `.eleventy.js`:
+
+```njk
+{% image "2021/mona-lisa.jpg", "The Mona Lisa by Leonardo Da Vinci" %}
+{% image "2021/mona-lisa.jpg", "Alt text", { eager: true, sizes: "...", widths: [400, 800] } %}
+{% image "2026/divider.svg", "", { decorative: true } %}
+```
+
+- Source files live in `src/images/YYYY/filename.ext` — pass the path relative to `src/images/` (a leading `/images/` or `images/`, as found in frontmatter values, is stripped automatically).
+- Generates a `<picture>` with a `webp` `<source>` plus an original-format (`"auto"`) `<img>` fallback, at `widths: [400, 800, 1200]` by default. Output is written to `dist/images/optimized/` with content-hashed filenames.
+- Defaults to `loading="lazy"`/`decoding="async"`. Pass `{ eager: true }` for above-the-fold images (also adds `fetchpriority="high"`) — used for the About page hero image and `post.html`'s optional feature-image slot.
+- **Alt text is mandatory** — the build throws if it's missing or empty. For genuinely decorative images, pass both `alt: ""` and `{ decorative: true }` explicitly; there's no way to ship an empty alt by accident.
+- The raw, unprocessed source images are still passthrough-copied to `/images/...` unchanged (`addPassthroughCopy("src/images")`) — required because `meta.html`'s Open Graph/Twitter image tags read the raw `featureImage` frontmatter value directly, not an optimized variant.
+- Used in `about.html` (hero image), `post.html` (the `image`/`imageAlt` feature-image frontmatter fields), and inline within post markdown bodies. The latter works because `markdownTemplateEngine: "njk"` means Nunjucks resolves shortcodes in post content before markdown-it renders it — the same mechanism that already let raw HTML `<img>` tags pass through.
+
 ## CSS architecture
 
 All CSS lives in two files:
@@ -223,6 +241,8 @@ WCAG 2.2 Level AA is a hard requirement throughout.
 **`<details>`/`<summary>`** — used for "All tags" disclosure in the sidebar. Custom chevron indicator via `::after` pseudo-element.
 
 **Contrast** — all text and UI component colours were verified against WCAG 1.4.3 (text, 4.5:1 normal / 3:1 large) and 1.4.11 (non-text, 3:1) during the redesign.
+
+**Images** — alt text is enforced at build time by the `{% image %}` shortcode (see "Images" above); an empty or missing alt fails the build unless `{ decorative: true }` is explicitly passed.
 
 ## Content conventions
 
