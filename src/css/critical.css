@@ -595,7 +595,7 @@ gap: var(--space-6); }
 
 /* athens: main content + sidebar */
 .layout[data-layout="athens"] {
-grid-template-columns: 2fr 1fr; }
+grid-template-columns: minmax(0, 2fr) 1fr; }
 
 /* rome: image + text (about page) */
 .layout[data-layout="rome"] {
