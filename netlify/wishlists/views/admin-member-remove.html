@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% import "components/forms.html" as forms with context %}
+
+{% block content %}
+<h1>Remove {{ target.display_name }}?</h1>
+
+<p>This permanently deletes {{ target.display_name }}'s account, lists and items. Their reservations on other people's lists are deleted too, so those items show as available again. It can't be undone.</p>
+
+<p>To keep their data but stop them logging in, suspend them instead.</p>
+
+<form method="post" action="/wishlists/admin/members/{{ target.id }}/remove/">
+{{ forms.csrf() }}
+<button type="submit" class="btn">Remove {{ target.display_name }}</button>
+</form>
+
+<p><a href="/wishlists/admin/members/">Keep {{ target.display_name }}</a></p>
+{% endblock %}

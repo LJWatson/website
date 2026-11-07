@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% import "components/forms.html" as forms with context %}
+
+{% block content %}
+{{ forms.errorSummary(errors) }}
+
+<h1>Accept your invitation</h1>
+
+<p>Check the name other members will see. You can change it later on your Account page.</p>
+
+<form method="post" action="/wishlists/invite/" novalidate>
+<input type="hidden" name="token" value="{{ token }}">
+{{ forms.field("display_name", "Display name", values, errors, autocomplete="nickname") }}
+<button type="submit" class="btn">Accept invitation</button>
+</form>
+{% endblock %}

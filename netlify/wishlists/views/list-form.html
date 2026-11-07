@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% import "components/forms.html" as forms with context %}
+
+{% block content %}
+{{ forms.errorSummary(errors) }}
+
+<h1>{{ "Edit list details" if list else "Create a list" }}</h1>
+
+<form method="post" action="{{ ('/wishlists/lists/' + list.id + '/edit/') if list else '/wishlists/mine/new/' }}" novalidate>
+{{ forms.csrf() }}
+{{ forms.field("title", "Title", values, errors, hint="For example, Christmas 2026 or Birthday", autocomplete="off") }}
+{{ forms.field("occasion_date", "Occasion date (optional)", values, errors, type="date", hint="After this date, you'll be asked whether to archive the list") }}
+{{ forms.textarea("description", "Description (optional)", values, errors, hint="Up to 1,000 characters") }}
+<button type="submit" class="btn">{{ "Save changes" if list else "Create list" }}</button>
+</form>
+
+<p><a href="{{ ('/wishlists/lists/' + list.id + '/') if list else '/wishlists/mine/' }}">Cancel</a></p>
+{% endblock %}

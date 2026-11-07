@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+
+<p>{{ message or "Sorry, something went wrong on our side. Nothing was changed. Try again in a few minutes." }}</p>
+
+<p><a href="{{ '/wishlists/' if member else '/wishlists/log-in/' }}">{{ "Go to everyone's lists" if member else "Go to log in" }}</a></p>
+{% endblock %}

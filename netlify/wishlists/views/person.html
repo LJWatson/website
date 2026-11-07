@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% import "components/lists.html" as ui with context %}
+
+{% block content %}
+<h1>{{ person.display_name }}'s lists</h1>
+
+{% if lists.length %}
+<ul class="wishlists-cards">
+{% for list in lists %}
+{{ ui.listSummary(list) }}
+{% endfor %}
+</ul>
+{% else %}
+<p>{{ person.display_name }} hasn't made any lists yet.</p>
+{% endif %}
+
+<p><a href="/wishlists/">Back to everyone's lists</a></p>
+{% endblock %}

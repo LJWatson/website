@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% import "components/forms.html" as forms with context %}
+{% import "components/reservations.html" as reservations with context %}
+
+{% macro entryBlock(entry, errors) %}
+{% set error = errors.byField["reservation-" + entry.id] if errors else "" %}
+<div class="wishlists-item" id="reservation-{{ entry.id }}" data-item-block{% if error %} tabindex="-1"{% endif %}>
+<h4>{{ entry.name }}</h4>
+{% if entry.removed %}
+<p class="item-status"><strong>Removed from {{ entry.owner_name }}'s list.</strong></p>
+{% if entry.url %}<p><a href="{{ entry.url }}">{{ entry.name }} at {{ entry.url | domain }}</a></p>{% endif %}
+<div class="wishlists-actions">
+{{ forms.actionButton("/wishlists/reservations/" + entry.id + "/cancel/", "Remove from My reservations", entry.name, true, "reservations", true) }}
+</div>
+{% else %}
+<p>On {% if entry.list_visible %}<a href="/wishlists/lists/{{ entry.list_id }}/">{{ entry.list_title }}</a>{% else %}{{ entry.list_title }} (no longer shared){% endif %}</p>
+{% if entry.url %}<p><a href="{{ entry.url }}">{{ entry.name }} at {{ entry.url | domain }}</a></p>{% endif %}
+{% if entry.item_quantity > 1 %}<p>You've reserved {{ entry.quantity }} of the {{ entry.item_quantity }} wanted.</p>{% endif %}
+{% if error %}
+<p class="field-error" id="reservation-{{ entry.id }}-error"><span data-visibility="hidden">Error: </span>{{ error }}</p>
+{% endif %}
+{{ reservations.yourReservation(entry, entry.name, entry.changed, entry.item_quantity, entry.max_quantity, "reservations", ("reservation-" + entry.id + "-error") if error else "") }}
+{% endif %}
+</div>
+{% endmacro %}
+
+{% block content %}
+{{ forms.errorSummary(errors) }}
+
+<h1>My reservations</h1>
+
+<p>Everything you've reserved, grouped by who it's for.</p>
+
+{# wishlists.js replaces this container in place after a change #}
+<div id="reservations" data-live-container>
+{% for group in groups %}
+<section aria-labelledby="for-{{ loop.index }}">
+<h2 id="for-{{ loop.index }}">For {{ group.owner_name }}</h2>
+{% if group.toBuy.length %}
+<h3>To buy</h3>
+<div class="wishlists-items">
+{% for entry in group.toBuy %}{{ entryBlock(entry, errors) }}{% endfor %}
+</div>
+{% endif %}
+{% if group.bought.length %}
+<h3>Bought</h3>
+<div class="wishlists-items">
+{% for entry in group.bought %}{{ entryBlock(entry, errors) }}{% endfor %}
+</div>
+{% endif %}
+</section>
+{% else %}
+<p>You haven't reserved anything yet. Find something on <a href="/wishlists/">everyone's lists</a>.</p>
+{% endfor %}
+</div>
+{% endblock %}

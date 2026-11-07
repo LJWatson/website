@@ -27,7 +27,10 @@
     "remove:testimonials": "node scripts/remove-feature.js testimonials",
     "remove:team": "node scripts/remove-feature.js team",
     "check:css": "node scripts/check-css.js",
-    "check:boilerplate": "node scripts/check-boilerplate.js"
+    "check:boilerplate": "node scripts/check-boilerplate.js",
+    "test:wishlists": "node --test --test-concurrency=1 \"tests/wishlists/*.test.mjs\"",
+    "wishlists:dev": "netlify dev",
+    "wishlists:local": "node scripts/wishlists-local.mjs"
   },
   "keywords": [
     "eleventy",
@@ -38,16 +41,21 @@
   "license": "MIT",
   "dependencies": {
     "@11ty/eleventy-plugin-rss": "^1.0.7",
+    "@netlify/database": "2.0.1",
     "js-yaml": "^4.1.0",
     "linkinator": "^7.6.1",
     "luxon": "^3.6.1",
-    "markdown-it": "^14.1.0"
+    "markdown-it": "^14.1.0",
+    "nodemailer": "10.2.1",
+    "nunjucks": "3.2.4"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",
+    "@netlify/database-dev": "1.0.1",
     "cross-env": "^7.0.3",
     "lightningcss": "^1.32.0",
     "pagefind": "^1.3.0",
+    "pg": "8.23.1",
     "sharp": "^0.35.3"
   }
 }

@@ -1,0 +1,48 @@
+{# Import with context: {% import "components/lists.html" as ui with context %} #}
+{% import "components/forms.html" as forms with context %}
+
+{# A list in a list of lists. The archive prompt is for the owner only. #}
+{% macro listSummary(list, ownerView=false) %}
+<li>
+<h3><a href="/wishlists/lists/{{ list.id }}/">{{ list.title }}</a></h3>
+<p>{% if list.occasion_date %}<time datetime="{{ list.occasion_date }}">{{ list.occasion_date | date }}</time>. {% endif %}{{ list.item_count | plural("item") }}.</p>
+{% if ownerView and list.occasion_passed and not list.archived_at %}
+<p>The occasion date has passed. Archive the list to hide it from other members.</p>
+<div class="wishlists-actions">
+{{ forms.actionButton("/wishlists/lists/" + list.id + "/archive/", "Archive", list.title) }}
+</div>
+{% endif %}
+</li>
+{% endmacro %}
+
+{% macro itemDetails(item) %}
+{% if item.most_wanted or item.similar_ok %}
+<ul class="item-flags">
+{% if item.most_wanted %}<li>Most wanted</li>{% endif %}
+{% if item.similar_ok %}<li>Similar is fine</li>{% endif %}
+</ul>
+{% endif %}
+{% if item.url %}
+<p><a href="{{ item.url }}">{{ item.name }} at {{ item.url | domain }}</a></p>
+{% endif %}
+<dl class="item-details">
+{% if item.price !== null %}
+<div><dt>Price</dt><dd>{{ item.price | price(item.price_currency) }}</dd></div>
+{% endif %}
+<div><dt>Quantity wanted</dt><dd>{{ item.quantity }}</dd></div>
+</dl>
+{% if item.notes %}
+<p class="wishlists-multiline">{{ item.notes }}</p>
+{% endif %}
+{% endmacro %}
+
+{# The same wording whether or not any items are reserved #}
+{% macro listDeleteText(list, isOwner) %}
+<p>{% if not isOwner %}This is {{ list.owner_name }}'s list. {% endif %}
+{% if list.item_count %}It has {{ list.item_count | plural("item") }}, which will be deleted too.{% else %}It has no items.{% endif %}
+Deleting a list is permanent. It can't be undone.</p>
+{% endmacro %}
+
+{% macro itemDeleteText(item, list) %}
+<p>This removes {{ item.name }} from {{ list.title }}. Deleting an item is permanent. It can't be undone.</p>
+{% endmacro %}

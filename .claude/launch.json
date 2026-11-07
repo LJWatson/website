@@ -6,6 +6,12 @@
       "runtimeExecutable": "npx",
       "runtimeArgs": ["serve", "dist", "-l", "5050"],
       "port": 5050
+    },
+    {
+      "name": "wishlists-local",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["scripts/wishlists-local.mjs", "--admin", "admin@example.test", "--name", "Léonie", "--memory", "--demo"],
+      "port": 8888
     }
   ]
 }

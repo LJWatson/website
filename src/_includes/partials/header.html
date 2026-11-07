@@ -2,7 +2,25 @@
 
 <a href="/" aria-label="{{ site.name }}" class="wordmark-link">{% include "partials/wordmark.html" %}</a>
 
-{% if features.navigationMenus %}
+{#
+Pages can pass headerNavigation ({ label, items }) to replace the website navigation, as the wishlists app does.
+An empty items array leaves the navigation out. Items with method "post" render as a form button, such as Log out.
+#}
+{% if headerNavigation %}
+{% if headerNavigation.items | length %}
+<nav data-navigation-body="bar" aria-label="{{ headerNavigation.label }}">
+<ul>
+{% for item in headerNavigation.items %}
+{% if item.method == "post" %}
+<li><form method="post" action="{{ item.url }}"><input type="hidden" name="_csrf" value="{{ csrfToken }}"><button type="submit">{{ item.text }}</button></form></li>
+{% else %}
+<li><a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a></li>
+{% endif %}
+{% endfor %}
+</ul>
+</nav>
+{% endif %}
+{% elif features.navigationMenus %}
 {% include "partials/navigation-menu.html" %}
 {% else %}
 <nav data-navigation-body="bar" aria-label="Website">
@@ -14,8 +32,10 @@
 </nav>
 {% endif %}
 
+{% if not hideSearch %}
 <search aria-label="Site">
 <pagefind-searchbox shortcut="" hide-shortcut></pagefind-searchbox>
 </search>
+{% endif %}
 
 </header>

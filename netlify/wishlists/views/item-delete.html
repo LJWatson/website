@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% import "components/forms.html" as forms with context %}
+{% import "components/lists.html" as ui with context %}
+
+{% block content %}
+<h1>Delete {{ item.name }}?</h1>
+
+{{ ui.itemDeleteText(item, list) }}
+
+<form method="post" action="/wishlists/lists/{{ list.id }}/items/{{ item.id }}/delete/">
+{{ forms.csrf() }}
+<button type="submit" class="btn">Delete {{ item.name }}</button>
+</form>
+
+<p><a href="/wishlists/lists/{{ list.id }}/">Keep {{ item.name }}</a></p>
+{% endblock %}

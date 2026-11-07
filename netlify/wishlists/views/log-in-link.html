@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>Log in to wishlists</h1>
+
+<p>You're logging in as {{ name }}.</p>
+
+<form method="post" action="/wishlists/log-in/link/">
+<input type="hidden" name="token" value="{{ token }}">
+<button type="submit" class="btn">Log in</button>
+</form>
+{% endblock %}

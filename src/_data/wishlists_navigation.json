@@ -1,0 +1,35 @@
+{
+  "label": "Wishlists",
+  "items": [
+    {
+      "text": "Everyone's lists",
+      "url": "/wishlists/"
+    },
+    {
+      "text": "My lists",
+      "url": "/wishlists/mine/"
+    },
+    {
+      "text": "My reservations",
+      "url": "/wishlists/reservations/"
+    },
+    {
+      "text": "Account",
+      "url": "/wishlists/account/"
+    },
+    {
+      "text": "Members",
+      "url": "/wishlists/admin/members/",
+      "role": "admin"
+    },
+    {
+      "text": "Help",
+      "url": "/wishlists/help/"
+    },
+    {
+      "text": "Log out",
+      "url": "/wishlists/log-out/",
+      "method": "post"
+    }
+  ]
+}

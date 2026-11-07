@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% import "components/lists.html" as ui with context %}
+
+{% block content %}
+<h1>Everyone's lists</h1>
+
+<p>Your own lists are on <a href="/wishlists/mine/">My lists</a>.</p>
+
+{% for person in people %}
+<section aria-labelledby="person-{{ person.id }}">
+<h2 id="person-{{ person.id }}"><a href="/wishlists/people/{{ person.id }}/">{{ person.display_name }}</a></h2>
+{% if person.lists.length %}
+<ul class="wishlists-cards">
+{% for list in person.lists %}
+{{ ui.listSummary(list) }}
+{% endfor %}
+</ul>
+{% else %}
+<p>No lists yet.</p>
+{% endif %}
+</section>
+{% else %}
+<p>No one else has joined yet.</p>
+{% endfor %}
+{% endblock %}

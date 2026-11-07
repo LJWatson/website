@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+{% import "components/forms.html" as forms with context %}
+
+{% block content %}
+{{ forms.errorSummary(errors) }}
+
+<h1>Members</h1>
+
+<section aria-labelledby="invite-heading">
+<h2 id="invite-heading">Invite someone</h2>
+<p>They'll get an email with a link that works once, for 7 days.</p>
+<form method="post" action="/wishlists/admin/members/invite/" novalidate>
+{{ forms.csrf() }}
+{{ forms.field("email", "Email address", values, errors, type="email", autocomplete="off", spellcheck="false") }}
+{{ forms.field("display_name", "Display name", values, errors, autocomplete="off") }}
+<button type="submit" class="btn">Send invitation</button>
+</form>
+</section>
+
+{% if invitations.length %}
+<section aria-labelledby="invitations-heading">
+<h2 id="invitations-heading">Invitations not yet accepted</h2>
+<ul class="wishlists-cards">
+{% for invitation in invitations %}
+<li>
+<h3>{{ invitation.display_name }}</h3>
+<p>{{ invitation.email }}</p>
+<p>{% if invitation.expired %}Expired on {{ invitation.expires_at | date }}{% else %}Works until {{ invitation.expires_at | dateTime }}{% endif %}</p>
+<div class="wishlists-actions">
+{{ forms.actionButton("/wishlists/admin/invitations/" + invitation.id + "/resend/", "Resend", "invitation to " + invitation.display_name) }}
+{{ forms.actionButton("/wishlists/admin/invitations/" + invitation.id + "/revoke/", "Revoke", "invitation to " + invitation.display_name) }}
+</div>
+</li>
+{% endfor %}
+</ul>
+</section>
+{% endif %}
+
+<section aria-labelledby="members-heading">
+<h2 id="members-heading">Members</h2>
+<ul class="wishlists-cards">
+{% for person in members %}
+<li>
+<h3>{{ person.display_name }}{% if person.id == member.id %} (you){% endif %}</h3>
+<p>{{ person.email }}</p>
+<p>{% if person.role == "admin" %}Admin{% elif person.status == "suspended" %}Suspended{% else %}Member{% endif %}.
+{% if person.last_active_at %}Last active {{ person.last_active_at | date }}.{% else %}Not logged in anywhere.{% endif %}</p>
+<div class="wishlists-actions">
+<a href="/wishlists/admin/members/{{ person.id }}/">Edit<span data-visibility="hidden"> {{ person.display_name }}</span></a>
+{% if person.role != "admin" %}
+{% if person.status == "suspended" %}
+{{ forms.actionButton("/wishlists/admin/members/" + person.id + "/reinstate/", "Reinstate", person.display_name) }}
+{% else %}
+{{ forms.actionButton("/wishlists/admin/members/" + person.id + "/suspend/", "Suspend", person.display_name) }}
+{% if person.last_active_at %}
+{{ forms.actionButton("/wishlists/admin/members/" + person.id + "/log-out/", "Log out everywhere", person.display_name) }}
+{% endif %}
+{% endif %}
+<a href="/wishlists/admin/members/{{ person.id }}/remove/">Remove<span data-visibility="hidden"> {{ person.display_name }}</span></a>
+{% endif %}
+</div>
+</li>
+{% endfor %}
+</ul>
+</section>
+{% endblock %}

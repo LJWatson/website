@@ -18,9 +18,14 @@
 <link rel="alternate" type="application/rss+xml" href="{{ site.assetPath }}/feed.xml" />
 {% endif %}
 <link rel="stylesheet" href="{{ site.assetPath }}/css/critical.css">
+{% if not hideSearch %}
 <link rel="stylesheet" href="/pagefind/pagefind-component-ui.css">
+{% endif %}
 {% if features.blog %}
 <link rel="stylesheet" href="{{ site.assetPath }}/css/blog.css">
 {% endif %}
+{% for stylesheet in extraStylesheets %}
+<link rel="stylesheet" href="{{ site.assetPath }}{{ stylesheet }}">
+{% endfor %}
 
 </head>

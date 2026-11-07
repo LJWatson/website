@@ -1,3 +1,26 @@
 [build]
   command = "npm run build"
   publish = "dist"
+
+# Wishlists app: one function routed at /wishlists/*, kept in the EU
+[functions.wishlists]
+  region = "fra"
+  # The site's partials and data render the app's pages, alongside the app's own views
+  included_files = ["src/_includes/**", "src/_data/**", "features.json", "netlify/wishlists/views/**"]
+  # Nunjucks loads optional modules at runtime, so it isn't bundled
+  external_node_modules = ["nunjucks"]
+
+# Daily purge of used tokens, expired sessions and old audit entries
+[functions.wishlists-cleanup]
+  region = "fra"
+
+# Netlify never applies these rules to function responses, so the wishlists function sends the same headers itself.
+# They're here for anything else Netlify serves under /wishlists/.
+[[headers]]
+  for = "/wishlists/*"
+  [headers.values]
+    Cache-Control = "no-store"
+    X-Robots-Tag = "noindex, nofollow"
+    Content-Security-Policy = "default-src 'self'; frame-ancestors 'none'; form-action 'self'; base-uri 'none'; object-src 'none'"
+    Referrer-Policy = "no-referrer"
+    X-Content-Type-Options = "nosniff"
