@@ -32,7 +32,7 @@ describe("invitations", () => {
     const invitation = await app.db.one("SELECT extract(day FROM expires_at - created_at)::int AS days, token_hash FROM invitations");
 
     assert.equal(reply.location, "/wishlists/admin/members/");
-    assert.equal(message.subject, "Léonie has invited you to share wishlists");
+    assert.equal(message.subject, "Léonie has invited you to Wishlists");
     assert.equal(invitation.days, 7);
     assert.ok(!message.text.includes(invitation.token_hash));
 
@@ -57,7 +57,7 @@ describe("invitations", () => {
 
     const member = await app.db.one("SELECT display_name, role, status FROM members WHERE email = 'alex@example.test'");
     assert.deepEqual(member, { display_name: "Alex Jones", role: "member", status: "active" });
-    assert.match((await invitee.get("/wishlists/")).text, /Welcome to wishlists, Alex Jones/);
+    assert.match((await invitee.get("/wishlists/")).text, /Welcome to Wishlists, Alex Jones/);
   });
 
   it("keep the token and the entered name when the name is missing", async () => {

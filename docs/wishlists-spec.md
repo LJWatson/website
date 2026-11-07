@@ -74,7 +74,7 @@ Every log-in email holds both the link and a 6-digit code. Either one logs the m
 - **Browser binding:** requesting a log-in sets a short-lived, `HttpOnly` pending log-in cookie in that browser. The code works only in the browser holding that cookie, so a code seen over someone's shoulder, or on a lock screen, is useless anywhere else. The link isn't bound, so it works on any device.
 - **Limits:** the code expires with the link, after 15 minutes. After 5 wrong entries the code is cancelled and the member has to request a new email.
 - **Entry field:** one text field, not six separate boxes. It has `inputmode="numeric"`, `autocomplete="one-time-code"` and a visible label, and pasting is allowed. A Log in button submits it; the form doesn't submit itself automatically. iOS can fill the code in from Mail.
-- **Email:** the subject line includes the code, such as "Your wishlists log-in code: 482915", so it can be read from a notification without opening the email. The browser binding is what makes that acceptable.
+- **Email:** the subject is "Log into Wishlists". The email gives the link, the bare URL and the code, and says that from the home screen you need to use the code.
 - **Installing the app:** iOS 17.2 and later copy login cookies into a web app when it's added to the home screen ([firt.dev iOS PWA notes](https://firt.dev/notes/pwa-ios/)). The help page tells members to log in in Safari first, then add the app to their home screen. They'll only need the code if that session ends.
 - **Considered and deferred:** passkeys. WebAuthn works on iOS, but passkeys mean more to build, and lost-device recovery would still need email.
 
