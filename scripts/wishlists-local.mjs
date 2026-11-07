@@ -88,7 +88,7 @@ async function addDemoData(pool) {
 }
 
 const handle = createApp({
-  config: { baseUrl: `http://localhost:${port}`, emailFrom: "\"tink wishlists\" <wishlists@example.test>" },
+  config: { baseUrl: `http://localhost:${port}`, emailFrom: "\"Wishlists\" <wishlists@example.test>" },
   deployContext: "dev",
   pool: database.pool,
   transport: consoleTransport()

@@ -16,7 +16,7 @@ export async function startTestApp({ config = {}, deployContext = "production" }
   const app = {
     db: createDb(database.pool),
     handle: createApp({
-      config: { baseUrl: ORIGIN, emailFrom: "\"tink wishlists\" <wishlists@tink.test>", ...config },
+      config: { baseUrl: ORIGIN, emailFrom: "\"Wishlists\" <wishlists@tink.test>", ...config },
       deployContext,
       pool: database.pool,
       transport: async (message) => {
