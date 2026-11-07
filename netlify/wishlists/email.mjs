@@ -16,7 +16,10 @@ export function smtpTransport({ smtpUser, smtpPassword }) {
       secure: true
     });
 
-    await transporter.sendMail(message);
+    const info = await transporter.sendMail(message);
+
+    // The mail server's reply, such as "250 2.0.0 Ok: queued as …". Never the address or content.
+    console.log(`Email accepted by the mail server: ${info.accepted.length} accepted, ${info.rejected.length} rejected. Reply: ${info.response}`);
   };
 }
 

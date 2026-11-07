@@ -57,7 +57,12 @@ export async function requestLogIn(ctx) {
     );
 
     const link = `${ctx.baseUrl}/wishlists/log-in/link/?token=${token}`;
+    // For the function log: which member-matching path ran and where the link points.
+    // Never the address, token or code.
+    console.log(`Log-in requested for an active member. Sending an email with a link to ${ctx.baseUrl}`);
     ctx.background(deliver(ctx.app, { to: member.email, ...logInEmail({ code, link, name: member.display_name }) }));
+  } else {
+    console.log("Log-in requested for an address that isn't an active member. No email sent.");
   }
 
   return redirect("/wishlists/log-in/code/");

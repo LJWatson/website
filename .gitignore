@@ -20,3 +20,6 @@ link-report.csv
 
 # Wishlists local database
 .wishlists-local
+
+# Local Netlify folder
+.netlify
