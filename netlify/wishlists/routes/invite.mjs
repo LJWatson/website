@@ -62,6 +62,6 @@ export async function acceptInvitation(ctx) {
     return invalid(ctx, "invite.html", { errors, title: "Accept your invitation", token, values: { display_name: displayName } });
   }
 
-  ctx.setFlash(`Welcome to wishlists, ${displayName}. You're logged in.`);
+  ctx.setFlash(`Welcome to Wishlists, ${displayName}. You're logged in.`);
   return redirect("/wishlists/");
 }

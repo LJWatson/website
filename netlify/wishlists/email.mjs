@@ -60,20 +60,24 @@ function htmlEmail(paragraphs) {
 }
 
 export function logInEmail({ code, link, name }) {
+  const homeScreen = "Note: if you're using Wishlists from your homescreen, you'll need to use the code.";
+  const lifetime = "The link and the code will work for the next 15 minutes, but you can only use them once.";
+
   return {
     html: htmlEmail([
       `Hello ${escapeHtml(name)},`,
-      `<a href="${escapeHtml(link)}">Log in to wishlists</a>`,
-      `Or copy this link into your browser: ${escapeHtml(link)}`,
-      `If you asked to log in from the wishlists app on your home screen, enter this code there instead: <strong>${code}</strong>`,
-      "The link and the code work once, and stop working after 15 minutes. If you didn't ask to log in, you can ignore this email."
+      `You can <a href="${escapeHtml(link)}">log into Wishlists</a>, or paste this URL into your browser:<br>${escapeHtml(link)}`,
+      `Alternatively, you can enter this code:<br><strong>${code}</strong>`,
+      homeScreen,
+      lifetime
     ]),
-    subject: `Your wishlists log-in code: ${code}`,
+    subject: "Log into Wishlists",
     text: [
       `Hello ${name},`,
-      `Log in to wishlists with this link:\n${link}`,
-      `If you asked to log in from the wishlists app on your home screen, enter this code there instead: ${code}`,
-      "The link and the code work once, and stop working after 15 minutes. If you didn't ask to log in, you can ignore this email."
+      `You can log into Wishlists, or paste this URL into your browser:\n${link}`,
+      `Alternatively, you can enter this code:\n${code}`,
+      homeScreen,
+      lifetime
     ].join("\n\n")
   };
 }
@@ -82,15 +86,15 @@ export function invitationEmail({ inviterName, link, name }) {
   return {
     html: htmlEmail([
       `Hello ${escapeHtml(name)},`,
-      `${escapeHtml(inviterName)} has invited you to share wishlists with the family, and reserve gifts without spoiling the surprise.`,
+      `${escapeHtml(inviterName)} has invited you to Wishlists, where the family shares wishlists and reserves gifts without spoiling the surprise.`,
       `<a href="${escapeHtml(link)}">Accept your invitation</a>`,
       `Or copy this link into your browser: ${escapeHtml(link)}`,
       "The invitation works once, and stops working after 7 days."
     ]),
-    subject: `${inviterName} has invited you to share wishlists`,
+    subject: `${inviterName} has invited you to Wishlists`,
     text: [
       `Hello ${name},`,
-      `${inviterName} has invited you to share wishlists with the family, and reserve gifts without spoiling the surprise.`,
+      `${inviterName} has invited you to Wishlists, where the family shares wishlists and reserves gifts without spoiling the surprise.`,
       `Accept your invitation with this link:\n${link}`,
       "The invitation works once, and stops working after 7 days."
     ].join("\n\n")

@@ -52,7 +52,7 @@ export function tokenFrom(message) {
 }
 
 export function codeFrom(message) {
-  return message.subject.match(/(\d{6})$/)[1];
+  return message.text.match(/enter this code:\n(\d{6})/)[1];
 }
 
 let browserCount = 0;

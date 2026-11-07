@@ -11,7 +11,7 @@
 <p>Alternatively, the email also contains a 6 digit code that you can enter, here:</p>
 
 <form method="post" action="/wishlists/log-in/code/" novalidate>
-{{ forms.field("code", "Log-in code", values, errors, hint="6 digits, from the email subject or message", autocomplete="one-time-code", inputmode="numeric", spellcheck="false") }}
+{{ forms.field("code", "Log-in code", values, errors, hint="6 digits, from the email", autocomplete="one-time-code", inputmode="numeric", spellcheck="false") }}
 <button type="submit" class="btn">Log in</button>
 </form>
 

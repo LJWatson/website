@@ -38,13 +38,22 @@ describe("requesting a log-in email", () => {
     assert.equal(app.mail[0].to, "sam@example.test");
   });
 
-  it("puts the code in the subject line, and sends plain text with an HTML alternative", async () => {
+  it("sends the link and code in plain text with an HTML alternative", async () => {
     await new Browser(app).post("/wishlists/log-in/", { email: "Sam@Example.test " });
     const message = lastMailTo(app, "sam@example.test");
+    const link = `https://tink.test/wishlists/log-in/link/?token=${tokenFrom(message)}`;
+    const code = codeFrom(message);
 
-    assert.match(message.subject, /^Your wishlists log-in code: \d{6}$/);
-    assert.ok(message.text.includes(`https://tink.test/wishlists/log-in/link/?token=${tokenFrom(message)}`));
-    assert.match(message.html, /<a href="https:\/\/tink\.test\/wishlists\/log-in\/link\/\?token=/);
+    assert.equal(message.subject, "Log into Wishlists");
+    assert.equal(message.text, [
+      "Hello Sam,",
+      `You can log into Wishlists, or paste this URL into your browser:\n${link}`,
+      `Alternatively, you can enter this code:\n${code}`,
+      "Note: if you're using Wishlists from your homescreen, you'll need to use the code.",
+      "The link and the code will work for the next 15 minutes, but you can only use them once."
+    ].join("\n\n"));
+    assert.ok(message.html.includes(`You can <a href="${link}">log into Wishlists</a>, or paste this URL into your browser:<br>${link}`));
+    assert.ok(message.html.includes(`Alternatively, you can enter this code:<br><strong>${code}</strong>`));
     assert.ok(!/<img/i.test(message.html));
   });
 
