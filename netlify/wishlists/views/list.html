@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+{% import "components/forms.html" as forms with context %}
+{% import "components/lists.html" as ui with context %}
+{% import "components/reservations.html" as reservations with context %}
+
+{% block content %}
+{% set listUrl = "/wishlists/lists/" + list.id + "/" %}
+
+{{ forms.errorSummary(errors) }}
+
+<h1>{{ list.title }}</h1>
+
+{% if not isOwner %}
+<p><a href="/wishlists/people/{{ list.owner_id }}/">{{ list.owner_name }}'s list</a></p>
+{% endif %}
+{% if list.occasion_date %}
+<p>Occasion: <time datetime="{{ list.occasion_date }}">{{ list.occasion_date | date }}</time></p>
+{% endif %}
+{% if list.description %}
+<p class="wishlists-multiline">{{ list.description }}</p>
+{% endif %}
+
+{% if isOwner %}
+{% if list.archived_at %}
+<div class="wishlists-notice">
+<p>This list is archived, so other members can't see it.</p>
+{{ forms.actionButton(listUrl + "unarchive/", "Unarchive", list.title) }}
+</div>
+{% elif list.occasion_passed %}
+<div class="wishlists-notice">
+<p>The occasion date has passed. Archive the list to hide it from other members. You can unarchive it later.</p>
+{{ forms.actionButton(listUrl + "archive/", "Archive", list.title) }}
+</div>
+{% endif %}
+
+<div class="wishlists-actions">
+<a href="{{ listUrl }}items/new/" class="btn">Add an item</a>
+<a href="{{ listUrl }}edit/">Edit list details</a>
+{% if not list.archived_at and not list.occasion_passed %}
+{{ forms.actionButton(listUrl + "archive/", "Archive", list.title) }}
+{% endif %}
+{{ forms.deleteLink("delete-list", listUrl + "delete/", "Delete list", list.title) }}
+</div>
+{% elif canDelete %}
+<div class="wishlists-actions">
+{{ forms.deleteLink("delete-list", listUrl + "delete/", "Delete this list", list.title) }}
+</div>
+{% endif %}
+
+{% if items.length %}
+<div class="wishlists-items" id="items" data-live-container>
+{% for item in items %}
+<div class="wishlists-item" id="item-{{ item.id }}" data-item-block{% if errors and errors.byField["item-" + item.id] %} tabindex="-1"{% endif %}>
+<h2>{{ item.name }}</h2>
+{{ ui.itemDetails(item) }}
+{% if not isOwner %}
+{{ reservations.giverItem(item, list, errors) }}
+{% endif %}
+{% if isOwner %}
+{% set itemUrl = listUrl + "items/" + item.id + "/" %}
+<div class="wishlists-actions">
+<a href="{{ itemUrl }}edit/">Edit<span data-visibility="hidden"> {{ item.name }}</span></a>
+{% if not loop.first %}{{ forms.actionButton(itemUrl + "move-up/", "Move up", item.name, true, "", true) }}{% endif %}
+{% if not loop.last %}{{ forms.actionButton(itemUrl + "move-down/", "Move down", item.name, true, "", true) }}{% endif %}
+{{ forms.deleteLink("delete-item-" + item.id, itemUrl + "delete/", "Delete", item.name) }}
+</div>
+{% call forms.deleteDialog("delete-item-" + item.id, "Delete " + item.name + "?", itemUrl + "delete/", "Delete " + item.name, "Keep " + item.name) %}
+{{ ui.itemDeleteText(item, list) }}
+{% endcall %}
+{% endif %}
+</div>
+{% endfor %}
+</div>
+{% elif isOwner %}
+<p>No items yet. <a href="{{ listUrl }}items/new/">Add the first item</a>.</p>
+{% else %}
+<p>There's nothing on this list yet.</p>
+{% endif %}
+
+{% if canDelete %}
+{% call forms.deleteDialog("delete-list", "Delete " + list.title + "?", listUrl + "delete/", "Delete " + list.title, "Keep " + list.title) %}
+{{ ui.listDeleteText(list, isOwner) }}
+{% endcall %}
+{% endif %}
+{% endblock %}

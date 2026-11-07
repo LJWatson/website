@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% import "components/lists.html" as ui with context %}
+
+{% block content %}
+<h1>My lists</h1>
+
+<p><a href="/wishlists/mine/new/" class="btn">Create a list</a></p>
+
+{% if lists.length %}
+<ul class="wishlists-cards">
+{% for list in lists %}
+{{ ui.listSummary(list, true) }}
+{% endfor %}
+</ul>
+{% else %}
+<p>You haven't made any lists yet.</p>
+{% endif %}
+
+{% if archived.length %}
+<section aria-labelledby="archived-heading">
+<h2 id="archived-heading">Archived lists</h2>
+<p>Other members can't see these.</p>
+<ul class="wishlists-cards">
+{% for list in archived %}
+{{ ui.listSummary(list, true) }}
+{% endfor %}
+</ul>
+</section>
+{% endif %}
+{% endblock %}

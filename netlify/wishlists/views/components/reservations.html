@@ -1,0 +1,61 @@
+{# Only ever rendered for members who don't own the list. Import with context. #}
+{% import "components/forms.html" as forms with context %}
+
+{# A quantity field and button in one form. errorId is the id of an error message to describe the field. #}
+{% macro quantityForm(action, fieldId, label, value, max, buttonText, hiddenText, returnTo, errorId="", secondary=false) %}
+<form method="post" action="{{ action }}" class="reserve-form" data-enhance>
+{{ forms.csrf() }}
+<input type="hidden" name="return_to" value="{{ returnTo }}">
+{% if max > 1 %}
+<div class="field">
+<label for="{{ fieldId }}">{{ label }}</label>
+<p class="field-hint" id="{{ fieldId }}-hint">From 1 to {{ max }}</p>
+<input type="number" id="{{ fieldId }}" name="quantity" value="{{ value }}" min="1" max="{{ max }}" step="1" aria-describedby="{{ fieldId }}-hint{% if errorId %} {{ errorId }}{% endif %}"{% if errorId %} aria-invalid="true"{% endif %}>
+</div>
+{% else %}
+<input type="hidden" name="quantity" value="1">
+{% endif %}
+<button type="submit" class="btn{% if secondary %} btn-secondary{% endif %}">{{ buttonText }}<span data-visibility="hidden"> {{ hiddenText }}</span></button>
+</form>
+{% endmacro %}
+
+{# The member's own reservation, on a list or on My reservations #}
+{% macro yourReservation(reservation, name, changed, itemQuantity, maxQuantity, returnTo, errorId="") %}
+{% set base = "/wishlists/reservations/" + reservation.id + "/" %}
+{% if changed %}
+<div class="wishlists-notice">
+<p>Changed since you reserved it. Check the details are still right.</p>
+{{ forms.actionButton(base + "seen/", "Mark as seen", "the changes to " + name, true, returnTo, true) }}
+</div>
+{% endif %}
+{# Bought is a private tick for the reserver. Other members only ever see "Reserved by". #}
+{% set bought = reservation.status == "bought" %}
+<div class="wishlists-actions">
+<form method="post" action="{{ base }}{{ 'reserved/' if bought else 'bought/' }}" class="inline-form" data-enhance>
+{{ forms.csrf() }}
+<input type="hidden" name="return_to" value="{{ returnTo }}">
+<button type="submit" class="btn btn-secondary" aria-pressed="{{ 'true' if bought else 'false' }}" aria-describedby="bought-hint-{{ reservation.id }}">Bought<span data-visibility="hidden"> {{ name }}</span></button>
+</form>
+{{ forms.actionButton(base + "cancel/", "Cancel reservation", "of " + name, true, returnTo, true) }}
+</div>
+<p class="field-hint" id="bought-hint-{{ reservation.id }}">Only you can see whether you've bought it.</p>
+{% if itemQuantity > 1 and maxQuantity > 1 %}
+{{ quantityForm(base + "quantity/", "change-quantity-" + reservation.id, "How many you're reserving", reservation.quantity, maxQuantity, "Update", "how many " + name + " you're reserving", returnTo, errorId, true) }}
+{% endif %}
+{% endmacro %}
+
+{# Status, any error, and the reservation controls for one item on someone else's list #}
+{% macro giverItem(item, list, errors) %}
+{% set giver = item.giver %}
+{% set error = errors.byField["item-" + item.id] if errors else "" %}
+{% set errorId = ("item-" + item.id + "-error") if error else "" %}
+<p class="item-status"><strong>Status:</strong> {{ giver.status }}</p>
+{% if error %}
+<p class="field-error" id="{{ errorId }}"><span data-visibility="hidden">Error: </span>{{ error }}</p>
+{% endif %}
+{% if giver.mine %}
+{{ yourReservation(giver.mine, item.name, giver.changed, item.quantity, giver.mine.quantity + giver.remaining, "list", errorId) }}
+{% elif giver.remaining > 0 %}
+{{ quantityForm("/wishlists/lists/" + list.id + "/items/" + item.id + "/reserve/", "reserve-quantity-" + item.id, "How many to reserve", 1, giver.remaining, "Reserve", item.name, "list", errorId) }}
+{% endif %}
+{% endmacro %}

@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% import "components/forms.html" as forms with context %}
+
+{% block content %}
+<h1>Delete your account?</h1>
+
+<p>This permanently deletes your account, your lists and their items, and any reservations you've made on other people's lists. It logs you out on every device. It can't be undone.</p>
+
+<form method="post" action="/wishlists/account/delete/">
+{{ forms.csrf() }}
+<button type="submit" class="btn">Delete my account</button>
+</form>
+
+<p><a href="/wishlists/account/">Keep my account</a></p>
+{% endblock %}

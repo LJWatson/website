@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% import "components/forms.html" as forms with context %}
+
+{% block content %}
+{{ forms.errorSummary(errors) }}
+
+<h1>Edit {{ target.display_name }}</h1>
+
+<form method="post" action="/wishlists/admin/members/{{ target.id }}/" novalidate>
+{{ forms.csrf() }}
+{{ forms.field("display_name", "Display name", values, errors, autocomplete="off") }}
+{{ forms.field("email", "Email address", values, errors, type="email", hint="They'll use this address to log in", autocomplete="off", spellcheck="false") }}
+<button type="submit" class="btn">Save changes</button>
+</form>
+
+<p><a href="/wishlists/admin/members/">Back to Members</a></p>
+{% endblock %}

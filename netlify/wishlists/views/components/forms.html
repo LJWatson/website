@@ -1,0 +1,108 @@
+{# Import with context, so csrfToken is available: {% import "components/forms.html" as forms with context %} #}
+
+{% macro csrf() %}
+<input type="hidden" name="_csrf" value="{{ csrfToken }}">
+{% endmacro %}
+
+{# Shown after a failed POST. It takes focus and links to each field. #}
+{% macro errorSummary(errors) %}
+{% if errors %}
+<div class="error-summary" tabindex="-1" autofocus aria-labelledby="error-summary-title">
+<h2 id="error-summary-title">There is a problem</h2>
+<ul>
+{% for error in errors.list %}
+<li><a href="#{{ error.field }}">{{ error.message }}</a></li>
+{% endfor %}
+</ul>
+</div>
+{% endif %}
+{% endmacro %}
+
+{% macro fieldMessages(name, hint, error) %}
+{% if hint %}<p class="field-hint" id="{{ name }}-hint">{{ hint }}</p>{% endif %}
+{% if error %}<p class="field-error" id="{{ name }}-error"><span data-visibility="hidden">Error: </span>{{ error }}</p>{% endif %}
+{% endmacro %}
+
+{% macro describedBy(name, hint, error) -%}
+{%- set ids = ((name + "-hint ") if hint else "") + ((name + "-error") if error else "") -%}
+{%- if ids %} aria-describedby="{{ ids | trim }}"{% endif %}{% if error %} aria-invalid="true"{% endif -%}
+{%- endmacro %}
+
+{# min, max and step are for type="number". step defaults to whole numbers. #}
+{% macro field(name, label, values, errors, type="text", hint="", autocomplete="", inputmode="", spellcheck="", min="", max="", step="1") %}
+{% set error = errors.byField[name] if errors else "" %}
+<div class="field">
+<label for="{{ name }}">{{ label }}</label>
+{{ fieldMessages(name, hint, error) }}
+<input type="{{ type }}" id="{{ name }}" name="{{ name }}" value="{{ values[name] if values else '' }}"
+{%- if autocomplete %} autocomplete="{{ autocomplete }}"{% endif %}
+{%- if inputmode %} inputmode="{{ inputmode }}"{% endif %}
+{%- if spellcheck %} spellcheck="{{ spellcheck }}"{% endif %}
+{%- if min !== "" %} min="{{ min }}"{% endif %}
+{%- if max !== "" %} max="{{ max }}"{% endif %}
+{%- if type == "number" %} step="{{ step }}"{% endif %}
+{{- describedBy(name, hint, error) }}>
+</div>
+{% endmacro %}
+
+{# options: [{ value, text }] #}
+{% macro select(name, label, values, options) %}
+<div class="field">
+<label for="{{ name }}">{{ label }}</label>
+<select id="{{ name }}" name="{{ name }}">
+{% for option in options %}
+<option value="{{ option.value }}"{% if values and values[name] == option.value %} selected{% endif %}>{{ option.text }}</option>
+{% endfor %}
+</select>
+</div>
+{% endmacro %}
+
+{% macro textarea(name, label, values, errors, hint="") %}
+{% set error = errors.byField[name] if errors else "" %}
+<div class="field">
+<label for="{{ name }}">{{ label }}</label>
+{{ fieldMessages(name, hint, error) }}
+<textarea id="{{ name }}" name="{{ name }}" rows="5"{{ describedBy(name, hint, error) }}>{{ values[name] if values else '' }}</textarea>
+</div>
+{% endmacro %}
+
+{% macro checkbox(name, label, values, hint="") %}
+<div class="checkbox-field">
+<input type="checkbox" id="{{ name }}" name="{{ name }}" value="yes"{% if values and values[name] %} checked{% endif %}{% if hint %} aria-describedby="{{ name }}-hint"{% endif %}>
+<label for="{{ name }}">{{ label }}</label>
+{% if hint %}<p class="field-hint" id="{{ name }}-hint">{{ hint }}</p>{% endif %}
+</div>
+{% endmacro %}
+
+{#
+A delete link that goes to a confirmation page, plus the same confirmation as a modal
+<dialog> that wishlists.js opens instead when JavaScript is on. The caller block holds
+the explanation. Keep comes first, so it has focus when the dialog opens and Tab moves on
+to Delete. Closing the dialog returns focus to the link.
+#}
+{% macro deleteLink(id, href, text, hiddenText) %}
+<a href="{{ href }}" data-dialog="{{ id }}">{{ text }}{% if hiddenText %}<span data-visibility="hidden"> {{ hiddenText }}</span>{% endif %}</a>
+{% endmacro %}
+
+{% macro deleteDialog(id, heading, action, buttonText, cancelText) %}
+<dialog id="{{ id }}" class="wishlists-dialog" aria-labelledby="{{ id }}-heading">
+<h2 id="{{ id }}-heading">{{ heading }}</h2>
+{{ caller() }}
+<div class="wishlists-actions">
+<button type="button" class="btn btn-secondary" data-close-dialog autofocus>{{ cancelText }}</button>
+<form method="post" action="{{ action }}" class="inline-form">
+{{ csrf() }}
+<button type="submit" class="btn">{{ buttonText }}</button>
+</form>
+</div>
+</dialog>
+{% endmacro %}
+
+{# A one-button form. hiddenText finishes the button's name for screen readers: "Resend invitation to Sam". #}
+{% macro actionButton(action, text, hiddenText="", secondary=true, returnTo="", enhance=false) %}
+<form method="post" action="{{ action }}" class="inline-form"{% if enhance %} data-enhance{% endif %}>
+{{ csrf() }}
+{% if returnTo %}<input type="hidden" name="return_to" value="{{ returnTo }}">{% endif %}
+<button type="submit" class="btn{% if secondary %} btn-secondary{% endif %}">{{ text }}{% if hiddenText %}<span data-visibility="hidden"> {{ hiddenText }}</span>{% endif %}</button>
+</form>
+{% endmacro %}

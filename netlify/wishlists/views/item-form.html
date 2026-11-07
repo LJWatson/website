@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% import "components/forms.html" as forms with context %}
+
+{% block content %}
+{{ forms.errorSummary(errors) }}
+
+<h1>{{ ("Edit " + item.name) if item else "Add an item" }}</h1>
+
+<p>On <a href="/wishlists/lists/{{ list.id }}/">{{ list.title }}</a></p>
+
+<form method="post" action="/wishlists/lists/{{ list.id }}/items/{{ (item.id + '/edit/') if item else 'new/' }}" novalidate>
+{{ forms.csrf() }}
+{{ forms.field("name", "Name", values, errors, hint="Up to 200 characters", autocomplete="off") }}
+{{ forms.field("url", "Link (optional)", values, errors, type="url", hint="A web address that starts with https://", autocomplete="off", spellcheck="false") }}
+<div class="price-fields">
+{{ forms.select("price_currency", "Currency", values, currencies) }}
+{{ forms.field("price", "Price (optional)", values, errors, type="number", hint="For example, 30 or 29.99", inputmode="decimal", min=0, step="0.01") }}
+</div>
+{{ forms.field("quantity", "Quantity wanted", values, errors, type="number", min=1, max=quantityMax) }}
+<fieldset class="checkbox-group">
+<legend>About this item</legend>
+{{ forms.checkbox("most_wanted", "Most wanted", values, hint="Really hoping for this") }}
+{{ forms.checkbox("similar_ok", "Similar is fine", values, hint="Something like it would be just as welcome") }}
+</fieldset>
+{{ forms.textarea("notes", "Notes (optional)", values, errors, hint="Sizes, colours or anything else that helps. Up to 1,000 characters.") }}
+<button type="submit" class="btn">{{ "Save changes" if item else "Add item" }}</button>
+</form>
+
+<p><a href="/wishlists/lists/{{ list.id }}/">Cancel</a></p>
+{% endblock %}

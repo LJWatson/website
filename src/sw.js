@@ -1,6 +1,8 @@
-const CACHE_VERSION = "v1";
+const CACHE_VERSION = "v3";
 const STATIC_CACHE = `tink-static-${CACHE_VERSION}`;
 const PRECACHE_URLS = ["/css/critical.css", "/css/blog.css", "/js/scripts.js", "/offline/"];
+const WISHLISTS_PATTERN = /^\/wishlists(\/|$)/;
+const WISHLISTS_ASSET_PATTERN = /^\/(css|js)\/wishlists\.(css|js)$/;
 const STATIC_ASSET_PATTERN = /\.(css|js|png|jpe?g|svg|webp|gif|woff2?|ttf|ico)$/;
 
 self.addEventListener("install", (event) => {
@@ -29,6 +31,12 @@ return;
 const url = new URL(request.url);
 
 if (url.origin !== self.location.origin) {
+return;
+}
+
+// The wishlists app holds private data, so nothing under /wishlists/ goes into Cache Storage.
+// Its own stylesheet and script aren't cached either, so a change to them reaches members at once.
+if (WISHLISTS_PATTERN.test(url.pathname) || WISHLISTS_ASSET_PATTERN.test(url.pathname)) {
 return;
 }
 

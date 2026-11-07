@@ -262,6 +262,90 @@ npx linkinator ./dist --recurse --format csv > link-report.csv
 ```
 Filter the CSV for anything other than status 200. Note: LinkedIn (999), some BBC pages, and other sites that block crawlers will show false positives.
 
+## Wishlists app
+
+An invite-only family wishlists app at `/wishlists/`, specified in `docs/wishlists-spec.md`. It's the site's only server-side code. Pages are rendered by a Netlify Function using the site's own Nunjucks partials, data lives in Netlify Database (managed Postgres), and every page works without JavaScript. Nothing about the app goes into `dist/` apart from `css/wishlists.css`, so the sitemap and Pagefind never see it.
+
+### Files
+
+```
+netlify/
+  functions/
+    wishlists.mjs           The function, routed at /wishlists and /wishlists/*
+    wishlists-cleanup.mjs   Scheduled daily: purges used tokens, expired sessions, old audit entries
+  database/migrations/      Plain SQL, applied by Netlify on deploy
+  wishlists/
+    app.mjs                 Request pipeline: session, Origin and CSRF checks, routing, flash messages
+    routes/                 Handlers, one file per area. routes/index.mjs is the route table.
+    views/                  The app's templates. layout.html includes the site's head, header and footer.
+    render.mjs              Nunjucks (autoescape on) over views/ and src/_includes/
+    lists.mjs               Lists and items queries, with the visibility and ownership rules
+    reservations.mjs        Reservations. Never used to build a page for a list's owner.
+    sessions.mjs, members.mjs, email.mjs, rate-limit.mjs, security.mjs, validation.mjs, ...
+src/_data/wishlists_navigation.json   The app's navigation items
+src/css/wishlists.css                 App-only styles, loaded after critical.css
+src/js/wishlists.js                   Opens delete confirmations as a modal <dialog> (optional enhancement)
+scripts/wishlists-local.mjs           Local runner (see below)
+scripts/wishlists-create-admin.mjs    Creates the admin member
+tests/wishlists/                      node:test tests against a real local Postgres
+```
+
+### How it fits the site
+
+- `header.html` takes an optional `headerNavigation` (`{ label, items }`) in place of the website navigation. An empty `items` leaves the navigation out (logged-out pages). Items with `"method": "post"` render as a form button, which is how Log out works. `hideSearch` leaves out Pagefind.
+- `head.html` skips the Pagefind stylesheet when `hideSearch` is set, and loads anything in `extraStylesheets`. The app passes `/css/wishlists.css` that way, because `check:css` expects every stylesheet named in `head.html` to belong to a feature pack.
+- `sw.js` returns early for `/wishlists/`, so no app page goes into Cache Storage.
+- `netlify.toml` pins both functions to Frankfurt (`fra`) and bundles the partials with `included_files`. Its `[[headers]]` for `/wishlists/*` don't apply to function responses, so the function sends the same security headers itself (`netlify/wishlists/http.mjs`).
+
+### Security notes
+
+- Every cookie uses the `__Host-` prefix. The session cookie holds a random 256-bit token, and only its SHA-256 hash is stored. The CSRF token is derived from the session token.
+- POSTs must come from the same origin. `Referrer-Policy: no-referrer` makes browsers send `Origin: null` on form posts, so the check reads `Sec-Fetch-Site` first, then `Origin`, then `Referer`.
+- The log-in code is hashed together with the pending log-in cookie, so it only works in the browser that asked for it. Wrong codes are counted per pending cookie for members and non-members alike, so the replies never reveal who's a member.
+- Log-in emails are sent after the response (`context.waitUntil`), so response times don't reveal membership either.
+- Deploy previews and branch deploys only send email to the admin's address, because their database branch is a copy of production.
+
+### Lists and items
+
+- Other members see a list only while it isn't archived and its owner isn't suspended. That rule lives in the queries in `lists.mjs` (`VISIBLE_TO_OTHERS`), not the templates. Owner-only actions look the list up by its ID and the owner's ID together, and items by item, list and owner, so changing an ID in the address gives a 404.
+- Items keep their order in `position`. Move up and Move down swap positions with the neighbour inside a transaction that locks the list.
+- An item's `updated_at` only changes when its details really change, not when it's moved, because it will drive the "Changed since you reserved it" notice.
+- Delete links go to a confirmation page. With JavaScript, `wishlists.js` opens the same confirmation, rendered into the page as a `<dialog>`, instead. Cancel has focus when it opens, and closing it returns focus to the link.
+
+### Reservations and surprise protection
+
+- The owner's view of a list is built from `lists.mjs` alone, which never reads the `reservations` table. `routes/lists.mjs` (`listPage`) only calls `getReservationsForGiver` after checking the viewer isn't the owner, and that function throws if it is. The admin gets no exceptions on their own lists.
+- Nothing the owner does gives anything away. Deleting, editing, moving or trying to reserve their own item looks the same whether or not it's reserved.
+- A trigger (`wishlists_keep_reservations_of_deleted_item`) keeps reservations when their item is deleted, however that happens: by the owner, with its list, or when the owner is removed. It sets `item_id` to null and records the item in `item_snapshot`, so the reserver sees "Removed from Sam's list". A second trigger stops anyone reserving items on their own list, even outside the app.
+- Reserving locks the item's row, so two members reserving the last one take turns. The second gets a clear error.
+- `item_seen_at` holds the item's `updated_at` when the reserver last saw it. "Changed since you reserved it" shows until they mark it as seen.
+- Bought is private to the reserver. `getReservationsForGiver` only reads back `status` for the viewer's own reservations, so other members' pages can only ever say "Reserved by". The reserver gets a single Bought toggle (`aria-pressed`), and My reservations splits each person's items into To buy and Bought.
+- `tests/wishlists/surprise.test.mjs` is the safety net. It checks that every page an owner can open is byte-for-byte identical before and after others reserve, buy and cancel, for a member and for the admin. Run it after any change near lists, items or reservations.
+- Confirmations never change the `<title>`. Only "Error:" does, after a failed POST. Without JavaScript, the confirmation is at the top of `main` and takes focus.
+- With JavaScript, forms marked `data-enhance` (reserve, the Bought toggle, cancel, change how many, seen, move up and down) update in place. `wishlists.js` posts the form, follows the redirect, and replaces the `[data-live-container]` (`#items` on a list, `#reservations` on My reservations) with the same element from the page it gets back. There's no separate API: the server responds exactly as it does without JavaScript. Focus goes to an invalid field, the same button, its opposite (the Bought toggle posts to /bought/ or /reserved/, and Move up and Move down swap), or the item's heading. The confirmation or error goes to the `[data-live-announcer]` polite live region. If the page that comes back has no container, for example after being logged out, the form is sent the ordinary way.
+
+### Running it locally
+
+The Netlify CLI way is `npm run wishlists:dev` (`netlify dev`, with its local database). Without the CLI:
+
+```
+npm run build
+npm run wishlists:local -- --admin you@example.test --name "Your name"
+```
+
+That starts a local Postgres in `.wishlists-local/` (ignored by git), applies the migrations, creates the admin if there isn't one, and serves the app at `http://localhost:8888/wishlists/` with the built site around it. Emails are printed to the terminal, including their log-in links and codes.
+
+Tests: `npm run test:wishlists`. Each test file starts its own in-memory Postgres.
+
+### Setting up production
+
+1. Create the database in Netlify: Data & Storage > Database > Create a database manually.
+2. Set the environment variables in Netlify, all with the Functions scope:
+    - `SMTP_USER`, `SMTP_APP_PASSWORD` (as a secret) and `EMAIL_FROM`, for Production and Deploy Previews. Previews only email the admin's address.
+    - `APP_BASE_URL` (`https://tink.uk`), for Production only. Without it, previews' email links use the preview's own address.
+3. Deploy, so the migrations run.
+3. Create the admin: `NETLIFY_DB_URL="<connection string>" node scripts/wishlists-create-admin.mjs <email> "<name>"`, with the connection string from `netlify database connect --json`.
+
 ## What was done during the redesign (2026)
 
 This is a record of the significant work done during the qa-checks/add-content phase.

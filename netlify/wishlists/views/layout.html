@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+
+{% include "partials/head.html" %}
+
+<body id="{{ site.siteID }}">
+
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+{% include "partials/header.html" %}
+
+<main id="main-content">
+
+{% if flash %}
+<div class="wishlists-status" tabindex="-1" autofocus>
+<p>{{ flash.message }}</p>
+</div>
+{% endif %}
+
+{% block content %}{% endblock %}
+
+</main>
+
+{% include "partials/footer.html" %}
+
+{# Empty on load. wishlists.js puts the result of an in-place update here to announce it. #}
+<div data-live-announcer aria-live="polite" data-visibility="hidden"></div>
+
+<script src="{{ site.assetPath }}/js/wishlists.js" defer></script>
+
+</body>
+
+</html>

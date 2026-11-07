@@ -39,3 +39,6 @@ User-agent: slopsearch
 User-agent: Yandex
 User-agent: YouBot
 Disallow: /
+
+User-agent: *
+Disallow: /wishlists/

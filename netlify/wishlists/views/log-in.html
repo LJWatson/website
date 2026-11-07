@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% import "components/forms.html" as forms with context %}
+
+{% block content %}
+{{ forms.errorSummary(errors) }}
+
+<h1>Log in to wishlists</h1>
+
+<p>Enter your email address and we'll email you a link and a code. There's no password.</p>
+
+<form method="post" action="/wishlists/log-in/" novalidate>
+{{ forms.field("email", "Email address", values, errors, type="email", autocomplete="email", spellcheck="false") }}
+<button type="submit" class="btn">Email me a log-in link</button>
+</form>
+
+<p>Wishlists are invitation only. <a href="/wishlists/help/">Help with logging in</a></p>
+{% endblock %}

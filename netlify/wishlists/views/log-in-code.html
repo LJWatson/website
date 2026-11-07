@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% import "components/forms.html" as forms with context %}
+
+{% block content %}
+{{ forms.errorSummary(errors) }}
+
+<h1>Check your email</h1>
+
+<p>If that address belongs to an account, you'll receive an email with a log-in link. It'll work for the next 15 minutes.</p>
+
+<p>Alternatively, the email also contains a 6 digit code that you can enter, here:</p>
+
+<form method="post" action="/wishlists/log-in/code/" novalidate>
+{{ forms.field("code", "Log-in code", values, errors, hint="6 digits, from the email subject or message", autocomplete="one-time-code", inputmode="numeric", spellcheck="false") }}
+<button type="submit" class="btn">Log in</button>
+</form>
+
+<p>No email? Check your spam folder, or <a href="/wishlists/log-in/">request a new log-in email</a>.</p>
+{% endblock %}
