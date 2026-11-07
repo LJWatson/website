@@ -343,8 +343,13 @@ Tests: `npm run test:wishlists`. Each test file starts its own in-memory Postgre
 2. Set the environment variables in Netlify, all with the Functions scope:
     - `SMTP_USER`, `SMTP_APP_PASSWORD` (as a secret) and `EMAIL_FROM`, for Production and Deploy Previews. Previews only email the admin's address.
     - `APP_BASE_URL` (`https://tink.uk`), for Production only. Without it, previews' email links use the preview's own address.
-3. Deploy, so the migrations run.
-3. Create the admin: `NETLIFY_DB_URL="<connection string>" node scripts/wishlists-create-admin.mjs <email> "<name>"`, with the connection string from `netlify database connect --json`.
+    - `WISHLISTS_ADMIN_EMAIL` and `WISHLISTS_ADMIN_NAME`, for Production and Deploy Previews. They create the admin (see below).
+3. Deploy, so the migrations run. Netlify only gives functions new or changed variables on a new deploy.
+4. Request a log-in email for the `WISHLISTS_ADMIN_EMAIL` address. While the database has no admin, that request creates the admin, and the email arrives as normal. Once there's an admin, the two variables do nothing. Each new database, including every deploy preview's branch, starts empty, so this happens once per database.
+
+The alternative is `NETLIFY_DB_URL="<connection string>" node scripts/wishlists-create-admin.mjs <email> "<name>"`, with the connection string from `netlify database status --branch <branch> --show-credentials`.
+
+To read the function's log, which says whether each log-in request matched a member and what the mail server replied: `netlify logs --deploy-id <id> --function wishlists --since 1h`. It can run a few minutes behind.
 
 ## What was done during the redesign (2026)
 

@@ -1,5 +1,6 @@
 import { deliver, logInEmail } from "../email.mjs";
 import { redirect } from "../http.mjs";
+import { ensureFirstAdmin } from "../members.mjs";
 import { allow, bucket, countRecent, LIMITS, record } from "../rate-limit.mjs";
 import { hashCode, randomCode, randomToken, safeEqual, sha256 } from "../security.mjs";
 import { startSession } from "../sessions.mjs";
@@ -43,6 +44,8 @@ export async function requestLogIn(ctx) {
 
   const pending = randomToken();
   ctx.setCookie(PENDING_COOKIE, pending, TOKEN_LIFETIME_SECONDS);
+
+  await ensureFirstAdmin(ctx.db, ctx.app.config, email);
 
   const member = await ctx.db.one("SELECT id, email, display_name FROM members WHERE email = $1 AND status = 'active'", [email]);
 

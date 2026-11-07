@@ -7,11 +7,37 @@ export function getMember(db, id) {
   return db.one("SELECT id, email, display_name, role, status, created_at FROM members WHERE id = $1", [id]);
 }
 
-// Deleting the member cascades to their sessions, log-in tokens, lists and items.
-// The reservations phase adds their reservations to this.
+// Deleting the member cascades to their sessions, log-in tokens, lists, items and
+// reservations. Others' reservations on their items are kept, as removed (see 0003_reservations.sql).
 export async function removeMember(db, memberId) {
   const removed = await db.one("DELETE FROM members WHERE id = $1 AND role <> 'admin' RETURNING id", [memberId]);
   return Boolean(removed);
+}
+
+// First-time set-up. While the database has no admin, a log-in request for the address in the
+// WISHLISTS_ADMIN_EMAIL setting creates the admin (or makes an existing member with that
+// address the admin). Once there is an admin, this does nothing. Returns true if it created one.
+export function ensureFirstAdmin(db, config, email) {
+  if (!config.adminEmail || email !== config.adminEmail) {
+    return false;
+  }
+
+  return db.transaction(async (tx) => {
+    // Only one request at a time gets to check and create
+    await tx.query("SELECT pg_advisory_xact_lock(7312026)");
+
+    if (await tx.one("SELECT 1 FROM members WHERE role = 'admin'")) {
+      return false;
+    }
+
+    await tx.query(
+      `INSERT INTO members (email, display_name, role) VALUES ($1, $2, 'admin')
+       ON CONFLICT (email) DO UPDATE SET role = 'admin', status = 'active'`,
+      [email, config.adminName || "Admin"]
+    );
+    console.log("Created the admin from the WISHLISTS_ADMIN_EMAIL setting.");
+    return true;
+  });
 }
 
 // Creates or refreshes an invitation and emails it. Returns false if the email couldn't be sent.

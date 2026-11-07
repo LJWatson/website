@@ -8,15 +8,16 @@ export const SAFARI_IPHONE = "Mozilla/5.0 (iPhone; CPU iPhone OS 19_0 like Mac O
 
 const TABLES = ["reservations", "items", "lists", "audit_log", "rate_limit_events", "sessions", "login_tokens", "invitations", "members"];
 
-// One database per test file. Call reset() before each test.
-export async function startTestApp() {
+// One database per test file. Call reset() before each test. config adds to or overrides the
+// app's settings, and deployContext stands in for Netlify's ("production", "deploy-preview").
+export async function startTestApp({ config = {}, deployContext = "production" } = {}) {
   const database = await startLocalDatabase();
   const mail = [];
   const app = {
     db: createDb(database.pool),
     handle: createApp({
-      config: { baseUrl: ORIGIN, emailFrom: "\"tink wishlists\" <wishlists@tink.test>" },
-      deployContext: "production",
+      config: { baseUrl: ORIGIN, emailFrom: "\"tink wishlists\" <wishlists@tink.test>", ...config },
+      deployContext,
       pool: database.pool,
       transport: async (message) => {
         mail.push(message);
