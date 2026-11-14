@@ -28,8 +28,11 @@
 {%- if ids %} aria-describedby="{{ ids | trim }}"{% endif %}{% if error %} aria-invalid="true"{% endif -%}
 {%- endmacro %}
 
-{# min, max and step are for type="number". step defaults to whole numbers. #}
-{% macro field(name, label, values, errors, type="text", hint="", autocomplete="", inputmode="", spellcheck="", min="", max="", step="1") %}
+{#
+min, max and step are for type="number". step defaults to whole numbers.
+autofocus: only on a page whose single job is this form, and never when the error summary or a status message is showing, because those take focus instead.
+#}
+{% macro field(name, label, values, errors, type="text", hint="", autocomplete="", inputmode="", spellcheck="", min="", max="", step="1", autofocus=false) %}
 {% set error = errors.byField[name] if errors else "" %}
 <div class="field">
 <label for="{{ name }}">{{ label }}</label>
@@ -41,7 +44,8 @@
 {%- if min !== "" %} min="{{ min }}"{% endif %}
 {%- if max !== "" %} max="{{ max }}"{% endif %}
 {%- if type == "number" %} step="{{ step }}"{% endif %}
-{{- describedBy(name, hint, error) }}>
+{{- describedBy(name, hint, error) }}
+{%- if autofocus %} autofocus{% endif %}>
 </div>
 {% endmacro %}
 
