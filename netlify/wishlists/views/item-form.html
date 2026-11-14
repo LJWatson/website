@@ -10,7 +10,7 @@
 
 <form method="post" action="/wishlists/lists/{{ list.id }}/items/{{ (item.id + '/edit/') if item else 'new/' }}" novalidate>
 {{ forms.csrf() }}
-{{ forms.field("name", "Name", values, errors, hint="Up to 200 characters", autocomplete="off") }}
+{{ forms.field("name", "Name", values, errors, hint="Up to 200 characters", autocomplete="off", autofocus=(not item and not errors and not flash)) }}
 {{ forms.field("url", "Link (optional)", values, errors, type="url", hint="A web address that starts with https://", autocomplete="off", spellcheck="false") }}
 <div class="price-fields">
 {{ forms.select("price_currency", "Currency", values, currencies) }}

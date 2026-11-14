@@ -290,6 +290,23 @@ describe("items", () => {
     }
   });
 
+  it("put focus on the name field when adding, but not when editing or after an error", async () => {
+    const listId = await createList(sam, { title: "Birthday" });
+    const add = await sam.get(`/wishlists/lists/${listId}/items/new/`);
+    assert.match(add.text, /<input type="text" id="name" name="name" value="" autocomplete="off" aria-describedby="name-hint" autofocus>/);
+    assert.equal((add.text.match(/autofocus/g) || []).length, 1);
+
+    const failed = await sam.post(`/wishlists/lists/${listId}/items/new/`, { name: "", price: "", quantity: "", url: "" });
+    assert.equal(failed.status, 400);
+    assert.match(failed.text, /<div class="error-summary" tabindex="-1" autofocus/);
+    assert.equal((failed.text.match(/autofocus/g) || []).length, 1);
+
+    await addItem(sam, listId, { name: "Book" });
+    const itemId = (await app.db.one("SELECT id FROM items WHERE name = 'Book'")).id;
+    const edit = await sam.get(`/wishlists/lists/${listId}/items/${itemId}/edit/`);
+    assert.ok(!/id="name"[^>]*autofocus/.test(edit.text));
+  });
+
   it("have a native number field for the quantity, with a visible label and set limits", async () => {
     const listId = await createList(sam, { title: "Birthday" });
     const page = await sam.get(`/wishlists/lists/${listId}/items/new/`);
